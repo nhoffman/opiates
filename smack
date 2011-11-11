@@ -15,7 +15,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with taxtastic.  If not, see <http://www.gnu.org/licenses/>.
 
-from taxtastic.scripts.taxit import main
+from opiate.scripts.smack import main
 import sys
 
 if __name__ == '__main__':
