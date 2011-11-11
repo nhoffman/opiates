@@ -1,0 +1,15 @@
+"compound","amr_low","amr_high","signoise_stda","signoise","int_std_peak_area"
+"Morphine",10,1000,47,8,7000
+"Oxymorphone",10,1000,48,8,31000
+"Hydromorphone",10,1000,132,8,20000
+"Codeine",10,1000,29,8,10000
+"Oxycodone",10,1000,64,8,25000
+"Hydrocodone",10,1000,95,8,64000
+"6-monoacetylmorphine",10,1000,122,8,13000
+"Norfentanyl",10,1000,343,8,36000
+"Normeperidine",10,1000,164,8,104000
+"Meperidine",10,1000,134,8,87000
+"Fentanyl",0.25,25,36,8,8000
+"Buprenorphine",10,1000,32,8,3000
+"Propoxyphene",10,1000,295,8,48000
+"Methadone",10,1000,257,8,73000
