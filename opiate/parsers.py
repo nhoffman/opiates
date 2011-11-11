@@ -94,23 +94,3 @@ def qa_from_csv(fname):
 
     return dict(qadata)
 
-def main():
-    infile = sys.argv[1]
-    qafile = sys.argv[2]
-
-    qadata = qa_from_csv(qafile)
-
-    tree = xml.etree.ElementTree.ElementTree(file=infile)
-    samples = tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')
-
-    compound_names = qadata.keys()
-    rows = chain.from_iterable(parse_sample(sample, compound_names) for sample in samples)
-
-    headers, _ = zip(*sample_attrs)
-    with open(infile.replace('.xml','.csv'),'w') as f:
-        writer = csv.DictWriter(f, fieldnames = headers, quoting = csv.QUOTE_NONNUMERIC)
-        writer.writerow({k:k for k in headers})
-        writer.writerows(rows)
-
-if __name__ == '__main__':
-    main()

@@ -11,20 +11,18 @@ except ImportError:
 
 import glob
 
-from taxtastic import __version__
-
-# all files with .py extension in top level are assumed to be scripts
-scripts = ['taxit'] + list(set(glob.glob('*.py')) - set(['setup.py', 'distribute_setup.py']))
+from opiate import __version__
 
 params = {'author': 'Noah Hoffman',
           'author_email': 'ngh2@uw.edu',
-          'description': 'Tools for taxonomic naming and annotation',
-          'name': 'taxtastic',
+          'description': 'Analysis of LC/MS opiates assay',
+          'name': 'opiate',
           'packages': find_packages(exclude=['tests']),
-          'scripts': scripts,
-          'url': 'https://github.com/fhcrc/taxtastic',
+          'scripts': ['smack'],
           'version': __version__,
-          'install_requires': ['sqlalchemy', 'decorator']}
+          # 'install_requires': ['sqlalchemy', 'decorator'],
+          'package_data': {'opiate': ['data/qa.csv']}
+          }
 
 setup(**params)
 

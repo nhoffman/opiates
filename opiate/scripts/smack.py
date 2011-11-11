@@ -37,8 +37,8 @@ def parse_arguments(argv):
     parser = argparse.ArgumentParser(description=__doc__)
 
     parser.add_argument('-V', '--version', action='version',
-        version='romp v' + version,
-        help='Print the version number and exit')
+        version = version,
+        help = 'Print the version number and exit')
 
     parser.add_argument('-v', '--verbose',
         action='count', dest='verbosity', default=1,
