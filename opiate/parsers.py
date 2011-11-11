@@ -4,7 +4,6 @@ import pprint
 import xml.etree.ElementTree
 import sys
 import csv
-from itertools import chain
 from collections import defaultdict
 
 dump = xml.etree.ElementTree.dump

@@ -1,11 +1,13 @@
 """Extract contents of an XML file into CSV format."""
 
-import subprocess
-import tempfile
 import logging
-import shutil
-import os
 from os import path
+import xml.etree.ElementTree
+from itertools import chain
+import csv
+
+from opiate import qafile
+from opiate.parsers import qa_from_csv, sample_attrs, parse_sample
 
 log = logging.getLogger(__name__)
 
@@ -19,8 +21,6 @@ def action(args):
 
     infile = args.infile
     outfile = args.outfile or path.basename(infile).replace('.xml','.csv')
-
-    qafile = sys.argv[2]
 
     qadata = qa_from_csv(qafile)
 
