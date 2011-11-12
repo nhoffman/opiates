@@ -89,7 +89,7 @@ def qa_from_csv(fname):
         reader = csv.DictReader(f)
         for d in reader:
             compound = d.pop('compound')
-            qadata[compound] = {k:float(v) for k,v in d.items()}
+            qadata[compound] = {k:cast(v, float) for k,v in d.items()}
 
     return dict(qadata)
 
