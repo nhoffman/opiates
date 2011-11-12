@@ -8,7 +8,7 @@ import logging
 import pprint
 
 import __init__ as config
-from opiates.containers import Compound
+from opiate.containers import Compound
 
 log = logging.getLogger(__name__)
 
@@ -19,7 +19,8 @@ class TestCompound(unittest.TestCase):
 
     def tearDown(self):
         pass
-
+    
     def test01(self):
-        print 'hi'
+        cpnd = Compound(qadata={'meh':'buh'})
+        self.assertTrue(cpnd.meh == 'buh')
         

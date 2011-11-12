@@ -1,3 +1,7 @@
+"""
+Test parsing of XML files and QA data.
+"""
+
 import os
 import unittest
 import logging
