@@ -3,12 +3,10 @@
 import logging
 from os import path
 import xml.etree.ElementTree
-from itertools import chain
 import csv
 from collections import OrderedDict
 
-from opiate import qafile
-from opiate.parsers import qa_from_csv, sample_attrs, parse_sample
+from opiate.parsers import get_rows
 
 log = logging.getLogger(__name__)
 
@@ -22,15 +20,8 @@ def build_parser(parser):
     
 def action(args):
 
-    infile = args.infile
-    qadata = qa_from_csv(qafile)
-
-    tree = xml.etree.ElementTree.ElementTree(file=infile)
-    samples = tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')
-
-    compound_names = qadata.keys()
-    rows = chain.from_iterable(parse_sample(sample, compound_names) for sample in samples)
-
+    rows = get_rows(args.infile)
+    
     if args.samples:
         d = OrderedDict((row['SAMPLE_id'], row['SAMPLE_desc']) for row in rows)
         for i, desc in d.items():

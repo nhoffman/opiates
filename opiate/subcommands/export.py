@@ -1,14 +1,12 @@
 """Extract contents of an XML file into another format."""
 
-from itertools import chain
 from os import path
 import csv
 import json
 import logging
 import xml.etree.ElementTree
 
-from opiate import qafile
-from opiate.parsers import qa_from_csv, sample_attrs, parse_sample
+from opiate.parsers import sample_attrs, get_rows
 
 log = logging.getLogger(__name__)
 
@@ -30,13 +28,7 @@ def action(args):
     format = args.format
     outfile = args.outfile or path.basename(infile).replace('.xml','.'+format)
 
-    qadata = qa_from_csv(qafile)
-
-    tree = xml.etree.ElementTree.ElementTree(file=infile)
-    samples = tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')
-
-    compound_names = qadata.keys()
-    rows = chain.from_iterable(parse_sample(sample, compound_names) for sample in samples)
+    rows = get_rows(args.infile)
 
     headers, _ = zip(*sample_attrs)
     with open(outfile,'w') as f:

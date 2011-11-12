@@ -7,6 +7,7 @@ import unittest
 import logging
 import pprint
 
+from opiate.parsers import cast, cast_numeric, cast_vals
 import __init__ as config
 
 log = logging.getLogger(__name__)
@@ -19,6 +20,15 @@ class TestCast(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test01(self):
-        print 'hi'
-        
+    def test_cast_numeric(self):
+        # int
+        self.assertTrue(isinstance(cast_numeric('10'), int))
+        self.assertFalse(isinstance(cast_numeric('10'), float))        
+        self.assertEqual(cast_numeric('10'), 10)
+
+        # float
+        self.assertTrue(isinstance(cast_numeric('10.1'), float))        
+        self.assertAlmostEqual(cast_numeric('10.1'), 10.1)
+
+        # other
+        self.assertTrue(cast_numeric('meh') is None)
