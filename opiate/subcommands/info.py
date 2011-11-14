@@ -12,9 +12,9 @@ log = logging.getLogger(__name__)
 
 def build_parser(parser):
     parser.add_argument('infile', help='XML file')
-    parser.add_argument('--samples', help='list id and description of each sample',
+    parser.add_argument('-s','--samples', help='list id and description of each sample',
                         action = 'store_true', default = False)
-    parser.add_argument('--compounds', help='list id and name of each compound',
+    parser.add_argument('-c','--compounds', help='list id and name of each compound',
                         action = 'store_true', default = False)
 
     
