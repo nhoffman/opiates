@@ -13,12 +13,16 @@ log = logging.getLogger(__name__)
 from opiate.containers import Compound, Sample
 from opiate.parsers import qa_from_csv
 from opiate import qafile
-qadata = qa_from_csv(qafile)
 
 import __init__ as config
 
+## test data
+# default qa values for this package
+qadata = qa_from_csv(qafile)
+
 with open('testfiles/oct24.json') as f:
-    standards1, sample_groups1 = json.load(f)
+    standards, sample_groups = json.load(f)
+expt_stda = standards['stdA']
 
 class TestCompound(unittest.TestCase):
 
@@ -29,25 +33,26 @@ class TestCompound(unittest.TestCase):
         pass
     
     def test01(self):
-        cpnd = Compound(qa = {'meh':'buh'})
+        # can initialize with arbitrary values
+        cpnd = Compound({'meh':'buh'})
         self.assertTrue(cpnd.meh == 'buh')
 
     def test02(self):
-        cpnd = Compound(experiment = {}, qa = {})
-        defaults = dict(Compound.defaults)
-        self.assertTrue(cpnd.COMPOUND_id == defaults['COMPOUND_id'])
-        self.assertTrue(cpnd.COMPOUND_name == defaults['COMPOUND_name'])        
+        # arbitrary values in both `experiment` and `kwargs`
+        cpnd = Compound({'meh':'buh'}, blee = 1)
+        self.assertTrue(cpnd.meh == 'buh')
+        self.assertTrue(cpnd.blee == 1)        
         
     def test03(self):
-        cpnd = Compound(experiment = standards1['stdA'][0], qa = {})
+        cpnd = Compound(expt_stda[0])
         self.assertTrue(cpnd.COMPOUND_id == 1)
-        self.assertTrue(cpnd.COMPOUND_name == 'Morphine')        
+        self.assertTrue(cpnd.COMPOUND_name == 'Morphine')
 
     def test04(self):
-        experiment = standards1['stdA'][0]
-        #pprint.pprint(qadata)
-        
-        cpnd = Compound(experiment = standards1['stdA'][0], qa = {})
+        data = expt_stda[0]
+        cpnd = Compound(data, **qadata[data['COMPOUND_id']])
         self.assertTrue(cpnd.COMPOUND_id == 1)
-        self.assertTrue(cpnd.COMPOUND_name == 'Morphine')        
+        self.assertTrue(cpnd.COMPOUND_name == 'Morphine')
+        self.assertTrue(cpnd.qa_id == 1)
+        self.assertTrue(cpnd.qa_compound == 'Morphine')
         

@@ -1,34 +1,27 @@
 from itertools import chain
 
-# a=x10, b=spike_x10, c=straight, d=spiked
-SAMPLE_NAMES = ['straight10','spiked10','straight','spiked']
-
 class Compound(object):
     """
     Container class for a compound plus QA values.
     """
-
-    defaults = (
-        ('COMPOUND_id', 0),
-        ('COMPOUND_name', 'undefined')
-        )
     
-    def __init__(self, experiment = None, qa = None):        
-
-        experiment = experiment or {}
-        qa = qa or {}
-
-        for k,v in Compound.defaults:
-            setattr(self, k, v)
+    def __init__(self, experiment, **kwargs):                
+        self.__dict__ = dict(chain(*[experiment.items(), kwargs.items()]))
         
-        for k,v in chain.from_iterable([qa.items(), experiment.items()]):
-            setattr(self, k, v)
+    def __repr__(self):
+        """
+        Uses any attributes starting with COMPOUND to identify
+        instance.
+        """
 
-    def __getitem__(self, key):
-        return getattr(self, key)
+        tag = 'COMPOUND_'
+        attrs = [(attr.replace(tag, ''), getattr(self, attr)) \
+                     for attr in dir(self) if attr.startswith(tag)]
         
-    def __repr__(self, ):
-        return '<Compound "%(COMPOUND_name)s" id=%(COMPOUND_id)s>' % self
+        return '<Compound %s>' % ' '.join('%s = %s' % attr for attr in attrs)
+
+    def items(self):
+        return self.__dict__.items()
         
 class Sample(object):
     """
@@ -39,7 +32,7 @@ class Sample(object):
     `samples`; each element in `samples` will be defined as an
     attribute of `self`, as will any additional samples provided in
     `**kargs`. Each element of `samples` (and each value in
-    `**kwargs`) is a dict that will be used to initialize an onject of
+    `**kwargs`) is a dict that will be used to initialize an object of
     class `Compound`.
     """
 
