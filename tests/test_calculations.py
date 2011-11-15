@@ -10,10 +10,10 @@ import pprint
 import json
 log = logging.getLogger(__name__)
 
-from opiate.calculations import calculate, all_checks
+from opiate.calculations import perform_qa, all_checks
 from opiate.containers import Compound
-from opiate.parsers import qa_from_csv
-from opiate import qafile
+from opiate.parsers import qa_from_csv, read_matrix
+from opiate import qafile, matrix_file
 
 import __init__ as config
 
@@ -23,9 +23,12 @@ qadata = qa_from_csv(qafile)
 
 with open('testfiles/oct24.json') as f:
     standards, sample_groups = json.load(f)
+
+matrix = read_matrix(matrix_file)
+
 expt_stda = standards['stdA']
 
-class TestCalculate(unittest.TestCase):
+class TestPerformQA(unittest.TestCase):
 
     def setUp(self):
         self.funcname = '_'.join(self.id().split('.')[-2:])
@@ -34,21 +37,11 @@ class TestCalculate(unittest.TestCase):
         pass
     
     def test01(self):
-        retvals = calculate(tests = ['_check_true'],
-                            sample = sample_groups['A00001'][0],
-                            qadata = qadata                  
-                            )
+        retvals = perform_qa(sample = standards['stdA'],
+                             qadata = qadata,
+                             matrix = matrix
+                             )
 
-        self.assertTrue(all, [x[0] for x in retvals])
-
-    def test02(self):
-        checks = all_checks.keys()
-        retvals = calculate(tests = checks,
-                            sample = sample_groups['A00001'][0],
-                            qadata = qadata                  
-                            )
-        self.assertEqual(len(retvals), len(checks) * len(sample_groups['A00001'][0]))
-
-    def test03(self):
-        self.assertEqual(len(all_checks), 7)
+        for r in retvals:
+            print r
         

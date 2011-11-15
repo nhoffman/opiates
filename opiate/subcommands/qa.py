@@ -8,9 +8,11 @@ import logging
 import pprint
 import sys
 import xml.etree.ElementTree
+import inspect
 
-from opiate import qafile
+from opiate import qafile, CONTROL_NAMES
 from opiate.parsers import qa_from_csv
+from opiate.calculations import all_checks
 
 log = logging.getLogger(__name__)
 
@@ -23,7 +25,15 @@ def build_parser(parser):
                         action = 'store_true', default = False)
     parser.add_argument('-r','--variables', help='print variable names (headers in QA file)',
                         action = 'store_true', default = False)
+    parser.add_argument('-c','--list-calculations', help='list names of calculations',
+                        action = 'store_true', default = False)
+    parser.add_argument('-s','--show-calculation', help='show a functions implementing a calculation specified by NAME',
+                        metavar = 'NAME', default = False)
+    parser.add_argument('-C','--controls', help='list sample id and name of control samples',
+                        action = 'store_true', default = False)
 
+    
+    
 def action(args):
     qadata = qa_from_csv(qafile)
     
@@ -43,7 +53,16 @@ def action(args):
         except KeyError:
             print('"%s" is not a valid compound id; try listing compounds using the "-n/--names" option' % args.compound_id)
             sys.exit(1)
-            
+    elif args.list_calculations:
+        for name, d in all_checks.items():
+            print '%-20s %s' % (name, d['description'])
+    elif args.show_calculation:
+        fun = all_checks[args.show_calculation]['function']
+        print ''.join(inspect.getsourcelines(fun)[0])
+    elif args.controls:
+        for row in CONTROL_NAMES:
+            print '%s\t%s' % row
+        
 if __name__ == '__main__':
     main()
     

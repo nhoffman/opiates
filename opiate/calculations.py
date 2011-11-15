@@ -21,15 +21,20 @@ def check_stda_signoise(cmpnd):
     Std A S/N test
 
     Compare Drug S/N with Drug QA S/N    
-    """
 
-    cmpnd.PEAK_signoise > cmpnd.signoise_stda
+    Should never return None.
+    """
+    
+    retval = cmpnd.PEAK_signoise > cmpnd.signoise_stda
+    return retval
     
 def check_amr(cmpnd):
     """
     AMR Test
 
     Compare Drug Concentration with Drug QA Concentration Range
+
+    Return None if cmpnd.PEAK_analconc is None or 0
     """    
     
     retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
@@ -40,6 +45,8 @@ def check_rrt(cmpnd):
     RRT test
 
     Compare Drug Relative Retention Time with Relative Retention Time QA
+
+    Return None if cmpnd.PEAK_foundrrt is None
     """
 
     retval = cmpnd.rel_reten_low <= cmpnd.PEAK_foundrrt <= cmpnd.rel_reten_high
@@ -50,6 +57,8 @@ def check_signoise(cmpnd):
     S/N test
 
     Compare Drug signal to noise (S/N) ratio with QA Range    
+
+    Return None if cmpnd.PEAK_signoise is None.
     """
 
     retval = cmpnd.PEAK_signoise > cmpnd.signoise
@@ -61,6 +70,8 @@ def check_ion_rato(cmpnd):
 
     Compare Drug Ion Ratio (Quatifying Peak Area/ Qualifying Peak
     Area) to a QA range. If the denominator is zero, return None.
+
+    Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
     """
 
     try:
@@ -85,27 +96,30 @@ def check_spike(cmpnd):
     """
     Spike Test
 
-    Compare and report metabolites that have no deuterated internal standard
+    Compare and report metabolites that have no deuterated internal standard.
 
     Somone will need to clarify this one.
     """
 
     return None
     
-def calculate(tests, sample, qadata):
+def perform_qa(sample, qadata, matrix):
     """
-    * tests - list of function names to apply
-    * samples - a list of dicts containing experimental results
     * qadata - dict containing QA values for each compound
+    * sample - a list of dicts, each containing experimental
+      results for a compound
+    * matrix - dict with keys (sample_id, compound_id) returning a
+      set of calculation names.
     """
-
-    results = []
-    for compound in sample:
+    
+    results = {}
+    for compound in sample:        
+        sample_id = compound['SAMPLE_id']
         compound_id = compound['COMPOUND_id']
-        qa = qadata[compound_id]
-        for testname in tests:
-            fun = globals()[testname]
-            retval = fun(Compound(compound, **qa))
+        cmpnd = Compound(compound, **qadata[compound_id])
+
+        for testname in matrix.get((sample_id, compound_id), []):
+            retval = globals()[testname](cmpnd)
             results.append((compound_id, testname, retval))
 
     return results
@@ -113,5 +127,5 @@ def calculate(tests, sample, qadata):
 def description(fun):
     return fun.__doc__.strip().split('\n', 1)[0]
 
-all_checks = dict((name, description(fun)) for name, fun in globals().items() if name.startswith('check_'))
+all_checks = dict((name, {'description': description(fun), 'function': fun}) for name, fun in globals().items() if name.startswith('check_'))
 

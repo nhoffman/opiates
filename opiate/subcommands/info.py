@@ -16,7 +16,6 @@ def build_parser(parser):
                         action = 'store_true', default = False)
     parser.add_argument('-c','--compounds', help='list id and name of each compound',
                         action = 'store_true', default = False)
-
     
 def action(args):
 
