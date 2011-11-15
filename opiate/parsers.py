@@ -127,7 +127,7 @@ def parse_sample(sample, compound_ids = None):
 def get_rows(infile):
 
     qadata = qa_from_csv(qafile)    
-    compound_ids = [d['id'] for d in qadata.values()]
+    compound_ids = [d['qa_id'] for d in qadata.values()]
 
     tree = xml.etree.ElementTree.ElementTree(file=infile)
     sample_elems = tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')
