@@ -7,8 +7,6 @@ log = logging.getLogger(__name__)
 from __init__ import SAMPLE_NAMES
 from containers import Compound
 
-#matrix = 
-
 def _check_true(cmpnd):
     return True
 
@@ -112,5 +110,8 @@ def calculate(tests, sample, qadata):
 
     return results
 
-all_checks = dict((name,fun) for name, fun in globals().items() if name.startswith('check_'))
+def description(fun):
+    return fun.__doc__.strip().split('\n', 1)[0]
+
+all_checks = dict((name, description(fun)) for name, fun in globals().items() if name.startswith('check_'))
 

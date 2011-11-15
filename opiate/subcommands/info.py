@@ -30,7 +30,8 @@ def action(args):
         d = OrderedDict((row['COMPOUND_id'], row['COMPOUND_name']) for row in rows)
         for i, desc in d.items():
             print i, desc
-        
+    else:
+        print 'Found %s samples' % len(set(row['SAMPLE_id'] for row in rows))
 
 if __name__ == '__main__':
     main()

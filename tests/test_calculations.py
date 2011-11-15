@@ -48,3 +48,7 @@ class TestCalculate(unittest.TestCase):
                             qadata = qadata                  
                             )
         self.assertEqual(len(retvals), len(checks) * len(sample_groups['A00001'][0]))
+
+    def test03(self):
+        self.assertEqual(len(all_checks), 7)
+        
