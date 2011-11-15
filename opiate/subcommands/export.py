@@ -6,7 +6,8 @@ import json
 import logging
 import xml.etree.ElementTree
 
-from opiate.parsers import sample_attrs, get_rows, group_samples
+from opiate import SAMPLE_ATTRS
+from opiate.parsers import get_rows, group_samples
 
 log = logging.getLogger(__name__)
 
@@ -30,7 +31,7 @@ def action(args):
 
     with open(outfile,'w') as f:
         if format == 'csv':
-            headers, _ = zip(*sample_attrs)
+            headers, _ = zip(*SAMPLE_ATTRS)
             rows = get_rows(args.infile)
             writer = csv.DictWriter(f, fieldnames = headers, quoting = csv.QUOTE_NONNUMERIC)
             writer.writerow({k:k for k in headers})
