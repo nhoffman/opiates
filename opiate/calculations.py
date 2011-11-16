@@ -103,24 +103,31 @@ def check_spike(cmpnd):
 
     return None
     
-def perform_qa(sample, qadata, matrix):
+def perform_qa(sample, qadata, matrix = None):
     """
     * qadata - dict containing QA values for each compound
     * sample - a list of dicts, each containing experimental
       results for a compound
     * matrix - dict with keys (sample_id, compound_id) returning a
-      set of calculation names.
+      set of calculation names. If None, apply all calculations defined in `calculations.all_checks`.
     """
     
-    results = {}
+    results = []
     for compound in sample:        
-        sample_id = compound['SAMPLE_id']
+        # 'sample_prep' is added by `parsers.group_specimens()` - is
+        # this value is defined, use it in place of SAMPLE_id
+        sample_id = compound.get('sample_prep') or compound['SAMPLE_id']
         compound_id = compound['COMPOUND_id']
         cmpnd = Compound(compound, **qadata[compound_id])
 
-        for testname in matrix.get((sample_id, compound_id), []):
+        if matrix:
+            testnames = matrix.get((sample_id, compound_id), [])
+        else:
+            testnames = all_checks.keys()
+            
+        for testname in testnames:
             retval = globals()[testname](cmpnd)
-            results.append((compound_id, testname, retval))
+            results.append((cmpnd, testname, retval))
 
     return results
 
