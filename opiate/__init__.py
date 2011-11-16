@@ -10,7 +10,7 @@ __version__ = "0.1"
 __version_info__ = tuple([_safeint(num) for num in __version__.split('.')])
 
 qafile = path.join(path.dirname(__file__), 'data', 'qa.csv')
-matrix_file = path.join(path.dirname(__file__), 'data', 'control_matrix.csv')
+matrix_file = path.join(path.dirname(__file__), 'data', 'matrix.csv')
 
 # a=x10, b=spike_x10, c=straight, d=spiked
 SAMPLE_NAMES = ['straight10','spiked10','straight','spiked']
