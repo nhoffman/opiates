@@ -30,15 +30,31 @@ def check_stda_signoise(cmpnd):
     
 def check_amr(cmpnd):
     """
-    AMR Test
+    Check AMR
 
     Compare Drug Concentration with Drug QA Concentration Range
 
     Return None if cmpnd.PEAK_analconc is None or 0
     """    
-    
-    retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
-    return retval
+
+    if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
+        return None
+    else:
+        return  cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
+
+def check_amr_low(cmpnd):
+    """
+    AMR Lower Limit
+
+    Compare Drug Concentration with lower limit of Drug QA Concentration Range
+
+    Return None if cmpnd.PEAK_analconc is None or 0
+    """    
+
+    if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
+        return None
+    else:
+        return  cmpnd.amr_low <= cmpnd.PEAK_analconc
 
 def check_rrt(cmpnd):
     """
@@ -49,8 +65,10 @@ def check_rrt(cmpnd):
     Return None if cmpnd.PEAK_foundrrt is None
     """
 
-    retval = cmpnd.rel_reten_low <= cmpnd.PEAK_foundrrt <= cmpnd.rel_reten_high
-    return retval
+    if cmpnd.PEAK_foundrrt is None:
+        return None
+    else:
+        return cmpnd.rel_reten_low <= cmpnd.PEAK_foundrrt <= cmpnd.rel_reten_high
 
 def check_signoise(cmpnd):
     """

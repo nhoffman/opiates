@@ -22,7 +22,7 @@ def display_qa_results(results, show_all = False):
     show = (lambda x: True) if show_all else (lambda x: x is False)
 
     for sample_id, sample_group in groupby(results, lambda r: r[0].SAMPLE_id):
-        print 'Sample', sample_id, controls.get(sample_id)
+        print 'Sample', sample_id, controls.get(sample_id, '')
         for cmpnd_id_and_name, compound_group in groupby(sample_group, lambda r: (r[0].COMPOUND_id, r[0].COMPOUND_name)):
             compound_group = list(compound_group)
             if any(show(r[-1]) for r in compound_group):
