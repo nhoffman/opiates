@@ -1,4 +1,4 @@
-"""Show predefined QA values."""
+"""Show predefined QA values and other configuration details."""
 
 from collections import OrderedDict
 from itertools import chain

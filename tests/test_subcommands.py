@@ -8,7 +8,7 @@ import logging
 import pprint
 import sys
 
-from opiate.subcommands.qa import action as qa_action
+from opiate.subcommands.config import action as config_action
 from opiate.subcommands.info import action as info_action
 
 import __init__ as config
@@ -34,20 +34,20 @@ class TestQA(unittest.TestCase):
         pass
 
     def test01(self):
-        qa_action(Args())
+        config_action(Args())
 
     def test02(self):
-        qa_action(Args(names = True))
+        config_action(Args(names = True))
 
     def test03(self):
-        qa_action(Args(qa_file = True))
+        config_action(Args(qa_file = True))
 
     def test04(self):
-        qa_action(Args(variables = True))
+        config_action(Args(variables = True))
 
     def test05(self):
-        qa_action(Args(compound_id = 1))
-        qa_action(Args(compound_id = 21))
+        config_action(Args(compound_id = 1))
+        config_action(Args(compound_id = 21))
         
 class TestInfo(unittest.TestCase):
 

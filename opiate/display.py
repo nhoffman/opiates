@@ -15,7 +15,7 @@ def list_grouped_samples(controls, sample_groups):
 
 def display_qa_results(results, show_all = False):
 
-    outcomes = {True: 'pass', False: '*FAIL*', None: 'not performed'}
+    outcomes = {True: 'pass', False: '* FAIL *', None: 'not performed'}
 
     show = (lambda x: True) if show_all else (lambda x: x is False)
     
