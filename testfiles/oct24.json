@@ -3639,6 +3639,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 15769.959, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0140999556, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 5916.838, 
@@ -3651,6 +3652,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 78824.227, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3663,6 +3665,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 33019.902, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3675,6 +3678,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 15786.593, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3687,6 +3691,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 45439.129, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3699,6 +3704,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 67202.391, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3711,6 +3717,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 37542.051, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3723,6 +3730,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 2085.867, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0059000254, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3735,6 +3743,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 243496.875, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3747,6 +3756,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 186279.5, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3759,6 +3769,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 54368.449, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3771,6 +3782,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 8808.183, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3783,6 +3795,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 108689.922, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3795,6 +3808,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 97438.141, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 37690.02, 
@@ -3807,6 +3821,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 9485.473, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0025999546, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 14653.604, 
@@ -3819,6 +3834,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 18892.332, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0101000071, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 7550.374, 
@@ -3831,6 +3847,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 18892.332, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.823300004, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 632.018, 
@@ -3843,6 +3860,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 3845.854, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3855,6 +3873,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 25803.982, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0010000467, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3867,6 +3886,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 2085.867, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -3881,6 +3901,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 15957.378, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0120999813, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 23613.982, 
@@ -3893,6 +3914,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 78604.648, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 93795.281, 
@@ -3905,6 +3927,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 32063.264, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 23155.295, 
@@ -3917,6 +3940,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 16094.462, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0082000494, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 12279.898, 
@@ -3929,6 +3953,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 46783.762, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.00849998, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 259702.797, 
@@ -3941,6 +3966,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 72651.547, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0027999878, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 34613.609, 
@@ -3953,6 +3979,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 41697.023, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0048999786, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 42083.188, 
@@ -3965,6 +3992,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 126937.766, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0011999607, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 21834.512, 
@@ -3977,6 +4005,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 256240.141, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 104965.109, 
@@ -3989,6 +4018,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 202571.344, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 214277.703, 
@@ -4001,6 +4031,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 58138.414, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 14245.584, 
@@ -4013,6 +4044,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 8090.703, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 17657.896, 
@@ -4025,6 +4057,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 117242.617, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0010999441, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 127230.883, 
@@ -4037,6 +4070,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 101841.883, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 575972.313, 
@@ -4049,6 +4083,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 9422.839, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025999546, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 14117.816, 
@@ -4061,6 +4096,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 19085.521, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0080000162, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 8804.49, 
@@ -4073,6 +4109,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 19085.521, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.8205000162, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 4494.845, 
@@ -4085,6 +4122,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 3866.842, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9993000031, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 886.608, 
@@ -4097,6 +4135,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 26464.844, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 3257.687, 
@@ -4109,6 +4148,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 126937.766, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9896000028, 
                     "SAMPLE_desc": "A00001 b", 
                     "CONFIRMATIONIONPEAK1_area": 1245.373, 
@@ -4123,6 +4163,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 25281.332, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0145000219, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 110288.039, 
@@ -4135,6 +4176,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 127294.297, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4147,6 +4189,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 78052.352, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 4121.31, 
@@ -4159,6 +4202,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 15339.291, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4171,6 +4215,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 68447.516, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4183,6 +4228,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 109970.531, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.004799962, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 486.227, 
@@ -4195,6 +4241,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 79761.82, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4207,6 +4254,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 173304.125, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9781000018, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4219,6 +4267,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 297461.25, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4231,6 +4280,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 162748.547, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4243,6 +4293,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 77817.063, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4255,6 +4306,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 9643.941, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4267,6 +4319,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 140896.547, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0010999441, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 266.327, 
@@ -4279,6 +4332,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 111792.781, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0011999607, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 7746.075, 
@@ -4291,6 +4345,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 20707.354, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 218023.125, 
@@ -4303,6 +4358,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 29504.762, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0078999996, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 127519.125, 
@@ -4315,6 +4371,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 29504.762, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.8230000138, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 13523.589, 
@@ -4327,6 +4384,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5414.466, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0089000463, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 99.578, 
@@ -4339,6 +4397,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 39448.77, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 61.937, 
@@ -4351,6 +4410,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 173304.125, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00001 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4365,6 +4425,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 25533.373, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0110000372, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 130021.75, 
@@ -4377,6 +4438,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 123184.398, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0104000568, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 147969.641, 
@@ -4389,6 +4451,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 76121.391, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 55988.23, 
@@ -4401,6 +4464,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 15989.405, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0055999756, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 12284.364, 
@@ -4413,6 +4477,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 69669.219, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.010800004, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 376308.531, 
@@ -4425,6 +4490,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 110264.164, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 52433.199, 
@@ -4437,6 +4503,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 80690.672, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0039000511, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 77498.391, 
@@ -4449,6 +4516,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 174158.859, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.002300024, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 29149.299, 
@@ -4461,6 +4529,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 305965.219, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 110662.828, 
@@ -4473,6 +4542,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 165941.75, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 174218.641, 
@@ -4485,6 +4555,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 81218.344, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 28631.643, 
@@ -4497,6 +4568,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 10813.026, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 19574.582, 
@@ -4509,6 +4581,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 140117.938, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 149764.734, 
@@ -4521,6 +4594,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 111892.391, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0011999607, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 631218.438, 
@@ -4533,6 +4607,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 20697.352, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 203823.641, 
@@ -4545,6 +4620,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 28518.863, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0078999996, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 122029.727, 
@@ -4557,6 +4633,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 28518.863, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.8270999789, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 17112.031, 
@@ -4569,6 +4646,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5227.992, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0025999546, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 1123.964, 
@@ -4581,6 +4659,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 39366.457, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 4767.28, 
@@ -4593,6 +4672,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 174158.859, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9912999868, 
                     "SAMPLE_desc": "A00001 d", 
                     "CONFIRMATIONIONPEAK1_area": 1721.223, 
@@ -4609,6 +4689,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 13244.759, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0119999647, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 17612.094, 
@@ -4621,6 +4702,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 51276.309, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4633,6 +4715,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 19472.793, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0032000542, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 1763.941, 
@@ -4645,6 +4728,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 17616.441, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4657,6 +4741,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 42820.605, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4669,6 +4754,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 73156.898, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 113217.875, 
@@ -4681,6 +4767,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 40587.723, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4693,6 +4780,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 1836.274, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0052000284, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4705,6 +4793,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 250348.313, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4717,6 +4806,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 215285.188, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4729,6 +4819,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 58080.352, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4741,6 +4832,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 9608.259, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4753,6 +4845,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 115041.719, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4765,6 +4858,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 106868.766, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0038000345, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 3344.217, 
@@ -4777,6 +4871,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 9968.836, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 31926.777, 
@@ -4789,6 +4884,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 13354.509, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0058000088, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 14176.499, 
@@ -4801,6 +4897,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 13354.509, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.8299000263, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 13628.626, 
@@ -4813,6 +4910,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 3438.413, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9993000031, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 295.089, 
@@ -4825,6 +4923,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 75399.164, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0070999861, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 890.549, 
@@ -4837,6 +4936,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 1836.274, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -4851,6 +4951,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 13878.809, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0088000298, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 33563.277, 
@@ -4863,6 +4964,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 52776.227, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0052000284, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 50065.277, 
@@ -4875,6 +4977,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 20798.584, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.002300024, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 15984.445, 
@@ -4887,6 +4990,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 17661.789, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0075000525, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 12339.164, 
@@ -4899,6 +5003,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 44111.98, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.00849998, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 236681.625, 
@@ -4911,6 +5016,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 73273.344, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 139898.438, 
@@ -4923,6 +5029,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 43137.496, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0059000254, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 39935.691, 
@@ -4935,6 +5042,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 121243.602, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0019999743, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 20826.102, 
@@ -4947,6 +5055,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 252935.078, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 97973.336, 
@@ -4959,6 +5068,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 216720.063, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 212875.313, 
@@ -4971,6 +5081,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 59348.883, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 12986.353, 
@@ -4983,6 +5094,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 9835.441, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 17369.881, 
@@ -4995,6 +5107,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 120518.266, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0010999441, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 121052.656, 
@@ -5007,6 +5120,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 107618.211, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 560113.375, 
@@ -5019,6 +5133,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 9717.811, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 30940.627, 
@@ -5031,6 +5146,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 13698.651, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0078999996, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 15316.516, 
@@ -5043,6 +5159,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 13698.651, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.8321999907, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 16840.189, 
@@ -5055,6 +5172,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 3792.846, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 925.463, 
@@ -5067,6 +5185,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 73175.141, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0070999861, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 3431.559, 
@@ -5079,6 +5198,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 121243.602, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.991599977, 
                     "SAMPLE_desc": "A00002 b", 
                     "CONFIRMATIONIONPEAK1_area": 1218.221, 
@@ -5093,6 +5213,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 0.0, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5105,6 +5226,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 0.0, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5117,6 +5239,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 9248.407, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.002300024, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 9920.058, 
@@ -5129,6 +5252,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 9456.865, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0042999983, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 819.382, 
@@ -5141,6 +5265,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 26349.102, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5153,6 +5278,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 37534.043, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0026999712, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 648015.25, 
@@ -5165,6 +5291,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 15686.557, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5177,6 +5304,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 77858.438, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9700999856, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5189,6 +5317,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 167369.031, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9972000122, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 318.12, 
@@ -5201,6 +5330,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 163578.922, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5213,6 +5343,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 51216.27, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5225,6 +5356,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 8902.084, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5237,6 +5369,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 93180.594, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9972000122, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 1498.644, 
@@ -5249,6 +5382,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 97605.203, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0069999695, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 3531.446, 
@@ -5261,6 +5395,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 16548.992, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 220027.172, 
@@ -5273,6 +5408,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 11115.551, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9643999934, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 492.83, 
@@ -5285,6 +5421,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 11115.551, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5297,6 +5434,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 1824.31, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0118999481, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 589.49, 
@@ -5309,6 +5447,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 279308.0, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0119999647, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 5327.29, 
@@ -5321,6 +5460,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 77858.438, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5335,6 +5475,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 0.0, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5347,6 +5488,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 0.0, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5359,6 +5501,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 9836.732, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.002300024, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 16369.907, 
@@ -5371,6 +5514,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 10017.939, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0073000193, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 6904.219, 
@@ -5383,6 +5527,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 28655.801, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0082999468, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 145611.688, 
@@ -5395,6 +5540,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 38889.582, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0037000179, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 644286.75, 
@@ -5407,6 +5553,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 17335.387, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.004799962, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 16672.488, 
@@ -5419,6 +5566,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 84352.953, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0019999743, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 12820.139, 
@@ -5431,6 +5579,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 174258.906, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 67780.281, 
@@ -5443,6 +5592,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 168242.859, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 159946.094, 
@@ -5455,6 +5605,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 52337.23, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0018999577, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 10193.029, 
@@ -5467,6 +5618,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 9163.168, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 16210.533, 
@@ -5479,6 +5631,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 98557.273, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0010999441, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 97319.477, 
@@ -5491,6 +5644,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 101076.961, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0011999607, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 541181.0, 
@@ -5503,6 +5657,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 18598.854, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9994000196, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 225239.844, 
@@ -5515,6 +5670,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 10436.117, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9649000168, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 493.543, 
@@ -5527,6 +5683,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 10436.117, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5539,6 +5696,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 2884.26, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0305999517, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 1299.042, 
@@ -5551,6 +5709,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 274000.719, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0106999874, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 6450.445, 
@@ -5563,6 +5722,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 84352.953, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9893000126, 
                     "SAMPLE_desc": "A00002 d", 
                     "CONFIRMATIONIONPEAK1_area": 891.831, 
@@ -5579,6 +5739,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 14597.338, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0105999708, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 13696.338, 
@@ -5591,6 +5752,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 64401.098, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5603,6 +5765,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 29837.914, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0451999903, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5615,6 +5778,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 18561.053, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0127999783, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 1327.126, 
@@ -5627,6 +5791,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 44133.48, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0085999966, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 412364.469, 
@@ -5639,6 +5804,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 72820.172, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5651,6 +5817,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 41649.781, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5663,6 +5830,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 115806.273, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9775999784, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5675,6 +5843,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 253115.109, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5687,6 +5856,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 216361.359, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5699,6 +5869,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 53664.145, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5711,6 +5882,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 10432.312, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5723,6 +5895,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 117830.711, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5735,6 +5908,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 103575.5, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0044000149, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 2459.124, 
@@ -5747,6 +5921,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 9297.27, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 21448.074, 
@@ -5759,6 +5934,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 15137.1, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0078999996, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 9241.455, 
@@ -5771,6 +5947,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 15137.1, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.8414999843, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 909.997, 
@@ -5783,6 +5960,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 3870.744, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 2327.414, 
@@ -5795,6 +5973,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 23771.184, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9779999852, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 657.466, 
@@ -5807,6 +5986,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 115806.273, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -5821,6 +6001,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 15742.745, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0140999556, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 30182.959, 
@@ -5833,6 +6014,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 77637.93, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0089000463, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 88209.688, 
@@ -5845,6 +6027,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 32031.602, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 23456.869, 
@@ -5857,6 +6040,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 20078.535, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0067000389, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 15687.057, 
@@ -5869,6 +6053,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 46258.09, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0096999407, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 647850.688, 
@@ -5881,6 +6066,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 78997.922, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 37673.91, 
@@ -5893,6 +6079,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 44026.59, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0059000254, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 43890.281, 
@@ -5905,6 +6092,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 1353.281, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0303000212, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 22288.006, 
@@ -5917,6 +6105,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 274834.656, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 110175.078, 
@@ -5929,6 +6118,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 233064.188, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 237902.219, 
@@ -5941,6 +6131,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 59780.797, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 13779.014, 
@@ -5953,6 +6144,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 9835.139, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 18941.85, 
@@ -5965,6 +6157,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 125903.883, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0010999441, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 134409.25, 
@@ -5977,6 +6170,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 110011.297, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 602959.75, 
@@ -5989,6 +6183,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 10042.868, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0089000463, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 20272.273, 
@@ -6001,6 +6196,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 17483.604, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0120999813, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 10944.053, 
@@ -6013,6 +6209,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 17483.604, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.8323000073, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 4337.957, 
@@ -6025,6 +6222,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 4379.441, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025999546, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 3526.121, 
@@ -6037,6 +6235,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 25607.615, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 3680.552, 
@@ -6049,6 +6248,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 1353.281, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0190999508, 
                     "SAMPLE_desc": "A00003 b", 
                     "CONFIRMATIONIONPEAK1_area": 1283.862, 
@@ -6063,6 +6263,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 15874.375, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0151000023, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 152733.531, 
@@ -6075,6 +6276,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 74218.313, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0039000511, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 25670.039, 
@@ -6087,6 +6289,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 26192.037, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0024000406, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 2074.306, 
@@ -6099,6 +6302,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 21068.361, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0120999813, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 16092.071, 
@@ -6111,6 +6315,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 53397.711, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0104000568, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 4931409.0, 
@@ -6123,6 +6328,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 97698.297, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6135,6 +6341,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 58329.145, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6147,6 +6354,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 153417.391, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9782000184, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6159,6 +6367,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 335357.25, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6171,6 +6380,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 284630.0, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6183,6 +6393,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 62701.32, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6195,6 +6406,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 11895.144, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6207,6 +6419,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 147166.234, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0082999468, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 719.571, 
@@ -6219,6 +6432,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 119346.922, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0018999577, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 2101.217, 
@@ -6231,6 +6445,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 18638.887, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 251906.109, 
@@ -6243,6 +6458,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 18181.799, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0099999905, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 107076.609, 
@@ -6255,6 +6471,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 18181.799, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.8314999938, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 10624.583, 
@@ -6267,6 +6484,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 7483.706, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9962000251, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 33121.348, 
@@ -6279,6 +6497,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 23318.857, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9937000275, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 691.714, 
@@ -6291,6 +6510,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 153417.391, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00003 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6305,6 +6525,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 15669.959, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0120999813, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 162744.984, 
@@ -6317,6 +6538,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 74550.227, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0082000494, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 124766.609, 
@@ -6329,6 +6551,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 28857.4, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 22397.432, 
@@ -6341,6 +6564,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 21059.58, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0059000254, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 28606.553, 
@@ -6353,6 +6577,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 53404.523, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.00849998, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 4927644.5, 
@@ -6365,6 +6590,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 101055.703, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 47778.508, 
@@ -6377,6 +6603,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 58437.449, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0059000254, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 57975.801, 
@@ -6389,6 +6616,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 151211.578, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 26865.49, 
@@ -6401,6 +6629,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 333364.0, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 138460.781, 
@@ -6413,6 +6642,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 281817.813, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 293214.281, 
@@ -6425,6 +6655,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 65105.754, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 14746.73, 
@@ -6437,6 +6668,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 10511.077, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 21287.52, 
@@ -6449,6 +6681,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 148877.844, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 159363.438, 
@@ -6461,6 +6694,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 121741.258, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 693296.813, 
@@ -6473,6 +6707,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 18011.479, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0025999546, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 239716.656, 
@@ -6485,6 +6720,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 18378.344, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0037000179, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 100993.414, 
@@ -6497,6 +6733,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 18378.344, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.825699985, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 13394.415, 
@@ -6509,6 +6746,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 6355.981, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9994000196, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 33430.148, 
@@ -6521,6 +6759,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 23683.58, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9962000251, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 2309.197, 
@@ -6533,6 +6772,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 151211.578, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9912999868, 
                     "SAMPLE_desc": "A00003 d", 
                     "CONFIRMATIONIONPEAK1_area": 1788.375, 
@@ -6549,6 +6789,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 20113.326, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6561,6 +6802,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 88579.078, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6573,6 +6815,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 44241.684, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0024000406, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6585,6 +6828,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 24158.43, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6597,6 +6841,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 56156.012, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6609,6 +6854,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 93807.641, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 37933.441, 
@@ -6621,6 +6867,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 56487.875, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6633,6 +6880,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 1316.204, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0032000542, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6645,6 +6893,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 337361.406, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6657,6 +6906,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 276048.75, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6669,6 +6919,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 71581.758, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6681,6 +6932,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 12584.577, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6693,6 +6945,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 130944.805, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6705,6 +6958,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 101731.898, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0011999607, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 9344599.0, 
@@ -6717,6 +6971,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 13109.251, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6729,6 +6984,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 20745.998, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6741,6 +6997,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 20745.998, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.8330000043, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6753,6 +7010,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5259.494, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6765,6 +7023,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 37188.559, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0010000467, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6777,6 +7036,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 1316.204, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6791,6 +7051,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 20355.057, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0095000267, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 20717.262, 
@@ -6803,6 +7064,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 92758.711, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0082999468, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 86375.125, 
@@ -6815,6 +7077,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 45927.355, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 29019.115, 
@@ -6827,6 +7090,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 24346.166, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0044000149, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 15512.878, 
@@ -6839,6 +7103,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 56250.281, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0096000433, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 283458.938, 
@@ -6851,6 +7116,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 95365.477, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 77033.227, 
@@ -6863,6 +7129,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 56491.59, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0048999786, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 50201.965, 
@@ -6875,6 +7142,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 149188.859, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 23973.129, 
@@ -6887,6 +7155,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 339686.563, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 124869.773, 
@@ -6899,6 +7168,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 283142.375, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 257854.313, 
@@ -6911,6 +7181,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 76037.906, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017000437, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -6923,6 +7194,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 13645.956, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 20912.154, 
@@ -6935,6 +7207,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 141739.797, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 129019.516, 
@@ -6947,6 +7220,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 105627.086, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 9372875.0, 
@@ -6959,6 +7233,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 12569.172, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025999546, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 785.168, 
@@ -6971,6 +7246,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 22163.588, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0102000237, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 1279.353, 
@@ -6983,6 +7259,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 22163.588, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.8393999934, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 4760.843, 
@@ -6995,6 +7272,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5321.797, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 1107.396, 
@@ -7007,6 +7285,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 37796.457, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0022000074, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 3203.714, 
@@ -7019,6 +7298,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 149188.859, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9912999868, 
                     "SAMPLE_desc": "A00004 b", 
                     "CONFIRMATIONIONPEAK1_area": 1337.652, 
@@ -7033,6 +7313,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 22037.615, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7045,6 +7326,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 106102.031, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7057,6 +7339,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 48861.266, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0006999969, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 6736.625, 
@@ -7069,6 +7352,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 22559.375, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7081,6 +7365,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 65570.313, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7093,6 +7378,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 125258.813, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 553490.688, 
@@ -7105,6 +7391,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 81077.891, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7117,6 +7404,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 117981.695, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7129,6 +7417,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 471277.906, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7141,6 +7430,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 377857.313, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7153,6 +7443,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 97454.461, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7165,6 +7456,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 15876.462, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7177,6 +7469,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 46862.477, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0116000175, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 897.869, 
@@ -7189,6 +7482,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 58089.641, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 27267004.0, 
@@ -7201,6 +7495,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 16345.354, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7213,6 +7508,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 19562.525, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7225,6 +7521,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 19562.525, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.8334000111, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 7069.737, 
@@ -7237,6 +7534,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 6208.318, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7249,6 +7547,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 61536.109, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0058000088, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 455.696, 
@@ -7261,6 +7560,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 117981.695, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00004 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7275,6 +7575,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 22206.236, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0154999495, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 25633.854, 
@@ -7287,6 +7588,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 105574.148, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0068999529, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 154679.172, 
@@ -7299,6 +7601,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 53447.871, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 42689.09, 
@@ -7311,6 +7614,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 23197.219, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0045000315, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 15627.317, 
@@ -7323,6 +7627,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 69376.555, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0068999529, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 384174.5, 
@@ -7335,6 +7640,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 137698.469, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 581637.688, 
@@ -7347,6 +7653,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 81681.828, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0048999786, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 78045.313, 
@@ -7359,6 +7666,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 126034.656, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.002300024, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 22494.646, 
@@ -7371,6 +7679,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 481939.781, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 191001.547, 
@@ -7383,6 +7692,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 385291.688, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 385192.125, 
@@ -7395,6 +7705,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 130361.633, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0006999969, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 34321.605, 
@@ -7407,6 +7718,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 14708.142, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 29881.512, 
@@ -7419,6 +7731,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 44040.715, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 38032.668, 
@@ -7431,6 +7744,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 69338.531, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 27639778.0, 
@@ -7443,6 +7757,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 16461.736, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 1008.542, 
@@ -7455,6 +7770,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 17748.221, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0059000254, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 1927.104, 
@@ -7467,6 +7783,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 17748.221, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.8313000202, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 11064.38, 
@@ -7479,6 +7796,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 6168.151, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 1350.185, 
@@ -7491,6 +7809,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 59945.738, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0033999681, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 3122.02, 
@@ -7503,6 +7822,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 126034.656, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9883000255, 
                     "SAMPLE_desc": "A00004 d", 
                     "CONFIRMATIONIONPEAK1_area": 1488.419, 
@@ -7519,6 +7839,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 18931.127, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7531,6 +7852,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 61851.453, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7543,6 +7865,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 41609.543, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0032000542, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 715.394, 
@@ -7555,6 +7878,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 21985.781, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7567,6 +7891,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 52981.824, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7579,6 +7904,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 73822.016, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 7610.208, 
@@ -7591,6 +7917,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 45892.898, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7603,6 +7930,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 147078.953, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9768999815, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7615,6 +7943,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 309875.406, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7627,6 +7956,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 257935.484, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7639,6 +7969,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 66135.531, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7651,6 +7982,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 9537.147, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7663,6 +7995,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 129060.727, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7675,6 +8008,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 105787.992, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0044000149, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 16334.683, 
@@ -7687,6 +8021,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 11853.395, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7699,6 +8034,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 18380.398, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7711,6 +8047,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 18380.398, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.8309000134, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 2873.257, 
@@ -7723,6 +8060,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5038.423, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7735,6 +8073,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 40260.527, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0022000074, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7747,6 +8086,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 147078.953, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -7761,6 +8101,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 18569.855, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.011500001, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 21630.342, 
@@ -7773,6 +8114,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 85485.594, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 82811.031, 
@@ -7785,6 +8127,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 43449.68, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 30790.01, 
@@ -7797,6 +8140,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 22522.197, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0067000389, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 16502.354, 
@@ -7809,6 +8153,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 53377.816, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0089000463, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 297527.938, 
@@ -7821,6 +8166,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 76226.883, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 43812.648, 
@@ -7833,6 +8179,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 46306.07, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0048999786, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 44467.313, 
@@ -7845,6 +8192,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 146991.063, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 26378.523, 
@@ -7857,6 +8205,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 312486.0, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 126971.875, 
@@ -7869,6 +8218,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 257134.672, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 265926.75, 
@@ -7881,6 +8231,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 71816.445, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017000437, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 15715.56, 
@@ -7893,6 +8244,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 10553.71, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 20391.723, 
@@ -7905,6 +8257,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 133350.625, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 147188.078, 
@@ -7917,6 +8270,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 108404.719, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 635372.813, 
@@ -7929,6 +8283,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 11314.028, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 853.318, 
@@ -7941,6 +8296,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 19113.221, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0080000162, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 1170.028, 
@@ -7953,6 +8309,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 19113.221, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.8295000196, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 7271.976, 
@@ -7965,6 +8322,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 4496.453, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9993000031, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 1129.176, 
@@ -7977,6 +8335,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 39411.32, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0033999681, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 3325.625, 
@@ -7989,6 +8348,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 146991.063, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9912999868, 
                     "SAMPLE_desc": "A00005 b", 
                     "CONFIRMATIONIONPEAK1_area": 1371.335, 
@@ -8003,6 +8363,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 11907.277, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8015,6 +8376,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 31085.605, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8027,6 +8389,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 19513.389, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0006999969, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 3678.744, 
@@ -8039,6 +8402,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 11685.827, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0134999752, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 422.362, 
@@ -8051,6 +8415,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 26767.17, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8063,6 +8428,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 30445.508, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 37983.574, 
@@ -8075,6 +8441,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 14720.693, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8087,6 +8454,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 89824.148, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9742000103, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8099,6 +8467,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 150297.703, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0061999559, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8111,6 +8480,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 141618.234, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8123,6 +8493,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 42444.078, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8135,6 +8506,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 4412.814, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8147,6 +8519,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 80547.281, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8159,6 +8532,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 80110.203, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 5696.031, 
@@ -8171,6 +8545,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 6502.224, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8183,6 +8558,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 8796.162, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8195,6 +8571,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 8796.162, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.8392999768, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 20822.037, 
@@ -8207,6 +8584,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 2490.689, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8219,6 +8597,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 82331.297, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0083999634, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 514.706, 
@@ -8231,6 +8610,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 89824.148, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00005 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8245,6 +8625,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 12155.792, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0104999542, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 14351.741, 
@@ -8257,6 +8638,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 36658.641, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0080000162, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 49481.059, 
@@ -8269,6 +8651,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 22003.557, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 17385.346, 
@@ -8281,6 +8664,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 12486.437, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0070999861, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 9064.481, 
@@ -8293,6 +8677,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 28289.186, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0096000433, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 151162.359, 
@@ -8305,6 +8690,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 32594.576, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 54005.305, 
@@ -8317,6 +8703,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 16074.271, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0039000511, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 14634.166, 
@@ -8329,6 +8716,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 94920.438, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0019999743, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 16825.078, 
@@ -8341,6 +8729,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 163761.156, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 66060.875, 
@@ -8353,6 +8742,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 149922.453, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 152768.141, 
@@ -8365,6 +8755,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 44128.188, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 8666.154, 
@@ -8377,6 +8768,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 4239.127, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 7495.677, 
@@ -8389,6 +8781,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 82059.609, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 89317.266, 
@@ -8401,6 +8794,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 81495.227, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 457087.875, 
@@ -8413,6 +8807,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 6940.426, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0119999647, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 394.647, 
@@ -8425,6 +8820,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 9213.311, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0038000345, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 949.164, 
@@ -8437,6 +8833,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 9213.311, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.8337000012, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 22534.436, 
@@ -8449,6 +8846,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 2669.254, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9962000251, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 543.855, 
@@ -8461,6 +8859,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 77141.188, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0096000433, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 1704.255, 
@@ -8473,6 +8872,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 94920.438, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9902999997, 
                     "SAMPLE_desc": "A00005 d", 
                     "CONFIRMATIONIONPEAK1_area": 1014.246, 
@@ -8489,6 +8889,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 5936.726, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8501,6 +8902,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 67476.328, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8513,6 +8915,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 41739.289, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9988999963, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8525,6 +8928,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 22053.277, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8537,6 +8941,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 53243.25, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8549,6 +8954,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 81472.539, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0027999878, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 75303.047, 
@@ -8561,6 +8967,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 51720.891, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8573,6 +8980,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 137685.141, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.9761999846, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8585,6 +8993,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 343846.344, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8597,6 +9006,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 277950.25, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8609,6 +9019,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 72707.586, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8621,6 +9032,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 13569.447, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8633,6 +9045,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 154580.547, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8645,6 +9058,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 117373.367, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0044000149, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 5578.269, 
@@ -8657,6 +9071,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 12637.907, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8669,6 +9084,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 17041.695, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8681,6 +9097,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 17041.695, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.8249999881, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 5647.969, 
@@ -8693,6 +9110,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5078.874, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8705,6 +9123,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 69567.922, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 1.0046999454, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 782.554, 
@@ -8717,6 +9136,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 137685.141, 
+                    "sample_prep": "a", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 a", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8731,6 +9151,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 18333.541, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0141999722, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 20901.285, 
@@ -8743,6 +9164,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 85975.273, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0039000511, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 127063.508, 
@@ -8755,6 +9177,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 43710.473, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 31787.393, 
@@ -8767,6 +9190,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 23401.949, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0055999756, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 16877.006, 
@@ -8779,6 +9203,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 55741.066, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0088000298, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 312314.781, 
@@ -8791,6 +9216,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 85437.078, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0027999878, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 109877.555, 
@@ -8803,6 +9229,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 52648.086, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.006000042, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 51239.918, 
@@ -8815,6 +9242,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 144338.063, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0017999411, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 25038.627, 
@@ -8827,6 +9255,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 364828.844, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 145834.141, 
@@ -8839,6 +9268,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 290513.563, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0008000135, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 291982.875, 
@@ -8851,6 +9281,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 75259.258, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 16268.749, 
@@ -8863,6 +9294,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 12315.655, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 24471.98, 
@@ -8875,6 +9307,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 160261.594, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 167014.766, 
@@ -8887,6 +9320,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 116361.359, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0011999607, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 661495.0, 
@@ -8899,6 +9333,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 13347.417, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 863.528, 
@@ -8911,6 +9346,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 17913.131, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0101000071, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 1401.235, 
@@ -8923,6 +9359,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 17913.131, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.8330000043, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 9214.026, 
@@ -8935,6 +9372,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 5328.34, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0025000572, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 1197.121, 
@@ -8947,6 +9385,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 66597.117, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 1.0033999681, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 4608.242, 
@@ -8959,6 +9398,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 144338.063, 
+                    "sample_prep": "b", 
                     "PEAK_foundrrt": 0.9902999997, 
                     "SAMPLE_desc": "A00006 b", 
                     "CONFIRMATIONIONPEAK1_area": 1305.572, 
@@ -8973,6 +9413,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 7984.374, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8985,6 +9426,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 14021.02, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -8997,6 +9439,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 24843.105, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0006999969, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 6064.684, 
@@ -9009,6 +9452,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 16413.008, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0118000507, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9021,6 +9465,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 41324.715, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9033,6 +9478,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 25410.48, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.9998000264, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 286019.063, 
@@ -9045,6 +9491,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 49894.777, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9057,6 +9504,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 74004.273, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9069,6 +9517,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 461328.469, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9081,6 +9530,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 346096.938, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9093,6 +9543,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 94915.445, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9105,6 +9556,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 15962.714, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9117,6 +9569,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 194766.734, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9129,6 +9582,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 129415.352, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0045000315, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 4785.737, 
@@ -9141,6 +9595,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 26766.746, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9153,6 +9608,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 12979.593, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9165,6 +9621,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 12979.593, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.8532000184, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 65660.016, 
@@ -9177,6 +9634,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 8688.426, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9189,6 +9647,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 298298.906, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 1.0083999634, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 5515.32, 
@@ -9201,6 +9660,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 74004.273, 
+                    "sample_prep": "c", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 c", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9215,6 +9675,7 @@
                 {
                     "COMPOUND_id": 1, 
                     "ISPEAK_area": 15128.501, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0104999542, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 18711.9, 
@@ -9227,6 +9688,7 @@
                 {
                     "COMPOUND_id": 2, 
                     "ISPEAK_area": 0.0, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.0, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
@@ -9239,6 +9701,7 @@
                 {
                     "COMPOUND_id": 3, 
                     "ISPEAK_area": 24853.773, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0015000105, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 25236.221, 
@@ -9251,6 +9714,7 @@
                 {
                     "COMPOUND_id": 4, 
                     "ISPEAK_area": 15980.941, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0067000389, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 12181.19, 
@@ -9263,6 +9727,7 @@
                 {
                     "COMPOUND_id": 5, 
                     "ISPEAK_area": 42287.516, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0080000162, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 245983.5, 
@@ -9275,6 +9740,7 @@
                 {
                     "COMPOUND_id": 6, 
                     "ISPEAK_area": 28635.684, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 281153.344, 
@@ -9287,6 +9753,7 @@
                 {
                     "COMPOUND_id": 7, 
                     "ISPEAK_area": 48947.082, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0039000511, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 48278.84, 
@@ -9299,6 +9766,7 @@
                 {
                     "COMPOUND_id": 8, 
                     "ISPEAK_area": 77926.414, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0032999516, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 15742.916, 
@@ -9311,6 +9779,7 @@
                 {
                     "COMPOUND_id": 9, 
                     "ISPEAK_area": 451829.906, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 185365.391, 
@@ -9323,6 +9792,7 @@
                 {
                     "COMPOUND_id": 10, 
                     "ISPEAK_area": 342478.875, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9998999834, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 351116.75, 
@@ -9335,6 +9805,7 @@
                 {
                     "COMPOUND_id": 11, 
                     "ISPEAK_area": 94374.656, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0006999969, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 28691.307, 
@@ -9347,6 +9818,7 @@
                 {
                     "COMPOUND_id": 12, 
                     "ISPEAK_area": 15379.39, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0009000301, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 30293.369, 
@@ -9359,6 +9831,7 @@
                 {
                     "COMPOUND_id": 13, 
                     "ISPEAK_area": 194444.516, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0004999638, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 206167.313, 
@@ -9371,6 +9844,7 @@
                 {
                     "COMPOUND_id": 14, 
                     "ISPEAK_area": 131259.203, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0005999804, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 741898.25, 
@@ -9383,6 +9857,7 @@
                 {
                     "COMPOUND_id": 15, 
                     "ISPEAK_area": 26274.729, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0089000463, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 1471.192, 
@@ -9395,6 +9870,7 @@
                 {
                     "COMPOUND_id": 16, 
                     "ISPEAK_area": 14663.779, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0119999647, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 523.463, 
@@ -9407,6 +9883,7 @@
                 {
                     "COMPOUND_id": 17, 
                     "ISPEAK_area": 14663.779, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.8468999863, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 64900.039, 
@@ -9419,6 +9896,7 @@
                 {
                     "COMPOUND_id": 18, 
                     "ISPEAK_area": 8829.357, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0056999922, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 2100.061, 
@@ -9431,6 +9909,7 @@
                 {
                     "COMPOUND_id": 19, 
                     "ISPEAK_area": 284383.25, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 1.0083999634, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 7939.867, 
@@ -9443,6 +9922,7 @@
                 {
                     "COMPOUND_id": 20, 
                     "ISPEAK_area": 77926.414, 
+                    "sample_prep": "d", 
                     "PEAK_foundrrt": 0.9902999997, 
                     "SAMPLE_desc": "A00006 d", 
                     "CONFIRMATIONIONPEAK1_area": 918.722, 
