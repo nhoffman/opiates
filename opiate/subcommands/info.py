@@ -6,7 +6,8 @@ import xml.etree.ElementTree
 import csv
 from collections import OrderedDict
 
-from opiate.parsers import get_rows
+from opiate.parsers import get_rows, group_samples
+from opiate.display import list_grouped_samples
 
 log = logging.getLogger(__name__)
 
@@ -18,19 +19,15 @@ def build_parser(parser):
                         action = 'store_true', default = False)
     
 def action(args):
-
-    rows = get_rows(args.infile)
     
     if args.samples:
-        d = OrderedDict((row['SAMPLE_id'], row['SAMPLE_desc']) for row in rows)
-        for i, desc in d.items():
-            print i, desc
+        controls, sample_groups = group_samples(args.infile)
+        list_grouped_samples(controls, sample_groups)
     elif args.compounds:
+        rows = get_rows(args.infile)
         d = OrderedDict((row['COMPOUND_id'], row['COMPOUND_name']) for row in rows)
         for i, desc in d.items():
             print i, desc
-    else:
-        print 'Found %s samples' % len(set(row['SAMPLE_id'] for row in rows))
 
 if __name__ == '__main__':
     main()
