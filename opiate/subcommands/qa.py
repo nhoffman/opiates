@@ -28,8 +28,8 @@ def action(args):
     controls, sample_groups = group_samples(args.infile)
 
     # controls
-    # retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in controls.values())
-    # display_qa_results(retvals, args.show_all)
+    retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in controls.values())
+    display_qa_results(retvals, args.show_all)
 
     # specimens
     for group_label, samples in sample_groups.items():
