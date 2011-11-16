@@ -43,3 +43,4 @@ CONTROL_NAMES = (
     (10, 'neg_spiked')
     )
 
+SAMPLE_PREP_LABELS = ['a','b','c','d']

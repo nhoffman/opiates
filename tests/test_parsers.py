@@ -44,5 +44,5 @@ class TestReadMatrix(unittest.TestCase):
 
     def test01(self):
         matrix = read_matrix(matrix_file)
-        pprint.pprint(matrix)
+
         

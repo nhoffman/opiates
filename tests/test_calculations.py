@@ -17,16 +17,11 @@ from opiate import qafile, matrix_file
 
 import __init__ as config
 
-## test data
-# default qa values for this package
 qadata = qa_from_csv(qafile)
-
 with open('testfiles/oct24.json') as f:
     standards, sample_groups = json.load(f)
 
 matrix = read_matrix(matrix_file)
-
-expt_stda = standards['stdA']
 
 class TestPerformQA(unittest.TestCase):
 
@@ -35,13 +30,17 @@ class TestPerformQA(unittest.TestCase):
 
     def tearDown(self):
         pass
-    
+
     def test01(self):
+        retvals = perform_qa(sample = standards['stdA'], qadata = qadata)
+        for r in retvals:
+            log.debug(r)
+            
+    def test02(self):
         retvals = perform_qa(sample = standards['stdA'],
                              qadata = qadata,
                              matrix = matrix
                              )
-
         for r in retvals:
-            print r
+            log.debug(r)
         
