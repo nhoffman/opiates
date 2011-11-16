@@ -20,13 +20,12 @@ def check_stda_signoise(cmpnd):
     """
     Std A S/N test
 
-    Compare Drug S/N with Drug QA S/N    
+    Compare Drug S/N with Drug QA S/N
 
-    Should never return None.
+    Missing values are treated as 0.
     """
-    
-    retval = cmpnd.PEAK_signoise > cmpnd.signoise_stda
-    return retval
+
+    return (cmpnd.PEAK_signoise or 0) > cmpnd.signoise_stda
     
 def check_amr(cmpnd):
     """
@@ -64,7 +63,7 @@ def check_rrt(cmpnd):
 
     Return None if cmpnd.PEAK_foundrrt is None
     """
-
+    
     if cmpnd.PEAK_foundrrt is None:
         return None
     else:
@@ -79,8 +78,10 @@ def check_signoise(cmpnd):
     Return None if cmpnd.PEAK_signoise is None.
     """
 
-    retval = cmpnd.PEAK_signoise > cmpnd.signoise
-    return retval
+    if cmpnd.PEAK_signoise is None:
+        return None
+    else:
+        return cmpnd.PEAK_signoise > cmpnd.signoise
     
 def check_ion_rato(cmpnd):
     """
@@ -92,23 +93,25 @@ def check_ion_rato(cmpnd):
     Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
     """
 
-    try:
-        ratio = cmpnd.PEAK_area/cmpnd.CONFIRMATIONIONPEAK1_area
-    except ZeroDivisionError:
-        ratio = None
-        
-    retval = cmpnd.ion_ratio_low <= ratio <= cmpnd.ion_ratio_high    
-    return retval
+    # convert missing values to 0
+    peak_area = cmpnd.PEAK_area or 0
+    conf_peak_area = cmpnd.CONFIRMATIONIONPEAK1_area or 0
 
+    if peak_area == 0:
+        return None
+    elif conf_peak_area == 0:
+        return False
+    else:
+        return cmpnd.ion_ratio_low <= peak_area/conf_peak_area <= cmpnd.ion_ratio_high    
+    
 def check_is_peak_area(cmpnd):
     """
     I.S. Peak Area Test
 
     Compare Drug Internal Standard Peak Area with QA Peak Area
     """
-
-    retval = cmpnd.ISPEAK_area > cmpnd.int_std_peak_area    
-    return retval
+    
+    return (cmpnd.ISPEAK_area or 0) > cmpnd.int_std_peak_area    
 
 def check_spike(cmpnd):
     """
@@ -119,7 +122,8 @@ def check_spike(cmpnd):
     Somone will need to clarify this one.
     """
 
-    return None
+    return (cmpnd.PEAK_analcon or 0) >= cmpnd.spiked_low
+
     
 def perform_qa(sample, qadata, matrix = None):
     """
