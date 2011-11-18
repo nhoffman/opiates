@@ -18,7 +18,7 @@ def _check_none(cmpnd):
 
 def check_stda_signoise(cmpnd):
     """
-    Std A S/N test
+    Std A S/N
 
     Compare Drug S/N with Drug QA S/N
 
@@ -29,7 +29,7 @@ def check_stda_signoise(cmpnd):
     
 def check_amr(cmpnd):
     """
-    Check AMR
+    AMR
 
     Compare Drug Concentration with Drug QA Concentration Range
 
@@ -57,7 +57,7 @@ def check_amr_low(cmpnd):
 
 def check_rrt(cmpnd):
     """
-    RRT test
+    RRT
 
     Compare Drug Relative Retention Time with Relative Retention Time QA
 
@@ -71,7 +71,7 @@ def check_rrt(cmpnd):
 
 def check_signoise(cmpnd):
     """
-    S/N test
+    S/N
 
     Compare Drug signal to noise (S/N) ratio with QA Range    
 
@@ -85,7 +85,7 @@ def check_signoise(cmpnd):
     
 def check_ion_rato(cmpnd):
     """
-    Ion Ratio Test
+    Ion Ratio
 
     Compare Drug Ion Ratio (Quatifying Peak Area/ Qualifying Peak
     Area) to a QA range. If the denominator is zero, return None.
@@ -106,7 +106,7 @@ def check_ion_rato(cmpnd):
     
 def check_is_peak_area(cmpnd):
     """
-    I.S. Peak Area Test
+    I.S. Peak Area
 
     Compare Drug Internal Standard Peak Area with QA Peak Area
     """
@@ -115,7 +115,7 @@ def check_is_peak_area(cmpnd):
 
 def check_spike(cmpnd):
     """
-    Spike Test
+    Spike
 
     Compare and report metabolites that have no deuterated internal standard.
 

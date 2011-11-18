@@ -1,6 +1,8 @@
 from itertools import chain, groupby
 
 import pprint
+import sys
+import csv
 
 from opiate import CONTROL_NAMES
 from opiate.calculations import all_checks
@@ -15,7 +17,7 @@ def list_grouped_samples(controls, sample_groups):
         print '# %s (%s specimens)' % (label, len(grp))
         for sample in grp:
             print '%s\t%s' % (sample[0]['SAMPLE_id'], sample[0]['SAMPLE_desc'])
-
+    
 def display_qa_results(results, show_all = False):
 
     controls = dict(CONTROL_NAMES)
@@ -25,16 +27,25 @@ def display_qa_results(results, show_all = False):
 
     # sort results by compound then by sample
     results = sorted(list(results), key = lambda r: (r[0].COMPOUND_id, r[0].SAMPLE_id))
-    pprint.pprint(results[1:20])
-    sys.exit()
-    
-    for sample_id, sample_group in groupby(results, lambda r: r[0].SAMPLE_id):
-        print 'Sample', sample_id, controls.get(sample_id, '')
-        for cmpnd_id_and_name, compound_group in groupby(sample_group, lambda r: (r[0].COMPOUND_id, r[0].COMPOUND_name)):
-            compound_group = list(compound_group)
-            if any(show(r[-1]) for r in compound_group):
-                print ' '*4 + '%2s %s' % cmpnd_id_and_name
-                for cmpnd, test, result in compound_group:
-                    if show(result):
-                        print ' '*7 + '%-30s %s' % (calc_names[test], outcomes[result])
 
+    headers = ['compound','sample','concentration','test','result','commment']
+    defaults = dict((k, '.') for k in headers)
+
+    writer = csv.DictWriter(sys.stdout, fieldnames = headers)
+    
+    def row(**args):
+        d = defaults.copy()
+        d.update(args)
+        writer.writerow(d)
+
+    row(**dict((k,k) for k in headers))
+    for cmpnd_id_and_name, compound_group in groupby(results, lambda r: (r[0].COMPOUND_id, r[0].COMPOUND_name)):    
+        row(compound = '%02i %s' % cmpnd_id_and_name)
+        for sample_id, sample_group in groupby(compound_group, lambda r: r[0].SAMPLE_id):
+            sample_group = list(sample_group)
+            if any(show(r[-1]) for r in sample_group):
+                row(sample = '%s %s' % (sample_id, controls.get(sample_id, '')),
+                    concentration = '%.2f' % sample_group[0][0].PEAK_analconc)          
+                for cmpnd, test, result in sample_group:
+                    if show(result):
+                        row(test = calc_names[test])

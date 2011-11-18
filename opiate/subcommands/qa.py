@@ -6,6 +6,7 @@ import xml.etree.ElementTree
 import csv
 from collections import OrderedDict
 from itertools import chain
+import json
 
 from opiate import matrix_file, qafile
 from opiate.parsers import qa_from_csv, read_matrix, group_samples
@@ -25,17 +26,22 @@ def build_parser(parser):
 def action(args):
     qadata = qa_from_csv(qafile)
     matrix = None if args.no_matrix else read_matrix(matrix_file)
-    controls, sample_groups = group_samples(args.infile)
 
+    if args.infile.lower().endswith('.xml'):
+        controls, sample_groups = group_samples(args.infile)
+    else:
+        with open(args.infile) as f:
+            controls, sample_groups = json.load(f)        
+        
     # controls
     retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in controls.values())
     display_qa_results(retvals, args.show_all)
 
     # specimens
-    for group_label, samples in sample_groups.items():
-        print group_label
-        retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in samples)
-        display_qa_results(retvals, args.show_all)
+    # for group_label, samples in sample_groups.items():
+    #     print group_label
+    #     retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in samples)
+    #     display_qa_results(retvals, args.show_all)
         
 if __name__ == '__main__':
     main()

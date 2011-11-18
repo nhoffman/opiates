@@ -13,12 +13,12 @@ class Compound(object):
         Uses any attributes starting with COMPOUND to identify
         instance.
         """
-
-        tag = 'COMPOUND_'
-        attrs = [(attr.replace(tag, ''), getattr(self, attr)) \
-                     for attr in dir(self) if attr.startswith(tag)]
         
-        return '<Compound %s>' % ' '.join('%s = %s' % attr for attr in attrs)
+        return '<Cpnd %s %s Sample %s>' % (
+            self.COMPOUND_id,
+            self.COMPOUND_name,
+            self.SAMPLE_id
+            )
 
     def items(self):
         return self.__dict__.items()
