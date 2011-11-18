@@ -18,8 +18,12 @@ def list_grouped_samples(controls, sample_groups):
         for sample in grp:
             print '%s\t%s' % (sample[0]['SAMPLE_id'], sample[0]['SAMPLE_desc'])
     
-def display_qa_results(results, show_all = False):
+def display_qa_results(results, outfile, show_all = False):
+    """
 
+     * results ...
+     * outfile - file-like object open for writing 
+    """
     controls = dict(CONTROL_NAMES)
     outcomes = {True: 'pass', False: '* FAIL *', None: 'not performed'}
 
@@ -31,7 +35,7 @@ def display_qa_results(results, show_all = False):
     headers = ['compound','sample','concentration','test','result','commment']
     defaults = dict((k, '.') for k in headers)
 
-    writer = csv.DictWriter(sys.stdout, fieldnames = headers)
+    writer = csv.DictWriter(outfile, fieldnames = headers)
     
     def row(**args):
         d = defaults.copy()

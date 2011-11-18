@@ -43,4 +43,3 @@ class TestPerformQA(unittest.TestCase):
                              )
         for r in retvals:
             log.debug(r)
-        

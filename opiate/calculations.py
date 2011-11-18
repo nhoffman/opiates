@@ -97,12 +97,17 @@ def check_ion_rato(cmpnd):
     peak_area = cmpnd.PEAK_area or 0
     conf_peak_area = cmpnd.CONFIRMATIONIONPEAK1_area or 0
 
+    # calculate reference range
+    delta = cmpnd.ion_ratio_average * cmpnd.ion_ratio_cv
+    ion_ratio_low = cmpnd.ion_ratio_average + delta
+    ion_ratio_high = cmpnd.ion_ratio_average - delta
+
     if peak_area == 0:
         return None
     elif conf_peak_area == 0:
         return False
     else:
-        return cmpnd.ion_ratio_low <= peak_area/conf_peak_area <= cmpnd.ion_ratio_high    
+        return ion_ratio_low <= peak_area/conf_peak_area <= ion_ratio_high
     
 def check_is_peak_area(cmpnd):
     """
@@ -122,7 +127,7 @@ def check_spike(cmpnd):
     Somone will need to clarify this one.
     """
 
-    return (cmpnd.PEAK_analcon or 0) >= cmpnd.spiked_low
+    return (cmpnd.PEAK_analconc or 0) >= cmpnd.spike_low
 
     
 def perform_qa(sample, qadata, matrix = None):
@@ -135,7 +140,7 @@ def perform_qa(sample, qadata, matrix = None):
     """
     
     results = []
-    for compound in sample:        
+    for compound in sample:
         # 'sample_prep' is added by `parsers.group_specimens()` - is
         # this value is defined, use it in place of SAMPLE_id
         sample_id = compound.get('sample_prep') or compound['SAMPLE_id']

@@ -18,8 +18,8 @@ from opiate.display import display_qa_results
 import __init__ as config
 log = logging.getLogger(__name__)
 
-if log.getEffectiveLevel() >= logging.INFO:
-    sys.stdout = open(os.devnull)
+# if log.getEffectiveLevel() >= logging.INFO:
+#     sys.stdout = open(os.devnull)
 
 qadata = qa_from_csv(qafile)
 with open('testfiles/oct24.json') as f:
@@ -38,5 +38,5 @@ class TestDisplayQA(unittest.TestCase):
     def test01(self):
         retvals = chain.from_iterable([perform_qa(standards['stdA'], qadata, matrix),
                                        perform_qa(standards['high'], qadata, matrix)])
-        display_qa_results(retvals)
+        display_qa_results(retvals, sys.stdout)
         
