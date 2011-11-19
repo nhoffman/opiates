@@ -1,5 +1,7 @@
 import sys
 import logging
+import os
+import unittest
 
 verbosity_flag = [x for x in sys.argv if x.startswith('-v')]
 verbosity = (verbosity_flag[0] if verbosity_flag else '').count('v')
@@ -24,4 +26,19 @@ else:
 
 # set up logging
 logging.basicConfig(file=sys.stdout, format=logformat, level=loglevel)
+
+log = logging.getLogger(__name__)
+
+class TestCaseSuppressOutput(unittest.TestCase):
+
+    def setUp(self):        
+        self.funcname = '_'.join(self.id().split('.')[-2:])
+        self.suppress_output = log.getEffectiveLevel() >= logging.INFO
+        if self.suppress_output:
+            sys.stdout = open(os.devnull, 'w')
+            
+    def tearDown(self):
+        if self.suppress_output:
+            sys.stdout = sys.__stdout__
+
 

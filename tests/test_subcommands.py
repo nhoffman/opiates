@@ -11,12 +11,9 @@ import sys
 from opiate.subcommands.config import action as config_action
 from opiate.subcommands.info import action as info_action
 
+from __init__ import TestCaseSuppressOutput
 import __init__ as config
-
 log = logging.getLogger(__name__)
-
-if log.getEffectiveLevel() >= logging.INFO:
-    sys.stdout = open(os.devnull)
 
 class Args(object):
     def __init__(self, **kwargs):
@@ -24,14 +21,8 @@ class Args(object):
 
     def __getattr__(self, key):        
         return self.data.get(key)
-            
-class TestQA(unittest.TestCase):
 
-    def setUp(self):        
-        self.funcname = '_'.join(self.id().split('.')[-2:])
-
-    def tearDown(self):
-        pass
+class TestQA(TestCaseSuppressOutput):
 
     def test01(self):
         config_action(Args())
@@ -49,13 +40,7 @@ class TestQA(unittest.TestCase):
         config_action(Args(compound_id = 1))
         config_action(Args(compound_id = 21))
         
-class TestInfo(unittest.TestCase):
-
-    def setUp(self):        
-        self.funcname = '_'.join(self.id().split('.')[-2:])
-
-    def tearDown(self):
-        pass
+class TestInfo(TestCaseSuppressOutput):
 
     def test01(self):
         info_action(Args(infile = 'testfiles/opi_checkout.xml'))
