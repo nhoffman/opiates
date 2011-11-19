@@ -16,6 +16,9 @@ def _check_false(cmpnd):
 def _check_none(cmpnd):
     return None
 
+def fmt(*args):
+    return tuple('%.2f' % val if isinstance(val, float) else val for val in args)
+    
 def check_stda_signoise(cmpnd):
     """
     Std A S/N
@@ -26,7 +29,7 @@ def check_stda_signoise(cmpnd):
     """
 
     retval = (cmpnd.PEAK_signoise or 0) > cmpnd.signoise_stda
-    msg = '%.2f > %.2f' % (cmpnd.PEAK_signoise, cmpnd.signoise_stda)
+    msg = '%s > %s' % fmt(cmpnd.PEAK_signoise, cmpnd.signoise_stda)
 
     return retval, msg
     
@@ -44,7 +47,7 @@ def check_amr(cmpnd):
     else:
         retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
 
-    msg = '%.2f <= %.2f <= %.2f' % (cmpnd.amr_low, cmpnd.PEAK_analconc, cmpnd.amr_high)
+    msg = '%s <= %s <= %s' % fmt(cmpnd.amr_low, cmpnd.PEAK_analconc, cmpnd.amr_high)
 
     return retval, msg
 
@@ -62,8 +65,10 @@ def check_amr_low(cmpnd):
     else:
         retval = cmpnd.amr_low <= cmpnd.PEAK_analconc
 
-    msg = '%s <= %s' % (fmt(cmpnd.amr_low), fmt(cmpnd.amr_low))
-        
+    msg = '%s <= %s' % fmt(cmpnd.amr_low, cmpnd.PEAK_analconc)
+
+    return retval, msg
+    
 def check_rrt(cmpnd):
     """
     RRT
@@ -74,10 +79,14 @@ def check_rrt(cmpnd):
     """
     
     if cmpnd.PEAK_foundrrt is None:
-        return None
+        retval = None
     else:
-        return cmpnd.rel_reten_low <= cmpnd.PEAK_foundrrt <= cmpnd.rel_reten_high
+        retval = cmpnd.rel_reten_low <= cmpnd.PEAK_foundrrt <= cmpnd.rel_reten_high
 
+    msg = '%s <= %s <= %s' % fmt(cmpnd.rel_reten_low, cmpnd.PEAK_foundrrt, cmpnd.rel_reten_high)
+
+    return retval, msg
+    
 def check_signoise(cmpnd):
     """
     S/N
@@ -88,11 +97,15 @@ def check_signoise(cmpnd):
     """
 
     if cmpnd.PEAK_signoise is None:
-        return None
+        retval = None
     else:
-        return cmpnd.PEAK_signoise > cmpnd.signoise
-    
-def check_ion_rato(cmpnd):
+        retval = cmpnd.PEAK_signoise > cmpnd.signoise
+
+    msg = '%s > %s' % fmt(cmpnd.PEAK_signoise, cmpnd.signoise)
+
+    return retval, msg
+        
+def check_ion_ratio(cmpnd):
     """
     Ion Ratio
 
@@ -102,22 +115,23 @@ def check_ion_rato(cmpnd):
     Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
     """
 
-    # convert missing values to 0
-    peak_area = cmpnd.PEAK_area or 0
-    conf_peak_area = cmpnd.CONFIRMATIONIONPEAK1_area or 0
-
     # calculate reference range
     delta = cmpnd.ion_ratio_average * cmpnd.ion_ratio_cv
-    ion_ratio_low = cmpnd.ion_ratio_average + delta
-    ion_ratio_high = cmpnd.ion_ratio_average - delta
+    ion_ratio_low = cmpnd.ion_ratio_average - delta
+    ion_ratio_high = cmpnd.ion_ratio_average + delta
 
-    if peak_area == 0:
-        return None
-    elif conf_peak_area == 0:
-        return False
+    if not cmpnd.CONFIRMATIONIONPEAK1_area:
+        ion_ratio = None
+        retval = None
     else:
-        return ion_ratio_low <= peak_area/conf_peak_area <= ion_ratio_high
-    
+        ion_ratio = cmpnd.PEAK_area/cmpnd.CONFIRMATIONIONPEAK1_area
+        retval = ion_ratio_low <= ion_ratio <= ion_ratio_high
+
+    msg = '%s <= %s <= %s' % \
+        fmt(ion_ratio_low, ion_ratio, ion_ratio_high)
+        
+    return retval, msg
+        
 def check_is_peak_area(cmpnd):
     """
     I.S. Peak Area
@@ -125,19 +139,20 @@ def check_is_peak_area(cmpnd):
     Compare Drug Internal Standard Peak Area with QA Peak Area
     """
     
-    return (cmpnd.ISPEAK_area or 0) > cmpnd.int_std_peak_area    
-
+    retval = (cmpnd.ISPEAK_area or 0) > cmpnd.int_std_peak_area
+    msg = '%s > %s' % fmt(cmpnd.ISPEAK_area, cmpnd.int_std_peak_area)
+    return retval, msg
+    
 def check_spike(cmpnd):
     """
     Spike
 
     Compare and report metabolites that have no deuterated internal standard.
-
-    Somone will need to clarify this one.
     """
 
-    return (cmpnd.PEAK_analconc or 0) >= cmpnd.spike_low
-
+    retval = (cmpnd.PEAK_analconc or 0) >= cmpnd.spike_low
+    msg = '%s > %s' % fmt(cmpnd.PEAK_analconc, cmpnd.spike_low)
+    return retval, msg
     
 def perform_qa(sample, qadata, matrix = None):
     """

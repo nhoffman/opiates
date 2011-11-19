@@ -6,6 +6,7 @@ import sys
 import csv
 from collections import defaultdict, OrderedDict
 from itertools import chain, groupby, count
+from calculations import all_checks
 
 from __init__ import qafile, SAMPLE_ATTRS, CONTROL_NAMES, SAMPLE_PREP_LABELS
 
@@ -174,6 +175,14 @@ def read_matrix(fname):
     matrix = defaultdict(set)
     with open(fname, 'rU') as f:
         reader = csv.DictReader(f)
+        headers = [n for n in reader.fieldnames if n]
+
+        # ensure that all tests are defined in matrix file
+        missing = set(all_checks.keys()) - set(headers)
+        if missing:
+            raise ValueError('matrix file does not define %s' % \
+                                 ', '.join(missing))
+        
         for d in [d for d in reader if d['compound_id']]:
             compound_id = int(d['compound_id'])
             for k, v in d.items():
