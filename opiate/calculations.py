@@ -25,7 +25,10 @@ def check_stda_signoise(cmpnd):
     Missing values are treated as 0.
     """
 
-    return (cmpnd.PEAK_signoise or 0) > cmpnd.signoise_stda
+    retval = (cmpnd.PEAK_signoise or 0) > cmpnd.signoise_stda
+    msg = '%.2f > %.2f' % (cmpnd.PEAK_signoise, cmpnd.signoise_stda)
+
+    return retval, msg
     
 def check_amr(cmpnd):
     """
@@ -37,9 +40,13 @@ def check_amr(cmpnd):
     """    
 
     if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
-        return None
+        retval = None
     else:
-        return  cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
+        retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
+
+    msg = '%.2f <= %.2f <= %.2f' % (cmpnd.amr_low, cmpnd.PEAK_analconc, cmpnd.amr_high)
+
+    return retval, msg
 
 def check_amr_low(cmpnd):
     """
@@ -51,10 +58,12 @@ def check_amr_low(cmpnd):
     """    
 
     if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
-        return None
+        retval = None
     else:
-        return  cmpnd.amr_low <= cmpnd.PEAK_analconc
+        retval = cmpnd.amr_low <= cmpnd.PEAK_analconc
 
+    msg = '%s <= %s' % (fmt(cmpnd.amr_low), fmt(cmpnd.amr_low))
+        
 def check_rrt(cmpnd):
     """
     RRT
