@@ -5,8 +5,10 @@ import sys
 import csv
 
 from opiate import CONTROL_NAMES
-from opiate.calculations import all_checks
+from opiate.calculations import all_checks, fmt
+
 calc_names = dict((name, d['description']) for name, d in all_checks.items())
+outcomes = {True: 'ok', False: 'FAIL', None: '-'}
 
 def list_grouped_samples(controls, sample_groups):
     print '# Standards and Controls:'
@@ -17,39 +19,96 @@ def list_grouped_samples(controls, sample_groups):
         print '# %s (%s specimens)' % (label, len(grp))
         for sample in grp:
             print '%s\t%s' % (sample[0]['SAMPLE_id'], sample[0]['SAMPLE_desc'])
-    
-def display_qa_results(results, outfile, show_all = False):
+
+class Row(object):
+    def __init__(self, outfile, headers, nullchar = '', **args):
+
+        self.headers = headers
+        self.defaults = dict((k, nullchar) for k in headers)
+        self.writer = csv.DictWriter(outfile, fieldnames = headers, **args)
+
+    def write(self, **args):
+        d = self.defaults.copy()
+        d.update(args)
+        self.writer.writerow(d)
+
+    def write_headers(self):
+        self.write(**dict((k, calc_names.get(k) or k) for k in self.headers))
+        
+def display_controls(results, outfile, show_all = False, nullchar = '.'):
     """
 
      * results ...
-     * outfile - file-like object open for writing 
+     * outfile - file-like object open for writing
     """
+
     controls = dict(CONTROL_NAMES)
-    outcomes = {True: 'pass', False: '* FAIL *', None: 'not performed'}
+    outcomes = {True: 'ok', False: 'FAIL', None: '-'}
 
-    show = (lambda x: True) if show_all else (lambda x: x is False)
+    show = (lambda result: True) if show_all else (lambda result: result is False)
 
-    # sort results by compound then by sample
-    results = sorted(list(results), key = lambda r: (r[0].COMPOUND_id, r[0].SAMPLE_id))
-
-    headers = ['compound','sample','concentration','test','result','commment']
-    defaults = dict((k, '.') for k in headers)
-
-    writer = csv.DictWriter(outfile, fieldnames = headers)
+    row = Row(outfile,
+              headers = ['cmpnd_id','cmpnd','sample_id','sample','conc'] + all_checks.keys(),
+              nullchar = nullchar)
     
-    def row(**args):
-        d = defaults.copy()
-        d.update(args)
-        writer.writerow(d)
+    # sort results by compound then by sample
+    results = sorted(list(results), key = lambda r: (r['cmpnd'].COMPOUND_id, r['cmpnd'].SAMPLE_id))
 
-    row(**dict((k,k) for k in headers))
-    for cmpnd_id_and_name, compound_group in groupby(results, lambda r: (r[0].COMPOUND_id, r[0].COMPOUND_name)):    
-        row(compound = '%02i %s' % cmpnd_id_and_name)
-        for sample_id, sample_group in groupby(compound_group, lambda r: r[0].SAMPLE_id):
+    # headers
+    row.write_headers()
+    for cmpnd_id, cmpnd_group in groupby(results, lambda r: r['cmpnd'].COMPOUND_id):
+        for sample_id, sample_group in groupby(cmpnd_group, lambda r: r['cmpnd'].SAMPLE_id):
             sample_group = list(sample_group)
-            if any(show(r[-1]) for r in sample_group):
-                row(sample = '%s %s' % (sample_id, controls.get(sample_id, '')),
-                    concentration = '%.2f' % sample_group[0][0].PEAK_analconc)          
-                for cmpnd, test, result in sample_group:
-                    if show(result):
-                        row(test = calc_names[test])
+
+            if not any(show(r['result']) for r in sample_group):
+                continue
+
+            cmpnd = sample_group[0]['cmpnd']
+            row.write(cmpnd = cmpnd.COMPOUND_name,
+                cmpnd_id = cmpnd.COMPOUND_id,
+                sample = cmpnd.SAMPLE_desc,
+                sample_id = cmpnd.SAMPLE_id,
+                conc = fmt(cmpnd.PEAK_analconc)[0] or nullchar,
+                **{r['test']: outcomes[r['result']] for r in sample_group if show(r['result'])}
+                )
+
+
+def display_sample_group(results, outfile, show_all = False, nullchar = '.'):
+    """
+
+     * results ...
+     * outfile - file-like object open for writing
+    """
+
+    show = (lambda result: True) if show_all else (lambda result: result is False)
+
+    row = Row(outfile,
+              headers = ['cmpnd_id','cmpnd','sample_id','sample','conc'] + all_checks.keys(),
+              nullchar = nullchar)
+    
+    # sort results by compound then by sample - use 'sample_order' to
+    # sort sample (added by `parsers.group_samples()`) if available,
+    # otherwise use sample id
+    results = sorted(list(results), key = lambda r: (
+            r['cmpnd'].COMPOUND_id,  r['cmpnd'].get('sample_order') or r['cmpnd'].SAMPLE_id))
+
+    # headers
+    row.write_headers()
+    for cmpnd_id, cmpnd_group in groupby(results, lambda r: r['cmpnd'].COMPOUND_id):
+        for sample_id, sample_group in groupby(cmpnd_group, lambda r: r['cmpnd'].SAMPLE_id):
+            sample_group = list(sample_group)
+
+            if not any(show(r['result']) for r in sample_group):
+                continue
+
+            cmpnd = sample_group[0]['cmpnd']
+
+            row.write(cmpnd = cmpnd.COMPOUND_name,
+                cmpnd_id = cmpnd.COMPOUND_id,
+                sample = cmpnd.SAMPLE_desc,
+                sample_id = cmpnd.SAMPLE_id,
+                conc = fmt(cmpnd.PEAK_analconc)[0] or nullchar,
+                **{r['test']: outcomes[r['result']] for r in sample_group if show(r['result'])}
+                )
+
+            

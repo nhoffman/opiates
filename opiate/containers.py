@@ -22,7 +22,10 @@ class Compound(object):
 
     def items(self):
         return self.__dict__.items()
-        
+
+    def get(self, key, default = None):
+        return self.__dict__.get(key, default)
+    
 class Sample(object):
     """
     Container class for a collection of Compound objects. Calculations

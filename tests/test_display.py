@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 from opiate import qafile, matrix_file
 from opiate.calculations import perform_qa, all_checks
 from opiate.parsers import qa_from_csv, read_matrix
-from opiate.display import display_qa_results
+from opiate.display import display_sample_group
 
 import __init__ as config
 from __init__ import TestCaseSuppressOutput
@@ -29,8 +29,10 @@ matrix = read_matrix(matrix_file)
 class TestDisplayQA(TestCaseSuppressOutput):
         
     def test01(self):
-        retvals = chain.from_iterable([perform_qa(standards['stdA'], qadata, matrix),
-                                       perform_qa(standards['high'], qadata, matrix)])
-
+        retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in standards.values())
         display_qa_results(retvals, sys.stdout)
 
+    def test02(self):
+        retvals = perform_qa(chain.from_iterable(sample_groups['A00001']), qadata, matrix)
+        display_sample_group(retvals, sys.stdout, show_all = True)
+        

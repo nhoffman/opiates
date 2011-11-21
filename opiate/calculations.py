@@ -4,7 +4,6 @@ import logging
 
 log = logging.getLogger(__name__)
 
-from __init__ import SAMPLE_NAMES
 from containers import Compound
 
 def _check_true(cmpnd):
@@ -21,7 +20,7 @@ def fmt(*args):
     
 def check_stda_signoise(cmpnd):
     """
-    Std A S/N
+    StdA S/N
 
     Compare Drug S/N with Drug QA S/N
 
@@ -76,6 +75,8 @@ def check_rrt(cmpnd):
     Compare Drug Relative Retention Time with Relative Retention Time QA
 
     Return None if cmpnd.PEAK_foundrrt is None
+
+    TODO: Should this test fail if cmpnd.PEAK_foundrrt == 0?
     """
     
     if cmpnd.PEAK_foundrrt is None:
@@ -94,6 +95,8 @@ def check_signoise(cmpnd):
     Compare Drug signal to noise (S/N) ratio with QA Range    
 
     Return None if cmpnd.PEAK_signoise is None.
+
+    TODO: Should this test fail if cmpnd.PEAK_signoise == 0?
     """
 
     if cmpnd.PEAK_signoise is None:
@@ -127,8 +130,8 @@ def check_ion_ratio(cmpnd):
         ion_ratio = cmpnd.PEAK_area/cmpnd.CONFIRMATIONIONPEAK1_area
         retval = ion_ratio_low <= ion_ratio <= ion_ratio_high
 
-    msg = '%s <= %s <= %s' % \
-        fmt(ion_ratio_low, ion_ratio, ion_ratio_high)
+    msg = '%s [%s-%s]' % \
+        fmt(ion_ratio, ion_ratio_low, ion_ratio_high)
         
     return retval, msg
         
@@ -165,20 +168,20 @@ def perform_qa(sample, qadata, matrix = None):
     
     results = []
     for compound in sample:
-        # 'sample_prep' is added by `parsers.group_specimens()` - is
+        # 'sample_prep' is added by `parsers.group_samples()` - is
         # this value is defined, use it in place of SAMPLE_id
         sample_id = compound.get('sample_prep') or compound['SAMPLE_id']
         compound_id = compound['COMPOUND_id']
         cmpnd = Compound(compound, **qadata[compound_id])
 
-        if matrix:
-            testnames = matrix.get((sample_id, compound_id), [])
-        else:
-            testnames = all_checks.keys()
+        testnames = matrix.get((sample_id, compound_id), []) if matrix else all_checks.keys()
             
-        for testname in testnames:
-            retval = globals()[testname](cmpnd)
-            results.append((cmpnd, testname, retval))
+        for test in testnames:
+            retval, msg = globals()[test](cmpnd)
+            results.append(dict(cmpnd = cmpnd,
+                                test = test,
+                                result = retval,
+                                comment = msg))
 
     return results
 

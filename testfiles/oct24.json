@@ -3645,6 +3645,7 @@
                     "CONFIRMATIONIONPEAK1_area": 5916.838, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 230.0055674027, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 16.1255434181, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 7892.19
@@ -3658,6 +3659,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -3671,6 +3673,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 0.0
@@ -3684,6 +3687,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -3697,6 +3701,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -3710,6 +3715,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 0.0
@@ -3723,6 +3729,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -3736,6 +3743,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 188.4238433134, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 34.1276678791, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 4573.468
@@ -3749,6 +3757,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -3762,6 +3771,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -3775,6 +3785,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -3788,6 +3799,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -3801,6 +3813,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -3814,6 +3827,7 @@
                     "CONFIRMATIONIONPEAK1_area": 37690.02, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 95.3818885214, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 4.4224645319, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 8324.178
@@ -3827,6 +3841,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14653.604, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 10664.128375866, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 2128.8722442411, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 186023.781
@@ -3840,6 +3855,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7550.374, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 220.8009272822, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 420.5881320117, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 81874.25
@@ -3853,6 +3869,7 @@
                     "CONFIRMATIONIONPEAK1_area": 632.018, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 8.5347769582, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 6.5493000931, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 1276.837
@@ -3866,6 +3883,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -3879,6 +3897,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 3.4218618087, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 1.6195235303, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 602.045
@@ -3892,6 +3911,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 16, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -3907,6 +3927,7 @@
                     "CONFIRMATIONIONPEAK1_area": 23613.982, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 680.9551022512, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 66.0470711713, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 32818.637
@@ -3920,6 +3941,7 @@
                     "CONFIRMATIONIONPEAK1_area": 93795.281, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 194.225410212, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 40.9179932047, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 38924.391
@@ -3933,6 +3955,7 @@
                     "CONFIRMATIONIONPEAK1_area": 23155.295, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 1114.7139539935, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.1896555339, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 40923.543
@@ -3946,6 +3969,7 @@
                     "CONFIRMATIONIONPEAK1_area": 12279.898, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 450.0204283885, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.3289881428, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 21160.818
@@ -3959,6 +3983,7 @@
                     "CONFIRMATIONIONPEAK1_area": 259702.797, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 2357.2718614054, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.7190942329, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 67441.367
@@ -3972,6 +3997,7 @@
                     "CONFIRMATIONIONPEAK1_area": 34613.609, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 1145.6505669124, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.1901287594, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 111121.695
@@ -3985,6 +4011,7 @@
                     "CONFIRMATIONIONPEAK1_area": 42083.188, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 1474.462167606, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.9689101199, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 62607.391
@@ -3998,6 +4025,7 @@
                     "CONFIRMATIONIONPEAK1_area": 21834.512, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 3028.2799763856, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.5513310673, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 402777.25
@@ -4011,6 +4039,7 @@
                     "CONFIRMATIONIONPEAK1_area": 104965.109, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 2220.8617338912, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.6791498546, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 277616.688
@@ -4024,6 +4053,7 @@
                     "CONFIRMATIONIONPEAK1_area": 214277.703, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 2661.5929820052, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.9427439642, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 250027.031
@@ -4037,6 +4067,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14245.584, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 919.8113067242, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1.3592120645, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 19129.705
@@ -4050,6 +4081,7 @@
                     "CONFIRMATIONIONPEAK1_area": 17657.896, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 2100.182420527, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 58.5217081319, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 9780.198
@@ -4063,6 +4095,7 @@
                     "CONFIRMATIONIONPEAK1_area": 127230.883, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 2611.3680434324, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.1248586489, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 133032.219
@@ -4076,6 +4109,7 @@
                     "CONFIRMATIONIONPEAK1_area": 575972.313, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 2026.1427064809, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.2059804948, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 108736.039
@@ -4089,6 +4123,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14117.816, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 4076.2224168841, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 2173.2988140761, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 188651.859
@@ -4102,6 +4137,7 @@
                     "CONFIRMATIONIONPEAK1_area": 8804.49, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 1900.6315782814, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 474.8079200594, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 93374.164
@@ -4115,6 +4151,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4494.845, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 194.824981165, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 62.1842367585, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 12247.271
@@ -4128,6 +4165,7 @@
                     "CONFIRMATIONIONPEAK1_area": 886.608, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 716.3952886241, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 115.4266462171, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 3877.217
@@ -4141,6 +4179,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3257.687, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 1659.7492140747, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 89.2688939225, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 34034.898
@@ -4154,6 +4193,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1245.373, 
                     "SAMPLE_id": 17, 
                     "PEAK_signoise": 95.424482355, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 105.5741279013, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 10939.684
@@ -4169,6 +4209,7 @@
                     "CONFIRMATIONIONPEAK1_area": 110288.039, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 940.7586799995, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 190.5699575598, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 150129.438
@@ -4182,6 +4223,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -4195,6 +4237,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4121.31, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 104.9072024736, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 3.7589726984, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 7378.825
@@ -4208,6 +4251,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -4221,6 +4265,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -4234,6 +4279,7 @@
                     "CONFIRMATIONIONPEAK1_area": 486.227, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 62.1534710335, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.6434987368, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 2544.782
@@ -4247,6 +4293,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -4260,6 +4307,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 75.5273830596, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 3592.15
@@ -4273,6 +4321,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -4286,6 +4335,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -4299,6 +4349,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -4312,6 +4363,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -4325,6 +4377,7 @@
                     "CONFIRMATIONIONPEAK1_area": 266.327, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 46.2275355841, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0762601219, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 208.523
@@ -4338,6 +4391,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7746.075, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 9.8934856902, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.8917916074, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 1603.074
@@ -4351,6 +4405,7 @@
                     "CONFIRMATIONIONPEAK1_area": 218023.125, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 11883.6550798707, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 14841.2046599977, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 2831089.75
@@ -4364,6 +4419,7 @@
                     "CONFIRMATIONIONPEAK1_area": 127519.125, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 5556.5773414231, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 4421.6292988233, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 1344247.375
@@ -4377,6 +4433,7 @@
                     "CONFIRMATIONIONPEAK1_area": 13523.589, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 29.4797466917, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 109.0280081521, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 33195.957
@@ -4390,6 +4447,7 @@
                     "CONFIRMATIONIONPEAK1_area": 99.578, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 25.9377403548, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 2.7043758422, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 127.198
@@ -4403,6 +4461,7 @@
                     "CONFIRMATIONIONPEAK1_area": 61.937, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 15.6395269558, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 2.8711411735, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 1631.71
@@ -4416,6 +4475,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 18, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -4431,6 +4491,7 @@
                     "CONFIRMATIONIONPEAK1_area": 130021.75, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 667.9322528551, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 222.9037925605, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 177362.031
@@ -4444,6 +4505,7 @@
                     "CONFIRMATIONIONPEAK1_area": 147969.641, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 184.2633366243, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 42.0014800451, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 62598.543
@@ -4457,6 +4519,7 @@
                     "CONFIRMATIONIONPEAK1_area": 55988.23, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 760.1129001025, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.1790991171, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 97136.125
@@ -4470,6 +4533,7 @@
                     "CONFIRMATIONIONPEAK1_area": 12284.364, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 178.7293846428, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 57.5983319961, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 22686.717
@@ -4483,6 +4547,7 @@
                     "CONFIRMATIONIONPEAK1_area": 376308.531, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 4419.7865219843, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 51.9745506959, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 97168.156
@@ -4496,6 +4561,7 @@
                     "CONFIRMATIONIONPEAK1_area": 52433.199, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 2006.7829120911, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.2691087946, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 159417.484
@@ -4509,6 +4575,7 @@
                     "CONFIRMATIONIONPEAK1_area": 77498.391, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 2800.0269476492, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.041203267, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 118911.914
@@ -4522,6 +4589,7 @@
                     "CONFIRMATIONIONPEAK1_area": 29149.299, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 2648.0235566079, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.6835474957, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 543004.188
@@ -4535,6 +4603,7 @@
                     "CONFIRMATIONIONPEAK1_area": 110662.828, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 1485.8785612751, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 44.0219781668, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 294032.563
@@ -4548,6 +4617,7 @@
                     "CONFIRMATIONIONPEAK1_area": 174218.641, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 803.2211029495, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.9942978875, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 197001.219
@@ -4561,6 +4631,7 @@
                     "CONFIRMATIONIONPEAK1_area": 28631.643, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 1155.8296042814, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1.2272793246, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 24062.787
@@ -4574,6 +4645,7 @@
                     "CONFIRMATIONIONPEAK1_area": 19574.582, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 11441.4422273128, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.1799061592, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 10741.61
@@ -4587,6 +4659,7 @@
                     "CONFIRMATIONIONPEAK1_area": 149764.734, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 5457.0594938521, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 53.2393609891, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 159330.984
@@ -4600,6 +4673,7 @@
                     "CONFIRMATIONIONPEAK1_area": 631218.438, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 4332.7806893259, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 52.6954121994, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 118316.617
@@ -4613,6 +4687,7 @@
                     "CONFIRMATIONIONPEAK1_area": 203823.641, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 7686.5783114717, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 14002.2728715656, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 2669766.0
@@ -4626,6 +4701,7 @@
                     "CONFIRMATIONIONPEAK1_area": 122029.727, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 2445.9373953829, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 4335.1232272313, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 1273909.0
@@ -4639,6 +4715,7 @@
                     "CONFIRMATIONIONPEAK1_area": 17112.031, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 170.4412943039, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 50160.52
@@ -4652,6 +4729,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1123.964, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 639.2514723178, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 109.8951920408, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 4990.812
@@ -4665,6 +4743,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4767.28, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 802.898211999, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 84.5527424945, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 47952.25
@@ -4678,6 +4757,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1721.223, 
                     "SAMPLE_id": 19, 
                     "PEAK_signoise": 614.2891515298, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 112.8362134968, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 16041.704
@@ -4695,6 +4775,7 @@
                     "CONFIRMATIONIONPEAK1_area": 17612.094, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 173.3223981668, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 58.6246970094, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 24175.24
@@ -4708,6 +4789,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -4721,6 +4803,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1763.941, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 57.9992420531, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 6.5630016002, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 3230.689
@@ -4734,6 +4817,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -4747,6 +4831,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -4760,6 +4845,7 @@
                     "CONFIRMATIONIONPEAK1_area": 113217.875, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 963.4703857454, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 168.4362727627, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 353590.938
@@ -4773,6 +4859,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -4786,6 +4873,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 131.1534667994, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 33.6044516383, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 3965.138
@@ -4799,6 +4887,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -4812,6 +4901,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -4825,6 +4915,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -4838,6 +4929,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -4851,6 +4943,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -4864,6 +4957,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3344.217, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 57.9729515136, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.6121697194, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 930.769
@@ -4877,6 +4971,7 @@
                     "CONFIRMATIONIONPEAK1_area": 31926.777, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 11372.9931867055, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 4444.9234390786, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 408195.875
@@ -4890,6 +4985,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14176.499, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 878.2739681406, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 1099.2034773281, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 151255.359
@@ -4903,6 +4999,7 @@
                     "CONFIRMATIONIONPEAK1_area": 13628.626, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 34.8740169272, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 307.0772324574, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 42318.527
@@ -4916,6 +5013,7 @@
                     "CONFIRMATIONIONPEAK1_area": 295.089, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 21.9549396656, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 9.9127669214, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 296.081
@@ -4929,6 +5027,7 @@
                     "CONFIRMATIONIONPEAK1_area": 890.549, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 364.7708371499, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 15.7813233758, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 17142.135
@@ -4942,6 +5041,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 20, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -4957,6 +5057,7 @@
                     "CONFIRMATIONIONPEAK1_area": 33563.277, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 155.4679997728, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 102.3378908923, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 44244.594
@@ -4970,6 +5071,7 @@
                     "CONFIRMATIONIONPEAK1_area": 50065.277, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 140.5945646122, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 32.1345505825, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 20582.123
@@ -4983,6 +5085,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15984.445, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 412.0108352053, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.4566010915, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 26687.328
@@ -4996,6 +5099,7 @@
                     "CONFIRMATIONIONPEAK1_area": 12339.164, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 323.5296608558, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 51.9287314209, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 22618.672
@@ -5009,6 +5113,7 @@
                     "CONFIRMATIONIONPEAK1_area": 236681.625, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 545.5050640297, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 51.5275110942, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 60993.738
@@ -5022,6 +5127,7 @@
                     "CONFIRMATIONIONPEAK1_area": 139898.438, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 1638.3641252517, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 211.6074508508, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 444837.25
@@ -5035,6 +5141,7 @@
                     "CONFIRMATIONIONPEAK1_area": 39935.691, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 956.1964803004, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 45.937974448, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 59558.168
@@ -5048,6 +5155,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20826.102, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 4263.7890593363, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.4315978439, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 376079.656
@@ -5061,6 +5169,7 @@
                     "CONFIRMATIONIONPEAK1_area": 97973.336, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 1567.1376502633, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.3744934, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 266894.688
@@ -5074,6 +5183,7 @@
                     "CONFIRMATIONIONPEAK1_area": 212875.313, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 2269.913748784, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.0299323814, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 252232.109
@@ -5087,6 +5197,7 @@
                     "CONFIRMATIONIONPEAK1_area": 12986.353, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 638.87923621, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1.2209967809, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 17490.863
@@ -5100,6 +5211,7 @@
                     "CONFIRMATIONIONPEAK1_area": 17369.881, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 349.3507966473, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.3786112822, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 10220.944
@@ -5113,6 +5225,7 @@
                     "CONFIRMATIONIONPEAK1_area": 121052.656, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 2978.6767141344, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.3583601887, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 127052.375
@@ -5126,6 +5239,7 @@
                     "CONFIRMATIONIONPEAK1_area": 560113.375, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 3390.7402937222, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.0532176165, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 105904.727
@@ -5139,6 +5253,7 @@
                     "CONFIRMATIONIONPEAK1_area": 30940.627, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 1345.9120197844, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 4567.1042358817, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 408854.938
@@ -5152,6 +5267,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15316.516, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 1063.9923981359, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1110.2404824797, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 156711.047
@@ -5165,6 +5281,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16840.189, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 83.430043778, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 370.4102554845, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 52361.949
@@ -5178,6 +5295,7 @@
                     "CONFIRMATIONIONPEAK1_area": 925.463, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 92.4694538229, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 113.2224605977, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 3730.4
@@ -5191,6 +5309,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3431.559, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 2338.6889043981, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 39.5833937629, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 41728.383
@@ -5204,6 +5323,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1218.221, 
                     "SAMPLE_id": 21, 
                     "PEAK_signoise": 68.2797237966, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 101.8720698412, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 10082.55
@@ -5219,6 +5339,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -5232,6 +5353,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -5245,6 +5367,7 @@
                     "CONFIRMATIONIONPEAK1_area": 9920.058, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 73.1356255313, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 72.7810121123, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 17122.088
@@ -5258,6 +5381,7 @@
                     "CONFIRMATIONIONPEAK1_area": 819.382, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 4.7188593101, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 2.4709763379, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 709.844
@@ -5271,6 +5395,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -5284,6 +5409,7 @@
                     "CONFIRMATIONIONPEAK1_area": 648015.25, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 7502.0584834854, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1889.3785541194, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 2033154.0
@@ -5297,6 +5423,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -5310,6 +5437,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 23.4054524666, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 638.63
@@ -5323,6 +5451,7 @@
                     "CONFIRMATIONIONPEAK1_area": 318.12, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 5.3751908207, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 787.453
@@ -5336,6 +5465,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -5349,6 +5479,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -5362,6 +5493,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -5375,6 +5507,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1498.644, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 7.1792320566, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0512777521, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 88.178
@@ -5388,6 +5521,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3531.446, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 26.5448992907, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1.0792103296, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 1767.962
@@ -5401,6 +5535,7 @@
                     "CONFIRMATIONIONPEAK1_area": 220027.172, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 490809.7747059176, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 19155.1453131566, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 2920228.75
@@ -5414,6 +5549,7 @@
                     "CONFIRMATIONIONPEAK1_area": 492.83, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 110.8306092853, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1595.8210904208, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 182776.328
@@ -5427,6 +5563,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -5440,6 +5577,7 @@
                     "CONFIRMATIONIONPEAK1_area": 589.49, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 15.1709365208, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 132.9831154664, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 2107.428
@@ -5453,6 +5591,7 @@
                     "CONFIRMATIONIONPEAK1_area": 5327.29, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 693.4047253981, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 22.0326015013, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 88655.18
@@ -5466,6 +5605,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 22, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -5481,6 +5621,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -5494,6 +5635,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -5507,6 +5649,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16369.907, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 242.9983324578, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 114.6037611009, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 28682.633
@@ -5520,6 +5663,7 @@
                     "CONFIRMATIONIONPEAK1_area": 6904.219, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 67.3919073746, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.1020227231, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 11895.05
@@ -5533,6 +5677,7 @@
                     "CONFIRMATIONIONPEAK1_area": 145611.688, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 245.3527900942, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.9202379892, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 37616.09
@@ -5546,6 +5691,7 @@
                     "CONFIRMATIONIONPEAK1_area": 644286.75, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 9526.6831691834, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1802.2425777921, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 2009436.5
@@ -5559,6 +5705,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16672.488, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 1566.0148158656, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 47.3425056077, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 24664.074
@@ -5572,6 +5719,7 @@
                     "CONFIRMATIONIONPEAK1_area": 12820.139, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 7706.5295863327, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 42.8529157903, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 231737.234
@@ -5585,6 +5733,7 @@
                     "CONFIRMATIONIONPEAK1_area": 67780.281, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 736.8448201868, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.3382438373, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 183739.641
@@ -5598,6 +5747,7 @@
                     "CONFIRMATIONIONPEAK1_area": 159946.094, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 753.4365708938, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 47.4567984675, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 193480.672
@@ -5611,6 +5761,7 @@
                     "CONFIRMATIONIONPEAK1_area": 10193.029, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 304.475117907, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1.2527792886, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 15837.535
@@ -5624,6 +5775,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16210.533, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 950.0958752843, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 52.7804392732, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 9980.764
@@ -5637,6 +5789,7 @@
                     "CONFIRMATIONIONPEAK1_area": 97319.477, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 2412.0218827774, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 51.0085717969, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 107374.961
@@ -5650,6 +5803,7 @@
                     "CONFIRMATIONIONPEAK1_area": 541181.0, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 3388.7745458124, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 51.1982748512, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 103833.25
@@ -5663,6 +5817,7 @@
                     "CONFIRMATIONIONPEAK1_area": 225239.844, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 4944.5468205897, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 17608.7646803692, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 3016997.5
@@ -5676,6 +5831,7 @@
                     "CONFIRMATIONIONPEAK1_area": 493.543, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 117.2555486371, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1656.848702606, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 178166.703
@@ -5689,6 +5845,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -5702,6 +5859,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1299.042, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 168.0230384513, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 174.7393795255, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 4378.071
@@ -5715,6 +5873,7 @@
                     "CONFIRMATIONIONPEAK1_area": 6450.445, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 1817.0586381054, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 25.2630676123, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 99722.406
@@ -5728,6 +5887,7 @@
                     "CONFIRMATIONIONPEAK1_area": 891.831, 
                     "SAMPLE_id": 23, 
                     "PEAK_signoise": 278.9461106331, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 136.2921530514, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 9384.855
@@ -5745,6 +5905,7 @@
                     "CONFIRMATIONIONPEAK1_area": 13696.338, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 152.9645951458, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 40.2220503221, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 18270.162
@@ -5758,6 +5919,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -5771,6 +5933,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 18.9115895681, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.7359867616, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 524.932
@@ -5784,6 +5947,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1327.126, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 41.125970732, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 1.0754713232, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 761.821
@@ -5797,6 +5961,7 @@
                     "CONFIRMATIONIONPEAK1_area": 412364.469, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 2660.4710879966, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 89.607234256, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 106153.977
@@ -5810,6 +5975,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 0.0
@@ -5823,6 +5989,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -5836,6 +6003,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 138.8421760471, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.2508056849, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 4534.756
@@ -5849,6 +6017,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -5862,6 +6031,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -5875,6 +6045,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -5888,6 +6059,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -5901,6 +6073,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -5914,6 +6087,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2459.124, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 33.1938265523, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.3696638564, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 396.338
@@ -5927,6 +6101,7 @@
                     "CONFIRMATIONIONPEAK1_area": 21448.074, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 3461.7112955715, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 3230.2961310315, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 276667.188
@@ -5940,6 +6115,7 @@
                     "CONFIRMATIONIONPEAK1_area": 9241.455, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 609.3023788525, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 646.1947878114, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 100788.477
@@ -5953,6 +6129,7 @@
                     "CONFIRMATIONIONPEAK1_area": 909.997, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 7.9222932137, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 15.5540579623, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 2429.637
@@ -5966,6 +6143,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2327.414, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 1346.6781054869, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 338.215825605, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 11372.239
@@ -5979,6 +6157,7 @@
                     "CONFIRMATIONIONPEAK1_area": 657.466, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 100.4259247676, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 38.372570147, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 13140.947
@@ -5992,6 +6171,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 24, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -6007,6 +6187,7 @@
                     "CONFIRMATIONIONPEAK1_area": 30182.959, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 710.9561045032, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 86.529033196, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 42428.594
@@ -6020,6 +6201,7 @@
                     "CONFIRMATIONIONPEAK1_area": 88209.688, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 77.3061152966, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 39.1296494609, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 36782.688
@@ -6033,6 +6215,7 @@
                     "CONFIRMATIONIONPEAK1_area": 23456.869, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 457.4326476478, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.2086627845, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 39268.027
@@ -6046,6 +6229,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15687.057, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 665.409366749, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 52.4293558275, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 25958.717
@@ -6059,6 +6243,7 @@
                     "CONFIRMATIONIONPEAK1_area": 647850.688, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 9838.8136978197, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 134.392946784, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 166897.672
@@ -6072,6 +6257,7 @@
                     "CONFIRMATIONIONPEAK1_area": 37673.91, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 361.1082525624, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 51.3549830782, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 116672.586
@@ -6085,6 +6271,7 @@
                     "CONFIRMATIONIONPEAK1_area": 43890.281, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 1415.6864098906, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.7626419457, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 65832.992
@@ -6098,6 +6285,7 @@
                     "CONFIRMATIONIONPEAK1_area": 22288.006, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 15031.9565837174, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 4704.5381225096, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 404732.688
@@ -6111,6 +6299,7 @@
                     "CONFIRMATIONIONPEAK1_area": 110175.078, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 1627.2120349507, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.952245263, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 293439.125
@@ -6124,6 +6313,7 @@
                     "CONFIRMATIONIONPEAK1_area": 237902.219, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 2104.0315565353, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.8401525653, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 281452.031
@@ -6137,6 +6327,7 @@
                     "CONFIRMATIONIONPEAK1_area": 13779.014, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 189.2367122378, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1.2842670037, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 18557.469
@@ -6150,6 +6341,7 @@
                     "CONFIRMATIONIONPEAK1_area": 18941.85, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 1544.9018401364, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 56.7375277892, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 11523.381
@@ -6163,6 +6355,7 @@
                     "CONFIRMATIONIONPEAK1_area": 134409.25, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 3676.5031566504, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.8159229194, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 144718.547
@@ -6176,6 +6369,7 @@
                     "CONFIRMATIONIONPEAK1_area": 602959.75, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 6840.4462849694, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 52.4450712402, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 115772.992
@@ -6189,6 +6383,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20272.273, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 3763.826854177, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 2819.4509820638, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 260844.797
@@ -6202,6 +6397,7 @@
                     "CONFIRMATIONIONPEAK1_area": 10944.053, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 1695.4494444415, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 607.2288846874, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 109392.648
@@ -6215,6 +6411,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4337.957, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 200.8885821431, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 71.9482965835, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 12980.95
@@ -6228,6 +6425,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3526.121, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 443.2404290279, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 381.9650111733, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 14531.146
@@ -6241,6 +6439,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3680.552, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 483.9093758568, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 123.8336760798, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 45683.867
@@ -6254,6 +6453,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1283.862, 
                     "SAMPLE_id": 25, 
                     "PEAK_signoise": 390.7438492738, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 11113.0166258568, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 12276.551
@@ -6269,6 +6469,7 @@
                     "CONFIRMATIONIONPEAK1_area": 152733.531, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 1024.7333025421, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 425.3563775668, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 210450.813
@@ -6282,6 +6483,7 @@
                     "CONFIRMATIONIONPEAK1_area": 25670.039, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 50.8858522347, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 11.3485976352, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 10466.662
@@ -6295,6 +6497,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2074.306, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 15.0740540334, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 5.0973710259, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 3368.378
@@ -6308,6 +6511,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16092.071, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 575.8506152385, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 15.4463210946, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 8245.134
@@ -6321,6 +6525,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4931409.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 6893.4762426649, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 893.0057881631, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 1280462.375
@@ -6334,6 +6539,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 0.0
@@ -6347,6 +6553,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -6360,6 +6567,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 107.5283305183, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 5405.446
@@ -6373,6 +6581,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -6386,6 +6595,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -6399,6 +6609,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -6412,6 +6623,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -6425,6 +6637,7 @@
                     "CONFIRMATIONIONPEAK1_area": 719.571, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 26.8124690425, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0479325331, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 128.749
@@ -6438,6 +6651,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2101.217, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 62.7276688109, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.3517928388, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 413.743
@@ -6451,6 +6665,7 @@
                     "CONFIRMATIONIONPEAK1_area": 251906.109, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 35234.1259230694, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 18943.1359056753, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 3252608.0
@@ -6464,6 +6679,7 @@
                     "CONFIRMATIONIONPEAK1_area": 107076.609, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 6972.2313664418, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 5902.4021428153, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 1105784.25
@@ -6477,6 +6693,7 @@
                     "CONFIRMATIONIONPEAK1_area": 10624.583, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 49.4741861675, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 162.3799949716, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 30466.627
@@ -6490,6 +6707,7 @@
                     "CONFIRMATIONIONPEAK1_area": 33121.348, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 2058.0530692837, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 2114.9098320856, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 137488.438
@@ -6503,6 +6721,7 @@
                     "CONFIRMATIONIONPEAK1_area": 691.714, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 1166.6439811087, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 35.5873285813, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 11955.221
@@ -6516,6 +6735,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 26, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -6531,6 +6751,7 @@
                     "CONFIRMATIONIONPEAK1_area": 162744.984, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 1497.9193541579, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 460.3707654614, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 224844.438
@@ -6544,6 +6765,7 @@
                     "CONFIRMATIONIONPEAK1_area": 124766.609, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 149.9857875966, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 57.1357969243, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 51397.93
@@ -6557,6 +6779,7 @@
                     "CONFIRMATIONIONPEAK1_area": 22397.432, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 147.2860409403, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 55.8645171332, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 41000.008
@@ -6570,6 +6793,7 @@
                     "CONFIRMATIONIONPEAK1_area": 28606.553, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 308.9542542259, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 62.6527836341, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 32475.303
@@ -6583,6 +6807,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4927644.5, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 5971.2012907359, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 890.6555884958, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 1277255.25
@@ -6596,6 +6821,7 @@
                     "CONFIRMATIONIONPEAK1_area": 47778.508, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 1808.6571334389, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.1757143133, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 145833.531
@@ -6609,6 +6835,7 @@
                     "CONFIRMATIONIONPEAK1_area": 57975.801, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 3039.8462651471, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.1905011771, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 88131.008
@@ -6622,6 +6849,7 @@
                     "CONFIRMATIONIONPEAK1_area": 26865.49, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 14602.0580837088, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.7103542415, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 471715.281
@@ -6635,6 +6863,7 @@
                     "CONFIRMATIONIONPEAK1_area": 138460.781, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 3383.1701000682, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.6990038373, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 368531.906
@@ -6648,6 +6877,7 @@
                     "CONFIRMATIONIONPEAK1_area": 293214.281, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 2858.1584579768, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.8197239518, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 340188.531
@@ -6661,6 +6891,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14746.73, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 4242.2952320833, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1.301444159, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 20488.199
@@ -6674,6 +6905,7 @@
                     "CONFIRMATIONIONPEAK1_area": 21287.52, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 1821.5626809369, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 59.5212659063, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 12924.846
@@ -6687,6 +6919,7 @@
                     "CONFIRMATIONIONPEAK1_area": 159363.438, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 14056.4498567396, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 54.9688000719, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 174792.094
@@ -6700,6 +6933,7 @@
                     "CONFIRMATIONIONPEAK1_area": 693296.813, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 6746.9085006654, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 53.9133228601, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 131716.391
@@ -6713,6 +6947,7 @@
                     "CONFIRMATIONIONPEAK1_area": 239716.656, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 11174.2447955586, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 18673.7478991507, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 3098423.25
@@ -6726,6 +6961,7 @@
                     "CONFIRMATIONIONPEAK1_area": 100993.414, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 16328.9802386681, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 5528.9340855595, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 1047014.125
@@ -6739,6 +6975,7 @@
                     "CONFIRMATIONIONPEAK1_area": 13394.415, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 208.9105084197, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 39620.656
@@ -6752,6 +6989,7 @@
                     "CONFIRMATIONIONPEAK1_area": 33430.148, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 2864.3308266459, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 2431.4305462423, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 134246.219
@@ -6765,6 +7003,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2309.197, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 656.4629924818, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 84.8439398884, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 28948.305
@@ -6778,6 +7017,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1788.375, 
                     "SAMPLE_id": 27, 
                     "PEAK_signoise": 528.9899165889, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 125.1776724385, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 15451.418
@@ -6795,6 +7035,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -6808,6 +7049,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -6821,6 +7063,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 43.7254570921, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.9239999008, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 990.053
@@ -6834,6 +7077,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -6847,6 +7091,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -6860,6 +7105,7 @@
                     "CONFIRMATIONIONPEAK1_area": 37933.441, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 434.7643743007, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 44.5898565133, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 120352.242
@@ -6873,6 +7119,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -6886,6 +7133,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 38.5851160573, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 45.7753756018, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 3860.432
@@ -6899,6 +7147,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -6912,6 +7161,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -6925,6 +7175,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -6938,6 +7189,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -6951,6 +7203,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -6964,6 +7217,7 @@
                     "CONFIRMATIONIONPEAK1_area": 9344599.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 48200.82654851, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 878.6445751473, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 1799437.875
@@ -6977,6 +7231,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -6990,6 +7245,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -7003,6 +7259,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 8.3335812025, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 8.8977949768, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 1904.898
@@ -7016,6 +7273,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -7029,6 +7287,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 69.4106088786, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 2.5471027546, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 1364.617
@@ -7042,6 +7301,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 28, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -7057,6 +7317,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20717.262, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 1227.1781307458, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 45.7896201346, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 29009.316
@@ -7070,6 +7331,7 @@
                     "CONFIRMATIONIONPEAK1_area": 86375.125, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 28.2190348928, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 32.2587640106, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 36312.836
@@ -7083,6 +7345,7 @@
                     "CONFIRMATIONIONPEAK1_area": 29019.115, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 800.0592110973, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 45.3921319419, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 53010.547
@@ -7096,6 +7359,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15512.878, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 736.4534318025, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 45.4189824329, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 27315.729
@@ -7109,6 +7373,7 @@
                     "CONFIRMATIONIONPEAK1_area": 283458.938, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 1385.4998308881, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 47.7738645296, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 72107.352
@@ -7122,6 +7387,7 @@
                     "CONFIRMATIONIONPEAK1_area": 77033.227, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 620.5638644059, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 87.556924447, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 239817.719
@@ -7135,6 +7401,7 @@
                     "CONFIRMATIONIONPEAK1_area": 50201.965, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 2399.6700108647, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 43.6922683722, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 74192.969
@@ -7148,6 +7415,7 @@
                     "CONFIRMATIONIONPEAK1_area": 23973.129, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 2140.6683739753, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 45.7715824745, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 437535.594
@@ -7161,6 +7429,7 @@
                     "CONFIRMATIONIONPEAK1_area": 124869.773, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 3511.157258278, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 44.4890513132, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 329872.219
@@ -7174,6 +7443,7 @@
                     "CONFIRMATIONIONPEAK1_area": 257854.313, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 1648.0606168566, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 44.2118613365, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 303408.375
@@ -7187,6 +7457,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 419.8428550654, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1.1190573268, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 20484.363
@@ -7200,6 +7471,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20912.154, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 3622.9299854479, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 43.5161918133, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 12230.165
@@ -7213,6 +7485,7 @@
                     "CONFIRMATIONIONPEAK1_area": 129019.516, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 5087.1873445314, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 44.9804634876, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 136169.219
@@ -7226,6 +7499,7 @@
                     "CONFIRMATIONIONPEAK1_area": 9372875.0, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 17810.0442770093, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 838.7925197019, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 1783578.0
@@ -7239,6 +7513,7 @@
                     "CONFIRMATIONIONPEAK1_area": 785.168, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 22.9584240652, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 88.1439586346, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 10206.083
@@ -7252,6 +7527,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1279.353, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 114.8870311545, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 72.7845698576, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 16622.033
@@ -7265,6 +7541,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4760.843, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 53.6939107139, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 59.1980058629, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 13539.485
@@ -7278,6 +7555,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1107.396, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 297.0867684044, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 95.4131970627, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 4410.871
@@ -7291,6 +7569,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3203.714, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 770.5642013147, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 62.7853626718, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 34187.273
@@ -7304,6 +7583,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1337.652, 
                     "SAMPLE_id": 29, 
                     "PEAK_signoise": 340.853978256, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 94.2758387084, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 11481.357
@@ -7319,6 +7599,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -7332,6 +7613,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -7345,6 +7627,7 @@
                     "CONFIRMATIONIONPEAK1_area": 6736.625, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 175.6976716606, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 10.3358323066, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 12798.609
@@ -7358,6 +7641,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -7371,6 +7655,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -7384,6 +7669,7 @@
                     "CONFIRMATIONIONPEAK1_area": 553490.688, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 15663.0684157403, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 477.7944573437, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 1716273.5
@@ -7397,6 +7683,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -7410,6 +7697,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 0.0
@@ -7423,6 +7711,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -7436,6 +7725,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -7449,6 +7739,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -7462,6 +7753,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -7475,6 +7767,7 @@
                     "CONFIRMATIONIONPEAK1_area": 897.869, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 86.6275286224, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1.6032374105, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 1597.936
@@ -7488,6 +7781,7 @@
                     "CONFIRMATIONIONPEAK1_area": 27267004.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 29489.8081904614, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 9654.6421032327, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 11292291.0
@@ -7501,6 +7795,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -7514,6 +7809,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -7527,6 +7823,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7069.737, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 115.8312104311, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 105.8694956471, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 21372.275
@@ -7540,6 +7837,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -7553,6 +7851,7 @@
                     "CONFIRMATIONIONPEAK1_area": 455.696, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 317.2205187427, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 7.8415802669, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 6951.661
@@ -7566,6 +7865,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 30, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -7581,6 +7881,7 @@
                     "CONFIRMATIONIONPEAK1_area": 25633.854, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 62.8766674318, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.70341788, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 35049.016
@@ -7594,6 +7895,7 @@
                     "CONFIRMATIONIONPEAK1_area": 154679.172, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 82.2680971893, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.4894305262, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 64382.664
@@ -7607,6 +7909,7 @@
                     "CONFIRMATIONIONPEAK1_area": 42689.09, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 594.3489346771, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 54.7860033691, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 74470.43
@@ -7620,6 +7923,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15627.317, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 283.8397565482, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.8317436098, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 27956.426
@@ -7633,6 +7937,7 @@
                     "CONFIRMATIONIONPEAK1_area": 384174.5, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 1857.4672955697, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 53.5626730307, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 99718.703
@@ -7646,6 +7951,7 @@
                     "CONFIRMATIONIONPEAK1_area": 581637.688, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 9715.7565208646, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 452.5597868413, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 1787106.625
@@ -7659,6 +7965,7 @@
                     "CONFIRMATIONIONPEAK1_area": 78045.313, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 4152.0942553314, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.4905212622, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 121472.648
@@ -7672,6 +7979,7 @@
                     "CONFIRMATIONIONPEAK1_area": 22494.646, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 3492.1737955024, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 52.230397663, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 421375.281
@@ -7685,6 +7993,7 @@
                     "CONFIRMATIONIONPEAK1_area": 191001.547, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 6500.3064165554, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.6678774262, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 511598.094
@@ -7698,6 +8007,7 @@
                     "CONFIRMATIONIONPEAK1_area": 385192.125, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 8150.5506462026, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.7389488949, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 455029.063
@@ -7711,6 +8021,7 @@
                     "CONFIRMATIONIONPEAK1_area": 34321.605, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 1425.4751764994, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 0.9908883827, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 30969.619
@@ -7724,6 +8035,7 @@
                     "CONFIRMATIONIONPEAK1_area": 29881.512, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 954.0152770697, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 57.5471948684, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 17480.918
@@ -7737,6 +8049,7 @@
                     "CONFIRMATIONIONPEAK1_area": 38032.668, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 1053.1109433127, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 40.3725480205, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 37974.848
@@ -7750,6 +8063,7 @@
                     "CONFIRMATIONIONPEAK1_area": 27639778.0, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 16287.3443957576, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 7948.1347556709, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 11096482.0
@@ -7763,6 +8077,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1008.542, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 140.1834864937, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 96.5651624678, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 14643.874
@@ -7776,6 +8091,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1927.104, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 397.0839551126, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 92.8796447392, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 16985.57
@@ -7789,6 +8105,7 @@
                     "CONFIRMATIONIONPEAK1_area": 11064.38, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 80.5977778266, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 176.3985144985, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 32307.604
@@ -7802,6 +8119,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1350.185, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 177.1361325385, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 107.0550457693, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 5736.14
@@ -7815,6 +8133,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3122.02, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 833.6137535427, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 38.1912905047, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 32982.047
@@ -7828,6 +8147,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1488.419, 
                     "SAMPLE_id": 31, 
                     "PEAK_signoise": 343.8615254213, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 125.3539292673, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 12896.871
@@ -7845,6 +8165,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -7858,6 +8179,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -7871,6 +8193,7 @@
                     "CONFIRMATIONIONPEAK1_area": 715.394, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 14.3856834789, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.8704829143, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 874.471
@@ -7884,6 +8207,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -7897,6 +8221,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -7910,6 +8235,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7610.208, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 166.6557174193, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 11.0646869714, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 23762.492
@@ -7923,6 +8249,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -7936,6 +8263,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 60.2494415353, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.1037095254, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 4384.086
@@ -7949,6 +8277,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -7962,6 +8291,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -7975,6 +8305,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -7988,6 +8319,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -8001,6 +8333,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -8014,6 +8347,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16334.683, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 66.9954062959, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 1.7883267631, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 3426.64
@@ -8027,6 +8361,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -8040,6 +8375,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -8053,6 +8389,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2873.257, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 45.704760026, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 48.112217337, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 9125.681
@@ -8066,6 +8403,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -8079,6 +8417,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 35.0430185432, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 3.6636492629, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 2124.948
@@ -8092,6 +8431,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 32, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -8107,6 +8447,7 @@
                     "CONFIRMATIONIONPEAK1_area": 21630.342, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 131.7233791921, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 51.804236793, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 29946.799
@@ -8120,6 +8461,7 @@
                     "CONFIRMATIONIONPEAK1_area": 82811.031, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 82.2564059771, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 32.4146773167, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 33625.223
@@ -8133,6 +8475,7 @@
                     "CONFIRMATIONIONPEAK1_area": 30790.01, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 976.3560202396, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.1824094827, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 55448.438
@@ -8146,6 +8489,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16502.354, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 1537.6256351959, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 52.0286035183, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 28898.012
@@ -8159,6 +8503,7 @@
                     "CONFIRMATIONIONPEAK1_area": 297527.938, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 2556.6844598142, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 54.2929543841, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 77769.633
@@ -8172,6 +8517,7 @@
                     "CONFIRMATIONIONPEAK1_area": 43812.648, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 368.1790670939, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 62.5051411139, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 136945.641
@@ -8185,6 +8531,7 @@
                     "CONFIRMATIONIONPEAK1_area": 44467.313, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 1350.0282287949, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.1605358655, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 68405.781
@@ -8198,6 +8545,7 @@
                     "CONFIRMATIONIONPEAK1_area": 26378.523, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 18927.7585916966, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.5636625351, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 475865.906
@@ -8211,6 +8559,7 @@
                     "CONFIRMATIONIONPEAK1_area": 126971.875, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 2272.6291886705, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.0159253774, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 340832.188
@@ -8224,6 +8573,7 @@
                     "CONFIRMATIONIONPEAK1_area": 265926.75, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 1924.7649757767, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 51.0535563041, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 318061.438
@@ -8237,6 +8587,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15715.56, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 1330.6461606895, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1.2648811837, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 21947.891
@@ -8250,6 +8601,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20391.723, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 6525.0281312131, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 55.4327097928, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 12078.449
@@ -8263,6 +8615,7 @@
                     "CONFIRMATIONIONPEAK1_area": 147188.078, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 1206.5248489644, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 54.6140682366, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 155551.672
@@ -8276,6 +8629,7 @@
                     "CONFIRMATIONIONPEAK1_area": 635372.813, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 3820.8611493928, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 55.9512720805, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 121735.422
@@ -8289,6 +8643,7 @@
                     "CONFIRMATIONIONPEAK1_area": 853.318, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 43.6454642173, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 105.4142664796, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 10986.934
@@ -8302,6 +8657,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1170.028, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 158.6605704307, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 78.2529258809, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 15411.298
@@ -8315,6 +8671,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7271.976, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 81.7350415095, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 98.7323316693, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 19473.691
@@ -8328,6 +8685,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1129.176, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 73.9820990196, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 126.8036660304, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 4952.899
@@ -8341,6 +8699,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3325.625, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 722.8167384896, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 62.8090521467, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 35661.383
@@ -8354,6 +8713,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1371.335, 
                     "SAMPLE_id": 33, 
                     "PEAK_signoise": 832.8708986068, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 108.4760066103, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 13016.105
@@ -8369,6 +8729,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -8382,6 +8743,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -8395,6 +8757,7 @@
                     "CONFIRMATIONIONPEAK1_area": 3678.744, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 40.9383688041, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 13.75583559, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 6809.921
@@ -8408,6 +8771,7 @@
                     "CONFIRMATIONIONPEAK1_area": 422.362, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 6.8302510587, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.5995238106, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 344.057
@@ -8421,6 +8785,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -8434,6 +8799,7 @@
                     "CONFIRMATIONIONPEAK1_area": 37983.574, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 1159.9583769811, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 142.4820608463, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 124500.313
@@ -8447,6 +8813,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -8460,6 +8827,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 75.8824605161, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 5992.363
@@ -8473,6 +8841,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 5.5977062904, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 779.976
@@ -8486,6 +8855,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -8499,6 +8869,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -8512,6 +8883,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -8525,6 +8897,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -8538,6 +8911,7 @@
                     "CONFIRMATIONIONPEAK1_area": 5696.031, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 36.1856477158, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.9973941933, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 1319.096
@@ -8551,6 +8925,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -8564,6 +8939,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -8577,6 +8953,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20822.037, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 709.5757376785, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 735.4673197747, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 66759.273
@@ -8590,6 +8967,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -8603,6 +8981,7 @@
                     "CONFIRMATIONIONPEAK1_area": 514.706, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 118.6410623585, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 9.5582870075, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 11337.048
@@ -8616,6 +8995,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 34, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -8631,6 +9011,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14351.741, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 286.0632602642, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 51.7550215401, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 19584.469
@@ -8644,6 +9025,7 @@
                     "CONFIRMATIONIONPEAK1_area": 49481.059, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 38.9606539655, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 45.745166538, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 20272.57
@@ -8657,6 +9039,7 @@
                     "CONFIRMATIONIONPEAK1_area": 17385.346, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 364.229009887, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 60.9137129355, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 34090.043
@@ -8670,6 +9053,7 @@
                     "CONFIRMATIONIONPEAK1_area": 9064.481, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 333.959486956, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 48.8777605846, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 15062.196
@@ -8683,6 +9067,7 @@
                     "CONFIRMATIONIONPEAK1_area": 151162.359, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 641.2766839512, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 51.4942723454, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 39090.273
@@ -8696,6 +9081,7 @@
                     "CONFIRMATIONIONPEAK1_area": 54005.305, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 697.3909778595, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 180.1788479885, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 168512.406
@@ -8709,6 +9095,7 @@
                     "CONFIRMATIONIONPEAK1_area": 14634.166, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 316.8469643434, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 45.5648618395, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 22013.314
@@ -8722,6 +9109,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16825.078, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 9026.4532788146, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.8176465759, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 302792.219
@@ -8735,6 +9123,7 @@
                     "CONFIRMATIONIONPEAK1_area": 66060.875, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 1215.4966025101, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.2298052058, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 175830.328
@@ -8748,6 +9137,7 @@
                     "CONFIRMATIONIONPEAK1_area": 152768.141, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 429.9331818984, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.7058304031, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 184185.75
@@ -8761,6 +9151,7 @@
                     "CONFIRMATIONIONPEAK1_area": 8666.154, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 773.474057748, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1.2582808017, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 13413.724
@@ -8774,6 +9165,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7495.677, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 262.5968762756, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 45.2791903018, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 3954.988
@@ -8787,6 +9179,7 @@
                     "CONFIRMATIONIONPEAK1_area": 89317.266, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 575.9309127943, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 54.6995639834, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 95871.273
@@ -8800,6 +9193,7 @@
                     "CONFIRMATIONIONPEAK1_area": 457087.875, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 1321.640131611, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 53.3821212007, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 87301.055
@@ -8813,6 +9207,7 @@
                     "CONFIRMATIONIONPEAK1_area": 394.647, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 39.2357584879, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 86.5525698151, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 5533.832
@@ -8826,6 +9221,7 @@
                     "CONFIRMATIONIONPEAK1_area": 949.164, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 16.1841189561, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 29.4512645495, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 2795.918
@@ -8839,6 +9235,7 @@
                     "CONFIRMATIONIONPEAK1_area": 22534.436, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 360.647972962, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 655.340996126, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 62307.176
@@ -8852,6 +9249,7 @@
                     "CONFIRMATIONIONPEAK1_area": 543.855, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 174.3091890562, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 104.3824812145, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 2420.333
@@ -8865,6 +9263,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1704.255, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 332.5667009279, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 21.9985420484, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 24447.541
@@ -8878,6 +9277,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1014.246, 
                     "SAMPLE_id": 35, 
                     "PEAK_signoise": 224.6945442897, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 118.5185428714, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 9183.378
@@ -8895,6 +9295,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -8908,6 +9309,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -8921,6 +9323,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 42.1333390061, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 1.1238363248, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 1146.358
@@ -8934,6 +9337,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 0.0
@@ -8947,6 +9351,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -8960,6 +9365,7 @@
                     "CONFIRMATIONIONPEAK1_area": 75303.047, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 1347.3871213097, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 100.8584085037, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 235947.859
@@ -8973,6 +9379,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -8986,6 +9393,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 93.7591156644, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 3636.296
@@ -8999,6 +9407,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -9012,6 +9421,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -9025,6 +9435,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -9038,6 +9449,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -9051,6 +9463,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -9064,6 +9477,7 @@
                     "CONFIRMATIONIONPEAK1_area": 5578.269, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 81.1436469098, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.6726883387, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 1165.284
@@ -9077,6 +9491,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -9090,6 +9505,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -9103,6 +9519,7 @@
                     "CONFIRMATIONIONPEAK1_area": 5647.969, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 27.2998830831, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 104.0250580393, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 18293.877
@@ -9116,6 +9533,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -9129,6 +9547,7 @@
                     "CONFIRMATIONIONPEAK1_area": 782.554, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 140.7920083758, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 14.0766397359, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 14107.92
@@ -9142,6 +9561,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 36, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 2, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -9157,6 +9577,7 @@
                     "CONFIRMATIONIONPEAK1_area": 20901.285, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 211.1011245795, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 51.1604180067, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 29197.76
@@ -9170,6 +9591,7 @@
                     "CONFIRMATIONIONPEAK1_area": 127063.508, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 121.5843685002, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.2130739772, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 51116.262
@@ -9183,6 +9605,7 @@
                     "CONFIRMATIONIONPEAK1_area": 31787.393, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 492.3072694004, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.0510445613, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 54522.535
@@ -9196,6 +9619,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16877.006, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 672.4391122575, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 50.8658175933, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 29363.5
@@ -9209,6 +9633,7 @@
                     "CONFIRMATIONIONPEAK1_area": 312314.781, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 470.1249389414, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.978625062, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 80742.297
@@ -9222,6 +9647,7 @@
                     "CONFIRMATIONIONPEAK1_area": 109877.555, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 1179.6871048752, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 138.9237548132, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 340661.219
@@ -9235,6 +9661,7 @@
                     "CONFIRMATIONIONPEAK1_area": 51239.918, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 1225.5054849772, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.1601225902, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 77773.891
@@ -9248,6 +9675,7 @@
                     "CONFIRMATIONIONPEAK1_area": 25038.627, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 3395.6135184692, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.3986967184, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 447413.375
@@ -9261,6 +9689,7 @@
                     "CONFIRMATIONIONPEAK1_area": 145834.141, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 2554.8153503601, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 48.2509486903, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 383988.531
@@ -9274,6 +9703,7 @@
                     "CONFIRMATIONIONPEAK1_area": 291982.875, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 3764.6678416535, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 49.6084820852, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 349202.031
@@ -9287,6 +9717,7 @@
                     "CONFIRMATIONIONPEAK1_area": 16268.749, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 860.0090340059, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 1.3179605993, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 23992.109
@@ -9300,6 +9731,7 @@
                     "CONFIRMATIONIONPEAK1_area": 24471.98, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 1158.0895754315, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.2241364031, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 13528.362
@@ -9313,6 +9745,7 @@
                     "CONFIRMATIONIONPEAK1_area": 167014.766, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 13341.3933265447, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 52.5034423512, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 179717.391
@@ -9326,6 +9759,7 @@
                     "CONFIRMATIONIONPEAK1_area": 661495.0, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 3796.2248492156, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 55.1015629084, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 128679.672
@@ -9339,6 +9773,7 @@
                     "CONFIRMATIONIONPEAK1_area": 863.528, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 22.3062216771, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 95.5980213211, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 11754.55
@@ -9352,6 +9787,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1401.235, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 118.3687392341, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 74.77841355, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 13802.333
@@ -9365,6 +9801,7 @@
                     "CONFIRMATIONIONPEAK1_area": 9214.026, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 76.3937222718, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 150.0061459798, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 27729.086
@@ -9378,6 +9815,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1197.121, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 69.0641978331, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 109.4844958247, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 5067.598
@@ -9391,6 +9829,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4608.242, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 1478.9178881872, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 53.4928532187, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 51322.305
@@ -9404,6 +9843,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1305.572, 
                     "SAMPLE_id": 37, 
                     "PEAK_signoise": 218.7127143981, 
+                    "sample_order": 3, 
                     "PEAK_analconc": 113.6033327128, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 13385.308
@@ -9419,6 +9859,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 0.0
@@ -9432,6 +9873,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -9445,6 +9887,7 @@
                     "CONFIRMATIONIONPEAK1_area": 6064.684, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 128.8849634999, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 16.9769990033, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 10706.767
@@ -9458,6 +9901,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 7.7057404576, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1.8798639634, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 995.484
@@ -9471,6 +9915,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 0.0
@@ -9484,6 +9929,7 @@
                     "CONFIRMATIONIONPEAK1_area": 286019.063, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 241.47894316, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1214.8912936617, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 885109.75
@@ -9497,6 +9943,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 0.0
@@ -9510,6 +9957,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 0.0
@@ -9523,6 +9971,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 0.0
@@ -9536,6 +9985,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": null, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 0.0
@@ -9549,6 +9999,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 0.0
@@ -9562,6 +10013,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 0.0
@@ -9575,6 +10027,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 0.0
@@ -9588,6 +10041,7 @@
                     "CONFIRMATIONIONPEAK1_area": 4785.737, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 31.018084574, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.538881845, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 936.164
@@ -9601,6 +10055,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -9614,6 +10069,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 0.0
@@ -9627,6 +10083,7 @@
                     "CONFIRMATIONIONPEAK1_area": 65660.016, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 1779.4400804227, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 1545.7688196087, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 207043.031
@@ -9640,6 +10097,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 0.0
@@ -9653,6 +10111,7 @@
                     "CONFIRMATIONIONPEAK1_area": 5515.32, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 488.3477414999, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 23.4734482065, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 100874.992
@@ -9666,6 +10125,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 38, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 1, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 0.0
@@ -9681,6 +10141,7 @@
                     "CONFIRMATIONIONPEAK1_area": 18711.9, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 66.6825516628, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 52.8950598917, 
                     "COMPOUND_name": "Morphine", 
                     "PEAK_area": 24911.504
@@ -9694,6 +10155,7 @@
                     "CONFIRMATIONIONPEAK1_area": 0.0, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 0.0, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 0.0, 
                     "COMPOUND_name": "Oxymorphone", 
                     "PEAK_area": 0.0
@@ -9707,6 +10169,7 @@
                     "CONFIRMATIONIONPEAK1_area": 25236.221, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 308.19641775, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 74.055146823, 
                     "COMPOUND_name": "Hydromorphone", 
                     "PEAK_area": 46819.188
@@ -9720,6 +10183,7 @@
                     "CONFIRMATIONIONPEAK1_area": 12181.19, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 127.0784529977, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.5391012613, 
                     "COMPOUND_name": "Codeine", 
                     "PEAK_area": 19535.191
@@ -9733,6 +10197,7 @@
                     "CONFIRMATIONIONPEAK1_area": 245983.5, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 127.1645889902, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.3109499438, 
                     "COMPOUND_name": "Oxycodone", 
                     "PEAK_area": 55953.949
@@ -9746,6 +10211,7 @@
                     "CONFIRMATIONIONPEAK1_area": 281153.344, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 3020.3994219435, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1054.3900310152, 
                     "COMPOUND_name": "Hydrocodone", 
                     "PEAK_area": 865694.375
@@ -9759,6 +10225,7 @@
                     "CONFIRMATIONIONPEAK1_area": 48278.84, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 3747.3734793106, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.179979213, 
                     "COMPOUND_name": "6-Monoacetylmorphine", 
                     "PEAK_area": 73802.906
@@ -9772,6 +10239,7 @@
                     "CONFIRMATIONIONPEAK1_area": 15742.916, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 7151.7407371018, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 52.2243180671, 
                     "COMPOUND_name": "Norfentanyl", 
                     "PEAK_area": 260503.5
@@ -9785,6 +10253,7 @@
                     "CONFIRMATIONIONPEAK1_area": 185365.391, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 2486.5692136495, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 49.5591942175, 
                     "COMPOUND_name": "Normeperidine", 
                     "PEAK_area": 488350.406
@@ -9798,6 +10267,7 @@
                     "CONFIRMATIONIONPEAK1_area": 351116.75, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 2679.9013508919, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 50.4917302868, 
                     "COMPOUND_name": "Meperidine", 
                     "PEAK_area": 418976.719
@@ -9811,6 +10281,7 @@
                     "CONFIRMATIONIONPEAK1_area": 28691.307, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 582.9130009035, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1.2479811739, 
                     "COMPOUND_name": "Fentanyl", 
                     "PEAK_area": 28445.838
@@ -9824,6 +10295,7 @@
                     "CONFIRMATIONIONPEAK1_area": 30293.369, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 1290.069382195, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 56.0829605903, 
                     "COMPOUND_name": "Buprenorphine", 
                     "PEAK_area": 17809.629
@@ -9837,6 +10309,7 @@
                     "CONFIRMATIONIONPEAK1_area": 206167.313, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 5561.5554308345, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 53.7476513716, 
                     "COMPOUND_name": "Propoxyphene", 
                     "PEAK_area": 223218.094
@@ -9850,6 +10323,7 @@
                     "CONFIRMATIONIONPEAK1_area": 741898.25, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 5049.0213276001, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 53.2020883188, 
                     "COMPOUND_name": "Methadone", 
                     "PEAK_area": 140134.469
@@ -9863,6 +10337,7 @@
                     "CONFIRMATIONIONPEAK1_area": 1471.192, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 122.6226560009, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 81.3187139962, 
                     "COMPOUND_name": "Morphine-3-B-D-glucuronide", 
                     "PEAK_area": 19682.879
@@ -9876,6 +10351,7 @@
                     "CONFIRMATIONIONPEAK1_area": 523.463, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 25.1278938732, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 31.7813742701, 
                     "COMPOUND_name": "Morphine-6-B-D-glucuronide", 
                     "PEAK_area": 4802.013
@@ -9889,6 +10365,7 @@
                     "CONFIRMATIONIONPEAK1_area": 64900.039, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 252.6402791891, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 1268.3563424308, 
                     "COMPOUND_name": "Hydromorphone-3-B-D-glucuronide", 
                     "PEAK_area": 191929.703
@@ -9902,6 +10379,7 @@
                     "CONFIRMATIONIONPEAK1_area": 2100.061, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 75.0196863472, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 111.0957152344, 
                     "COMPOUND_name": "Oxymorphone Glucuronide", 
                     "PEAK_area": 8520.871
@@ -9915,6 +10393,7 @@
                     "CONFIRMATIONIONPEAK1_area": 7939.867, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 3568.455556139, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 30.0016956788, 
                     "COMPOUND_name": "Codeine-6-glucuronide", 
                     "PEAK_area": 122914.969
@@ -9928,6 +10407,7 @@
                     "CONFIRMATIONIONPEAK1_area": 918.722, 
                     "SAMPLE_id": 39, 
                     "PEAK_signoise": 284.2019878022, 
+                    "sample_order": 4, 
                     "PEAK_analconc": 136.5152283892, 
                     "COMPOUND_name": "Norbuprenorphine glucuronide", 
                     "PEAK_area": 8684.048
