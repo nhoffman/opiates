@@ -52,7 +52,7 @@ def cast_numeric(val, failfun = lambda x: None):
     Attempt to coerce val first into an in, then into a float. If both
     attempts fail, apply `failfun` to `val`.
     """
-        
+
     for fun in (int, float, failfun):
         try:
             retval = fun(val)
@@ -60,7 +60,7 @@ def cast_numeric(val, failfun = lambda x: None):
             pass
         else:
             return retval
-    
+
 def cast_vals(d, attrs):
     """
     Apply transformations specified by each `fun` in `attrs`, a list of
@@ -73,7 +73,7 @@ def parse_sample(sample, compound_ids = None):
     Return an iterator of dicts containing data for `sample`. Restrict
     to compounds with an id contained in set `compound_ids` if provided.
     """
-    
+
     if compound_ids:
         keep = lambda d: d['COMPOUND_id'] in compound_ids
     else:
@@ -88,7 +88,7 @@ def parse_sample(sample, compound_ids = None):
 
 def get_rows(infile):
 
-    qadata = qa_from_csv(qafile)    
+    qadata = qa_from_csv(qafile)
     compound_ids = [d['qa_id'] for d in qadata.values()]
 
     tree = xml.etree.ElementTree.ElementTree(file=infile)
@@ -107,19 +107,20 @@ def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = lambda desc: d
     compound data in sample_groups are given an additional key
     'sample_prep' returning an element of opiate.SAMPLE_PREP_LABELS
     corresponding to their position in the group *if* the group is of
-    length 4. Also adds `sample_order` to these samples indicatig
-    order in which samples should be sorted within each group of 4.
+    length 4. Also adds `sample_order` to these samples indicating
+    order in which samples should be sorted within each group of 4,
+    and `sample_label` containing the sample grouping term.
 
      * XML file
      * ctl_names - list of (sample_id, control_name) tuples
      * split_desc - function applied to SAMPLE_desc used to group clinical samples.
     """
-    
+
     qadata = qa_from_csv(qafile)
     compound_ids = [d['qa_id'] for d in qadata.values()]
 
     tree = xml.etree.ElementTree.ElementTree(file=infile)
-       
+
     samples = [list(parse_sample(elem, compound_ids)) \
                    for elem in tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')]
 
@@ -143,7 +144,12 @@ def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = lambda desc: d
                 SAMPLE_PREP_LABELS, SAMPLE_PREP_ORDER, this_group):
                 for cmpnd in sample:
                     cmpnd['sample_prep'] = sample_prep
-                    cmpnd['sample_order'] = sample_order                    
+                    cmpnd['sample_order'] = sample_order
+                    cmpnd['sample_label'] = label
+        else:
+            for sample in this_group:
+                for cmpnd in sample:
+                    cmpnd['sample_label'] = label
         sample_groups[label] = this_group
 
     return (controls, sample_groups)
@@ -175,7 +181,7 @@ def read_matrix(fname):
     """
 
     split_and_cast = lambda x: [cast_numeric(e, lambda x: x) for e in x.split(',')] if x else []
-    
+
     matrix = defaultdict(set)
     with open(fname, 'rU') as f:
         reader = csv.DictReader(f)
@@ -186,7 +192,7 @@ def read_matrix(fname):
         if missing:
             raise ValueError('matrix file does not define %s' % \
                                  ', '.join(missing))
-        
+
         for d in [d for d in reader if d['compound_id']]:
             compound_id = int(d['compound_id'])
             for k, v in d.items():
@@ -195,3 +201,20 @@ def read_matrix(fname):
                         matrix[(sample_id, compound_id)].add(k)
 
     return dict(matrix)
+
+def remove_patient_info(samples):
+    controls, specimen_groups = samples
+
+    sanitized = OrderedDict()
+
+    group_number = count(1)
+    for label, group in specimen_groups.items():
+        new_label = 'Accession%02i' % group_number.next()
+        for sample in group:
+            for compound in sample:
+                compound['sample_label'] = new_label
+                compound['SAMPLE_desc'] = '%s %s' % \
+                    (new_label, compound.get('sample_prep') or compound['SAMPLE_id'])
+        sanitized[new_label] = group
+
+    return (controls, sanitized)

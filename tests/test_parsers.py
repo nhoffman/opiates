@@ -6,8 +6,9 @@ import os
 import unittest
 import logging
 import pprint
+from collections import OrderedDict
 
-from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix
+from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples
 from opiate import matrix_file
 import __init__ as config
 
@@ -45,4 +46,9 @@ class TestReadMatrix(unittest.TestCase):
     def test01(self):
         matrix = read_matrix(matrix_file)
 
-        
+class TestGroupSamples(unittest.TestCase):
+
+    def test01(self):
+        controls, sample_groups = group_samples('testfiles/opi_checkout.xml')
+        self.assertEqual(len(controls), 10)
+        self.assertEqual(sample_groups, OrderedDict())
