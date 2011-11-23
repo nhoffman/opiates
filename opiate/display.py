@@ -73,13 +73,15 @@ def display_controls(results, outfile, show_all = False, nullchar = '.'):
                 )
 
 
-def display_sample_group(results, outfile, show_all = False, nullchar = '.'):
+def display_sample_group(results, outfile, show_all = False, nullchar = '.', result = 'outcome'):
     """
 
      * results ...
      * outfile - file-like object open for writing
+     * result in ('outcome','comment')
     """
 
+    assert result in ('outcome','comment')    
     show = (lambda result: True) if show_all else (lambda result: result is False)
 
     row = Row(outfile,
@@ -102,13 +104,16 @@ def display_sample_group(results, outfile, show_all = False, nullchar = '.'):
                 continue
 
             cmpnd = sample_group[0]['cmpnd']
-
-            row.write(cmpnd = cmpnd.COMPOUND_name,
-                cmpnd_id = cmpnd.COMPOUND_id,
-                sample = cmpnd.SAMPLE_desc,
-                sample_id = cmpnd.SAMPLE_id,
-                conc = fmt(cmpnd.PEAK_analconc)[0] or nullchar,
-                **{r['test']: outcomes[r['result']] for r in sample_group if show(r['result'])}
-                )
-
+                        
+            if result == 'outcome':
+                d = {r['test']: outcomes[r['result']] for r in sample_group if show(r['result'])}
+            elif result == 'comment':
+                d = {r['test']: r['comment'] if r['result'] is False else nullchar for r in sample_group if show(r['result'])}
             
+            row.write(cmpnd = cmpnd.COMPOUND_name,
+                      cmpnd_id = cmpnd.COMPOUND_id,
+                      sample = cmpnd.SAMPLE_desc,
+                      sample_id = cmpnd.SAMPLE_id,
+                      conc = fmt(cmpnd.PEAK_analconc)[0] or 0.0,
+                      **d
+                      )

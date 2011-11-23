@@ -10,7 +10,7 @@ import pprint
 import json
 log = logging.getLogger(__name__)
 
-from opiate.containers import Compound, Sample
+from opiate.containers import Compound, Sample, flatten
 from opiate.parsers import qa_from_csv
 from opiate import qafile
 
@@ -23,6 +23,11 @@ qadata = qa_from_csv(qafile)
 with open('testfiles/oct24.json') as f:
     standards, sample_groups = json.load(f)
 expt_stda = standards['stdA']
+
+class TestFlatten(unittest.TestCase):
+    def test01(self):
+        flat = flatten(sample_groups.values())
+        self.assertTrue(all(isinstance(x, dict) for x in flat))
 
 class TestCompound(unittest.TestCase):
 
