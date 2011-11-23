@@ -46,7 +46,7 @@ def check_amr(cmpnd):
     else:
         retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
 
-    msg = '%s <= %s <= %s' % fmt(cmpnd.amr_low, cmpnd.PEAK_analconc, cmpnd.amr_high)
+    msg = '%s [%s-%s]' % fmt(cmpnd.PEAK_analconc, cmpnd.amr_low, cmpnd.amr_high)
 
     return retval, msg
 
@@ -75,16 +75,14 @@ def check_rrt(cmpnd):
     Compare Drug Relative Retention Time with Relative Retention Time QA
 
     Return None if cmpnd.PEAK_foundrrt is None
-
-    TODO: Should this test fail if cmpnd.PEAK_foundrrt == 0?
     """
     
-    if cmpnd.PEAK_foundrrt is None:
+    if cmpnd.PEAK_foundrrt is None or cmpnd.PEAK_foundrrt == 0:
         retval = None
     else:
         retval = cmpnd.rel_reten_low <= cmpnd.PEAK_foundrrt <= cmpnd.rel_reten_high
 
-    msg = '%s <= %s <= %s' % fmt(cmpnd.rel_reten_low, cmpnd.PEAK_foundrrt, cmpnd.rel_reten_high)
+    msg = '%s [%s-%s]' % fmt(cmpnd.PEAK_foundrrt, cmpnd.rel_reten_low, cmpnd.rel_reten_high)
 
     return retval, msg
     
@@ -98,13 +96,13 @@ def check_signoise(cmpnd):
 
     TODO: Should this test fail if cmpnd.PEAK_signoise == 0?
     """
-
-    if cmpnd.PEAK_signoise is None:
+    
+    if cmpnd.PEAK_signoise is None or not cmpnd.PEAK_analconc:
         retval = None
+        msg = ''
     else:
         retval = cmpnd.PEAK_signoise > cmpnd.signoise
-
-    msg = '%s > %s' % fmt(cmpnd.PEAK_signoise, cmpnd.signoise)
+        msg = '%s > %s' % fmt(cmpnd.PEAK_signoise, cmpnd.signoise)
 
     return retval, msg
         

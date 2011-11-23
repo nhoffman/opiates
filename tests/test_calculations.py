@@ -50,7 +50,7 @@ class Cmpnd(object):
 
     def __repr__(self):
         return str(self.__dict__)
-
+    
 class TestCalculation(unittest.TestCase):
     
     def _testall(self, checkfun, trials):
