@@ -11,18 +11,20 @@ import json
 log = logging.getLogger(__name__)
 
 from opiate.containers import Compound, Sample, flatten
-from opiate.parsers import qa_from_csv
-from opiate import qafile
+from opiate.parsers import qa_from_csv, read_matrix
+from opiate import qafile, matrix_file
 
 import __init__ as config
 
 ## test data
 # default qa values for this package
 qadata = qa_from_csv(qafile)
+matrix = read_matrix(matrix_file)
 
 with open('testfiles/oct24.json') as f:
     standards, sample_groups = json.load(f)
 expt_stda = standards['stdA']
+sample1 = sample_groups['A00001'][0]
 
 class TestFlatten(unittest.TestCase):
     def test01(self):
@@ -61,3 +63,17 @@ class TestCompound(unittest.TestCase):
         self.assertTrue(cpnd.qa_id == 1)
         self.assertTrue(cpnd.qa_compound == 'Morphine')
         
+class TestQACalculation(unittest.TestCase):
+
+    def test01(self):
+        compound = sample1[0]
+        cmpnd = Compound(compound, **qadata[compound['COMPOUND_id']])
+        cmpnd.perform_qa()
+        self.assertTrue(cmpnd.qa_ok)
+
+    def test02(self):
+        compound = sample1[0]
+        cmpnd = Compound(compound, **qadata[compound['COMPOUND_id']])        
+        cmpnd.perform_qa(matrix)
+        self.assertTrue(cmpnd.qa_ok)
+

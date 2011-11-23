@@ -4,7 +4,7 @@ import logging
 
 log = logging.getLogger(__name__)
 
-from containers import Compound
+# from containers import Compound
 
 def _check_true(cmpnd):
     return True
@@ -152,7 +152,7 @@ def check_spike(cmpnd):
     """
 
     retval = (cmpnd.PEAK_analconc or 0) >= cmpnd.spike_low
-    msg = '%s > %s' % fmt(cmpnd.PEAK_analconc, cmpnd.spike_low)
+    msg = '%s >= %s' % fmt(cmpnd.PEAK_analconc, cmpnd.spike_low)
     return retval, msg
     
 def perform_qa(sample, qadata, matrix = None):
