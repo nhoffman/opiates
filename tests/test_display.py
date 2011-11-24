@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 from opiate import qafile, matrix_file
 from opiate.calculations import all_checks
 from opiate.parsers import qa_from_csv, read_matrix
-from opiate.display import display_specimen_qa
+from opiate.display import display_specimens
 from opiate.containers import Compound, flatten
 
 import __init__ as config
@@ -31,4 +31,9 @@ class TestDisplayQA(TestCaseSuppressOutput):
     
     def test01(self):
         compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample_groups.values())]     
-        display_specimen_qa(compounds, sys.stdout)
+        display_specimens(compounds, sys.stdout)
+
+    def test02(self):
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample_groups.values())]     
+        display_specimens(compounds, sys.stdout, message = False)
+        

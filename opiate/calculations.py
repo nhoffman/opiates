@@ -1,6 +1,7 @@
 import pprint
 from itertools import chain
 import logging
+from collections import OrderedDict
 
 log = logging.getLogger(__name__)
 
@@ -50,7 +51,7 @@ def check_amr(cmpnd):
 
 def check_amr_low(cmpnd):
     """
-    AMR Lower Limit
+    AMR Low
 
     Compare Drug Concentration with lower limit of Drug QA Concentration Range
 
@@ -133,7 +134,7 @@ def check_ion_ratio(cmpnd):
         
 def check_is_peak_area(cmpnd):
     """
-    I.S. Peak Area
+    I.S. Pk Area
 
     Compare Drug Internal Standard Peak Area with QA Peak Area
     """
@@ -156,5 +157,7 @@ def check_spike(cmpnd):
 def description(fun):
     return fun.__doc__.strip().split('\n', 1)[0]
 
-all_checks = dict((name, {'description': description(fun), 'function': fun}) for name, fun in globals().items() if name.startswith('check_'))
+all_checks = OrderedDict(sorted((name, description(fun)) for
+                                name, fun in globals().items()
+                                if name.startswith('check_')))
 

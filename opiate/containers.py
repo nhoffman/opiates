@@ -3,6 +3,7 @@ from collections import Iterable, OrderedDict
 
 from __init__ import CONTROL_NAMES
 control_ids = set(i for i,n in CONTROL_NAMES)
+outcomes = {True: 'ok', False: 'FAIL', None: '-'}
 
 import calculations
 from calculations import all_checks
@@ -11,6 +12,14 @@ class Compound(object):
     """
     Container class for a compound plus QA values.
     """
+
+    display_headers = (
+        ('cmpnd','COMPOUND_name'),
+        ('cmpnd_id','COMPOUND_id'),        
+        ('sample','SAMPLE_desc'),
+        ('sample_id','SAMPLE_id'),        
+        ('conc','PEAK_analconc')
+        )
     
     def __init__(self, experiment, matrix = None, testnames = None, **kwargs):                
         """
@@ -122,15 +131,21 @@ class Compound(object):
         elif self.type == 'misc':
             return (self.COMPOUND_id, self.sample_label, self.SAMPLE_id)
 
-    def summary_dict(self):
+    def display(self, message = True):
+        """
+        Return an OrderedDict containing values to display in the
+        final report.
+        """
 
-        d = dict(cmpnd = self.COMPOUND_name,
-                 cmpnd_id = self.COMPOUND_id,
-                 sample = self.SAMPLE_desc,
-                 sample_id = self.SAMPLE_id,
-                 conc = self.PEAK_analconc
-                 )
-        ## todo: add qa calculation results
+        d = OrderedDict((k, self.__dict__[a]) for k,a in self.display_headers)
+
+        for calc_name, results in self.qa_results.items():                   
+            retval, msg = results
+            if message:
+                # show messages, but only if retval is False
+                d[calc_name] = msg if retval is False else None
+            else:
+                d[calc_name] = outcomes[retval]
         
         return d
         

@@ -41,4 +41,3 @@ class TestCaseSuppressOutput(unittest.TestCase):
         if self.suppress_output:
             sys.stdout = sys.__stdout__
 
-
