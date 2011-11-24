@@ -12,15 +12,39 @@ class Compound(object):
     Container class for a compound plus QA values.
     """
     
-    def __init__(self, experiment, **kwargs):                
+    def __init__(self, experiment, matrix = None, testnames = None, **kwargs):                
         """
         Initialize the object with values in dict `experiment` and
-        additional values in **kwargs. `experiment` should provide
-        values in opiate.SAMPLE_ATTRS and **kwargs should provide
-        other values used in various calculations.
+        additional values in **kwargs. QA calculations are performed
+        if a list of calculations is provided via either `matrix` or
+        `testnames`.
 
+         * experiment - a dict providing experimental results with keys in opiate.SAMPLE_ATTRS
+         * matrix - a dict with keys (sample_id, compound_id) returning a list of
+           testnames
+         * testnames - provides a list of calculation names in the
+           absence of matrix. 
+         * **kwargs - should provide other values used in various calculations.
+         
         The attribute `self.type` is set as one of
         'control','patient', or 'misc'.
+
+        Example:
+
+        >>> from opiate.parsers import qa_from_csv, read_matrix
+        >>> qadata = qa_from_csv(qafile)
+        >>> matrix = read_matrix(matrix_file)
+        >>> compound = {u'COMPOUND_id': 1,
+         u'COMPOUND_name': u'Morphine',
+         u'CONFIRMATIONIONPEAK1_area': 3783.097,
+         u'ISPEAK_area': 16837.574,
+         u'PEAK_analconc': 10.0928668309,
+         u'PEAK_area': 5260.104,
+         u'PEAK_foundrrt': 1.0140000582,
+         u'PEAK_signoise': 300.1793138859,
+         u'SAMPLE_desc': u'StdA',
+         u'SAMPLE_id': 1}
+        >>> cmpnd = Compound(compound, matrix, **qadata[compound['COMPOUND_id']]        
         """
 
         self.__dict__ = dict(chain(*[experiment.items(), kwargs.items()]))
@@ -31,11 +55,30 @@ class Compound(object):
             self.type = 'patient'
         else:
             self.type = 'misc'
-        
+
+        # define testnames; 'sample_prep' is added by
+        # `parsers.group_samples()` - if this value is defined, use it
+        # in place of SAMPLE_id
+        sample_id = self.get('sample_prep') or self.SAMPLE_id
+        compound_id = self.COMPOUND_id
+
+        if testnames:
+            self.testnames = set(testnames)
+        elif matrix:
+            self.testnames = matrix.get((sample_id, compound_id), []) if matrix else all_checks.keys()        
+        else:
+            self.testnames = set()
+
+        if self.testnames:
+            self.perform_qa()
+        else:
+            self.qa_results = OrderedDict()
+            self.qa_ok = None
+            
     def __repr__(self):
         return '<Cpnd %s %s Smpl %s (%s)>' % (
             self.COMPOUND_id,
-            self.COMPOUND_name,
+            self.COMPOUND_name[:10] + '...',
             self.SAMPLE_id,
             self.type
             )
@@ -46,32 +89,32 @@ class Compound(object):
     def get(self, key, default = None):
         return self.__dict__.get(key, default)
 
-    def perform_qa(self, matrix = None):
+    def perform_qa(self):
         """
-        Given `matrix`, perform QA calculations using experimental
-        values associated with this instance and store results in
-        `self.qa_results`, an OrderedDict keyed by testname and
-        returning `(retval, msg)`. `matrix` provides a list of
-        testnames given (sample_id, compound_id); if `matrix` is not
-        provided, all tests defined in the calculations module are
-        performed.
+        Perform QA calculations for list of calculations defined in
+        `self.testnames` using experimental values associated with
+        this instance and store results in `self.qa_results`, an
+        OrderedDict keyed by testname and returning `(retval,
+        msg)`. Also defines `self.qa_ok` with a value of True (all
+        checks pass) or False (at least one test fails).
         """
-
-        # 'sample_prep' is added by `parsers.group_samples()` - if
-        # this value is defined, use it in place of SAMPLE_id        
-        sample_id = self.get('sample_prep') or self.SAMPLE_id
-        compound_id = self.COMPOUND_id
-
-        testnames = matrix.get((sample_id, compound_id), []) if matrix else all_checks.keys()        
 
         # testname: (retval, msg)
         self.qa_results = OrderedDict(
-            (test, getattr(calculations, test)(self)) for test in testnames)
+            (test, getattr(calculations, test)(self)) for test in self.testnames)
         self.qa_ok = all(retval is not False for retval, msg in self.qa_results.values())
 
     def print_qa(self):
         for k,v in self.qa_results.items():
             print k, v
+
+
+    def sort_by_compound(self):
+        """
+        Emit a tuple to sort a list of Compound objects primarily by compound id. The secondary sort key is  
+        """
+
+        pass
         
 class Sample(object):
     """

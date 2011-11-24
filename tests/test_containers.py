@@ -8,6 +8,8 @@ import unittest
 import logging
 import pprint
 import json
+from collections import OrderedDict
+
 log = logging.getLogger(__name__)
 
 from opiate.containers import Compound, Sample, flatten
@@ -22,8 +24,8 @@ qadata = qa_from_csv(qafile)
 matrix = read_matrix(matrix_file)
 
 with open('testfiles/oct24.json') as f:
-    standards, sample_groups = json.load(f)
-expt_stda = standards['stdA']
+    controls, sample_groups = json.load(f)
+expt_stda = controls['stdA']
 sample1 = sample_groups['A00001'][0]
 
 class TestFlatten(unittest.TestCase):
@@ -31,6 +33,11 @@ class TestFlatten(unittest.TestCase):
         flat = flatten(sample_groups.values())
         self.assertTrue(all(isinstance(x, dict) for x in flat))
 
+    def test02(self):
+        flat = flatten(controls.values())
+        self.assertTrue(all(isinstance(x, dict) for x in flat))
+
+        
 class TestCompound(unittest.TestCase):
 
     def setUp(self):
@@ -38,42 +45,44 @@ class TestCompound(unittest.TestCase):
 
     def tearDown(self):
         pass
-    
+            
     def test01(self):
-        # can initialize with arbitrary values
-        cpnd = Compound({'meh':'buh'})
-        self.assertTrue(cpnd.meh == 'buh')
-
-    def test02(self):
-        # arbitrary values in both `experiment` and `kwargs`
-        cpnd = Compound({'meh':'buh'}, blee = 1)
-        self.assertTrue(cpnd.meh == 'buh')
-        self.assertTrue(cpnd.blee == 1)        
-        
-    def test03(self):
         cpnd = Compound(expt_stda[0])
         self.assertTrue(cpnd.COMPOUND_id == 1)
         self.assertTrue(cpnd.COMPOUND_name == 'Morphine')
 
-    def test04(self):
+    def test02(self):
         data = expt_stda[0]
         cpnd = Compound(data, **qadata[data['COMPOUND_id']])
         self.assertTrue(cpnd.COMPOUND_id == 1)
         self.assertTrue(cpnd.COMPOUND_name == 'Morphine')
+
+        # qa_id and qa_compound defined in qadata
         self.assertTrue(cpnd.qa_id == 1)
         self.assertTrue(cpnd.qa_compound == 'Morphine')
+        self.assertTrue(cpnd.testnames == set())
+        self.assertTrue(cpnd.qa_results == OrderedDict())
         
 class TestQACalculation(unittest.TestCase):
 
     def test01(self):
         compound = sample1[0]
         cmpnd = Compound(compound, **qadata[compound['COMPOUND_id']])
-        cmpnd.perform_qa()
-        self.assertTrue(cmpnd.qa_ok)
+        self.assertTrue(cmpnd.qa_ok is None)
 
     def test02(self):
         compound = sample1[0]
-        cmpnd = Compound(compound, **qadata[compound['COMPOUND_id']])        
-        cmpnd.perform_qa(matrix)
+        cmpnd = Compound(compound, matrix, **qadata[compound['COMPOUND_id']])
         self.assertTrue(cmpnd.qa_ok)
+        self.assertEquals(
+            cmpnd.testnames,
+            set(['check_ion_ratio', 'check_rrt', 'check_signoise', 'check_is_peak_area']))
 
+    def test03(self):
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(controls.values())]
+        self.assertTrue(all(x.type == 'control' for x in compounds))
+
+    def test04(self):
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample1)]
+        self.assertTrue(all(x.type == 'patient' for x in compounds))
+        

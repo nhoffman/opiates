@@ -13,8 +13,7 @@ import xml.etree.ElementTree
 
 from opiate import matrix_file, qafile
 from opiate.parsers import qa_from_csv, read_matrix, group_samples
-from opiate.display import display_sample_group, display_controls
-from opiate.calculations import perform_qa
+# from opiate.display import display_sample_group, display_controls
 
 log = logging.getLogger(__name__)
 

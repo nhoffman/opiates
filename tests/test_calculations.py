@@ -19,30 +19,9 @@ import __init__ as config
 
 qadata = qa_from_csv(qafile)
 with open('testfiles/oct24.json') as f:
-    standards, sample_groups = json.load(f)
+    controls, sample_groups = json.load(f)
 
 matrix = read_matrix(matrix_file)
-
-class TestPerformQA(unittest.TestCase):
-
-    def setUp(self):
-        self.funcname = '_'.join(self.id().split('.')[-2:])
-
-    def tearDown(self):
-        pass
-
-    def test01(self):
-        retvals = perform_qa(sample = standards['stdA'], qadata = qadata)
-        for r in retvals:
-            log.debug(r)
-            
-    def test02(self):
-        retvals = perform_qa(sample = standards['stdA'],
-                             qadata = qadata,
-                             matrix = matrix
-                             )
-        for r in retvals:
-            log.debug(r)
 
 class Cmpnd(object):
     def __init__(self, **kwargs):
@@ -55,10 +34,12 @@ class TestCalculation(unittest.TestCase):
     
     def _testall(self, checkfun, trials):
         for kwargs, predicted in trials:
+            log.debug('in: %s --> %s...' % (str(kwargs), predicted))
             retval, msg = checkfun(Cmpnd(**kwargs))
-            log.debug('%s : %s' % (msg, retval))
+            log.debug('out: %s --> %s' % (msg, retval))
             self.assertTrue(retval is predicted)
-
+            self.assertTrue(bool(msg))
+            
     def test_stda_signoise(self):
         trials = [
             (dict(PEAK_signoise = 0.5, signoise_stda = 0.1), True),
@@ -91,16 +72,18 @@ class TestCalculation(unittest.TestCase):
             (dict(PEAK_foundrrt = 0.3, rel_reten_low = 0.1, rel_reten_high = 0.5), True),
             (dict(PEAK_foundrrt = 1, rel_reten_low = 0.1, rel_reten_high = 0.5), False),
             (dict(PEAK_foundrrt = None, rel_reten_low = 0.1, rel_reten_high = 0.5), None),
-            (dict(PEAK_foundrrt = 0, rel_reten_low = 0.1, rel_reten_high = 0.5), False)
+            (dict(PEAK_foundrrt = 0, rel_reten_low = 0.1, rel_reten_high = 0.5), None)
             ]
         self._testall(check_rrt, trials)
         
     def test_signoise(self):
         trials = [
-            (dict(PEAK_signoise = 0.3, signoise = 0.1), True),
-            (dict(PEAK_signoise = 0.1, signoise = 1), False),
-            (dict(PEAK_signoise = None, signoise = 0.1), None),
-            (dict(PEAK_signoise = 0, signoise = 0.1), False)
+            (dict(PEAK_signoise = 0.3, PEAK_analconc = 1, signoise = 0.1), True),
+            (dict(PEAK_signoise = 0.1, PEAK_analconc = 1, signoise = 1), False),
+            (dict(PEAK_signoise = None, PEAK_analconc = 1, signoise = 0.1), None),
+            (dict(PEAK_signoise = 0, PEAK_analconc = 1, signoise = 0.1), False),
+            (dict(PEAK_signoise = 0, PEAK_analconc = None, signoise = 0.1), None),
+            (dict(PEAK_signoise = 0, PEAK_analconc = 0, signoise = 0.1), None)
             ]
         self._testall(check_signoise, trials)
 

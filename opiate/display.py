@@ -117,3 +117,8 @@ def display_sample_group(results, outfile, show_all = False, nullchar = '.', res
                       conc = fmt(cmpnd.PEAK_analconc)[0] or 0.0,
                       **d
                       )
+
+def display_specimen_qa(compounds, outfile, show_all = False, style = 'screen'):
+    assert style in ('screen','file')
+
+    

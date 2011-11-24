@@ -4,8 +4,6 @@ import logging
 
 log = logging.getLogger(__name__)
 
-# from containers import Compound
-
 def _check_true(cmpnd):
     return True
 
@@ -99,10 +97,10 @@ def check_signoise(cmpnd):
     
     if cmpnd.PEAK_signoise is None or not cmpnd.PEAK_analconc:
         retval = None
-        msg = ''
     else:
         retval = cmpnd.PEAK_signoise > cmpnd.signoise
-        msg = '%s > %s' % fmt(cmpnd.PEAK_signoise, cmpnd.signoise)
+
+    msg = '%s > %s' % fmt(cmpnd.PEAK_signoise, cmpnd.signoise)
 
     return retval, msg
         
@@ -155,34 +153,6 @@ def check_spike(cmpnd):
     msg = '%s >= %s' % fmt(cmpnd.PEAK_analconc, cmpnd.spike_low)
     return retval, msg
     
-def perform_qa(sample, qadata, matrix = None):
-    """
-    * qadata - dict containing QA values for each compound
-    * sample - a list of dicts, each containing experimental
-      results for a compound
-    * matrix - dict with keys (sample_id, compound_id) returning a
-      set of calculation names. If None, apply all calculations defined in `calculations.all_checks`.
-    """
-    
-    results = []
-    for compound in sample:
-        # 'sample_prep' is added by `parsers.group_samples()` - is
-        # this value is defined, use it in place of SAMPLE_id
-        sample_id = compound.get('sample_prep') or compound['SAMPLE_id']
-        compound_id = compound['COMPOUND_id']
-        cmpnd = Compound(compound, **qadata[compound_id])
-
-        testnames = matrix.get((sample_id, compound_id), []) if matrix else all_checks.keys()
-            
-        for test in testnames:
-            retval, msg = globals()[test](cmpnd)
-            results.append(dict(cmpnd = cmpnd,
-                                test = test,
-                                result = retval,
-                                comment = msg))
-
-    return results
-
 def description(fun):
     return fun.__doc__.strip().split('\n', 1)[0]
 
