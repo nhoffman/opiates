@@ -121,4 +121,16 @@ def display_sample_group(results, outfile, show_all = False, nullchar = '.', res
 def display_specimen_qa(compounds, outfile, show_all = False, style = 'screen'):
     assert style in ('screen','file')
 
-    
+    # sort by compound
+    compounds.sort(key = lambda c: c.sort_by_compound())
+
+    # group by compound
+    for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
+        # within each compound, group by label
+        for label, label_group in groupby(compound_group, lambda c: c.sample_label):
+            first = label_group.next()
+            rest = list(label_group)
+            if first.type == 'patient' and first.qa_ok:
+                print first.summary_dict()
+                
+        

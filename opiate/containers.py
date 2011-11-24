@@ -76,10 +76,11 @@ class Compound(object):
             self.qa_ok = None
             
     def __repr__(self):
-        return '<Cpnd %s %s Smpl %s (%s)>' % (
+        return '<Cpnd %s %s Smpl %s %s (%s)>' % (
             self.COMPOUND_id,
             self.COMPOUND_name[:10] + '...',
             self.SAMPLE_id,
+            self.get('sample_prep') or '',
             self.type
             )
     
@@ -108,13 +109,30 @@ class Compound(object):
         for k,v in self.qa_results.items():
             print k, v
 
-
     def sort_by_compound(self):
         """
-        Emit a tuple to sort a list of Compound objects primarily by compound id. The secondary sort key is  
+        Emit a tuple to sort a list of Compound objects primarily by
+        compound id. The secondary and teriary sort keys are
+        (sample_label, sample_order) if self.type == 'patient', and
+        (sample_label, SAMPLE_id) if type == 'misc'.
         """
 
-        pass
+        if self.type == 'patient':
+            return (self.COMPOUND_id, self.sample_label, self.sample_order)
+        elif self.type == 'misc':
+            return (self.COMPOUND_id, self.sample_label, self.SAMPLE_id)
+
+    def summary_dict(self):
+
+        d = dict(cmpnd = self.COMPOUND_name,
+                 cmpnd_id = self.COMPOUND_id,
+                 sample = self.SAMPLE_desc,
+                 sample_id = self.SAMPLE_id,
+                 conc = self.PEAK_analconc
+                 )
+        ## todo: add qa calculation results
+        
+        return d
         
 class Sample(object):
     """

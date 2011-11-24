@@ -30,5 +30,5 @@ matrix = read_matrix(matrix_file)
 class TestDisplayQA(TestCaseSuppressOutput):
     
     def test01(self):
-        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(controls.values())]        
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample_groups.values())]     
         display_specimen_qa(compounds, sys.stdout)
