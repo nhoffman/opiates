@@ -26,7 +26,7 @@ matrix = read_matrix(matrix_file)
 with open('testfiles/oct24.json') as f:
     controls, sample_groups = json.load(f)
 expt_stda = controls['stdA']
-sample1 = sample_groups['A00001'][0]
+sample1 = sample_groups['Accession02'][0]
 
 class TestFlatten(unittest.TestCase):
     def test01(self):
