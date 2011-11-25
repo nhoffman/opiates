@@ -56,3 +56,29 @@ def display_specimens(compounds, outfile, show_all = False, message = True, styl
                 writer.writerow(display_empty)
                 
         
+def display_controls(compounds, outfile, show_all = False, message = True, style = 'screen'):
+
+    nullchar = choose_nullchar[style]
+    fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
+    writer = csv.DictWriter(outfile, fieldnames = display_fields)
+
+    if style == 'file':
+        writer.writerow(display_header)
+
+    # sort, then group by compound
+    compounds.sort(key = lambda c: c.sort_by_compound())
+    for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
+        grp = list(compound_group)
+        any_failed = any(c.qa_ok is False for c in grp)
+        
+        if any_failed and style == 'screen':
+            writer.writerow(display_header)
+            
+        for cmpnd in grp:
+            if cmpnd.qa_ok is False:
+                d = cmpnd.display(message)
+                writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
+
+        if any_failed and style == 'screen':
+            writer.writerow(display_empty)
+            

@@ -120,17 +120,18 @@ class Compound(object):
 
     def sort_by_compound(self):
         """
-        Emit a tuple to sort a list of Compound objects primarily by
-        compound id. The secondary and teriary sort keys are
-        (sample_label, sample_order) if self.type == 'patient', and
-        (sample_label, SAMPLE_id) if type == 'misc'.
+        Emit a tuple to sort a list of Compound objects depending on
+        type.
         """
 
         if self.type == 'patient':
             return (self.COMPOUND_id, self.sample_label, self.sample_order)
         elif self.type == 'misc':
             return (self.COMPOUND_id, self.sample_label, self.SAMPLE_id)
+        elif self.type == 'control':
+            return (self.COMPOUND_id, self.SAMPLE_id)
 
+        
     def display(self, message = True):
         """
         Return an OrderedDict containing values to display in the

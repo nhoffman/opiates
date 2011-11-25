@@ -13,7 +13,7 @@ import xml.etree.ElementTree
 
 from opiate import matrix_file, qafile
 from opiate.parsers import qa_from_csv, read_matrix, group_samples
-from opiate.display import display_specimens
+from opiate.display import display_specimens, display_controls
 from opiate.containers import Compound, flatten
 
 log = logging.getLogger(__name__)
@@ -40,17 +40,22 @@ def action(args):
             controls, sample_groups = json.load(f)        
 
     style = 'screen' if args.outfile == sys.stdout else 'file'
-            
-    # controls
-    # retvals = chain.from_iterable(perform_qa(sample, qadata, matrix) for sample in controls.values())
-    # display_qa_results(retvals, args.outfile, args.show_all)
 
     # other specimens
     if args.compound_id:
         cond = lambda c: c['COMPOUND_id'] == args.compound_id
     else:
         cond = lambda c: True
-        
+    
+    # controls
+    compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
+                 for c in flatten(controls.values()) if cond(c)]     
+
+    display_controls(compounds,
+                     outfile = args.outfile,
+                     message = not args.outcomes_only,
+                     style = style)
+
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
                  for c in flatten(sample_groups.values()) if cond(c)]     
     display_specimens(compounds,
