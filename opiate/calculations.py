@@ -1,7 +1,10 @@
 import pprint
-from itertools import chain
+from itertools import chain, ifilter, groupby
 import logging
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
+from __init__ import CONTROL_NAMES
+
+from utils import flatten
 
 log = logging.getLogger(__name__)
 
@@ -161,3 +164,41 @@ all_checks = OrderedDict(sorted((name, description(fun)) for
                                 name, fun in globals().items()
                                 if name.startswith('check_')))
 
+def mean_ion_ratios(controls, sample_ids):
+    """
+    Calculate the mean ion ratio for all compounds for each of the
+    specimens included in `sample_ids`.
+
+    `controls` is the first element of the tuple returned by
+    `parsers.group_samples` and is an OrderedDict where
+    controls.values() is a list of lists of dicts.
+
+    Return a dict keyed by
+    compound id containing the the calculated values.
+    """
+    
+    stds = ifilter(lambda c: c['SAMPLE_id'] in sample_ids,
+                   flatten(controls.values()))
+    stds = sorted(list(stds),
+                  key = lambda c: (c['COMPOUND_id'],c['SAMPLE_id']))
+
+    cnames = dict(CONTROL_NAMES)
+    
+    out = OrderedDict()
+    for cmpnd, cmpnd_grp in groupby(stds, lambda c: c['COMPOUND_id']):
+        out[cmpnd] = OrderedDict(
+            (cnames[c['SAMPLE_id']], ion_ratio(c)) for c in cmpnd_grp)
+        out[cmpnd]['ion_ratio_average_calc'] = average(out[cmpnd].values())
+
+    return out
+                
+def ion_ratio(cmpnd):
+    if not cmpnd['CONFIRMATIONIONPEAK1_area']:
+        return None
+    else:
+        return cmpnd['PEAK_area']/float(cmpnd['CONFIRMATIONIONPEAK1_area'])
+
+def average(seq):
+    noneless = filter(lambda x: x is not None, seq)
+    return sum(noneless)/len(noneless) if noneless else None
+    
