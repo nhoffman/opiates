@@ -12,7 +12,7 @@ import sys
 import xml.etree.ElementTree
 
 from opiate import matrix_file, qafile
-from opiate.parsers import qa_from_csv, read_matrix, group_samples
+from opiate.parsers import qa_from_csv, read_matrix, group_samples, add_ion_ratios
 from opiate.display import display_specimens, display_controls
 from opiate.containers import Compound
 from opiate.utils import flatten
@@ -25,24 +25,38 @@ def build_parser(parser):
                         type = argparse.FileType('w'))
     parser.add_argument('-a','--show-all', help='Show all results for each compound (ie, not just QA failures)',
                         action = 'store_true', default = False)    
-    parser.add_argument('-O','--outcomes-only', help='Show outcome for each QA calculation instead of a more detailed message containing values.',
+    parser.add_argument('-O','--outcomes-only',
+                        help="""Show outcome for each QA calculation
+    instead of a more detailed message containing values.""",
                         action = 'store_true', default = False)    
     parser.add_argument('-c','--compound-id', help='Show results for this compound id only.',
                         metavar = 'NUMBER', type = int, default = None)
+    parser.add_argument('-n','-no-calculate-ion-ratio-avg', help="""By
+    default, ion ratio averages are calculated from the standards;
+    providing this option causes QA to be performed using
+    'ion_ratio_avg' from the qa configuration file.""",
+                        action = 'store_false', dest = 'calculate_ion_ratios', default = True)    
+    
     
 def action(args):
-    qadata = qa_from_csv(qafile)
-    matrix = read_matrix(matrix_file)
 
+    style = 'screen' if args.outfile == sys.stdout else 'file'
+    
     if args.infile.lower().endswith('.xml'):
         controls, sample_groups = group_samples(args.infile)
     else:
         with open(args.infile) as f:
             controls, sample_groups = json.load(f)        
 
-    style = 'screen' if args.outfile == sys.stdout else 'file'
+    qadata = qa_from_csv(qafile)
+    matrix = read_matrix(matrix_file)
 
-    # other specimens
+    if args.calculate_ion_ratios:
+        qadata = add_ion_ratios(qadata, controls)
+        log.info('calculating ion ratio averages from experimental data.')
+
+    # if a single compound is specified, define lambda cond to use as
+    # a filter
     if args.compound_id:
         cond = lambda c: c['COMPOUND_id'] == args.compound_id
     else:

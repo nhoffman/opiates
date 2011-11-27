@@ -118,10 +118,13 @@ def check_ion_ratio(cmpnd):
     Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
     """
 
-    # calculate reference range
-    delta = cmpnd.ion_ratio_avg * cmpnd.ion_ratio_cv
-    ion_ratio_low = cmpnd.ion_ratio_avg - delta
-    ion_ratio_high = cmpnd.ion_ratio_avg + delta
+    # calculate reference range; first try to use the calculated
+    # average ion ratio, then fall back to the stored value if not
+    # defined
+    avg = cmpnd.get('ion_ratio_avg_calc') or cmpnd.ion_ratio_avg
+    delta = avg * cmpnd.ion_ratio_cv
+    ion_ratio_low = avg - delta
+    ion_ratio_high = avg + delta
 
     if not cmpnd.CONFIRMATIONIONPEAK1_area:
         ion_ratio = None

@@ -29,6 +29,9 @@ class Cmpnd(object):
 
     def __repr__(self):
         return str(self.__dict__)
+
+    def get(self, key, default = None):
+        return self.__dict__.get(key, default)
     
 class TestCalculation(unittest.TestCase):
     
@@ -97,6 +100,9 @@ class TestCalculation(unittest.TestCase):
                   ion_ratio_avg = 1, ion_ratio_cv = 0.1), False),
             (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 0,
                   ion_ratio_avg = 1, ion_ratio_cv = 0.1), None),
+            (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 2,
+                  ion_ratio_avg_calc = 1.1, ion_ratio_cv = 0.1), False),
+            
             ]
         self._testall(check_ion_ratio, trials)
         

@@ -4,9 +4,10 @@ import pprint
 import xml.etree.ElementTree
 import sys
 import csv
+import copy
 from collections import defaultdict, OrderedDict
 from itertools import chain, groupby, count
-from calculations import all_checks
+from calculations import all_checks, mean_ion_ratios
 
 from __init__ import qafile, SAMPLE_ATTRS, CONTROL_NAMES, SAMPLE_PREP_LABELS, SAMPLE_PREP_ORDER
 
@@ -168,6 +169,23 @@ def qa_from_csv(fname):
 
     return qadata
 
+def add_ion_ratios(qadata, controls):
+    """
+    Update qadata with ion ratos calculated from experimental data
+    """
+
+    std_ids, std_names = zip(
+        *[(i,n) for i,n in CONTROL_NAMES if n.startswith('std')])
+    ion_ratios = mean_ion_ratios(controls, set(std_ids))    
+
+    qdcopy = copy.deepcopy(qadata)
+
+    for cmpnd_id, data in qdcopy.items():
+        data['ion_ratio_avg_calc'] = ion_ratios[cmpnd_id]['ion_ratio_avg_calc']
+
+    return qdcopy
+    
+    
 def read_matrix(fname):
     """
     Read a configuration file describing compound-calculation

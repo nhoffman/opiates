@@ -6,10 +6,11 @@ import os
 import unittest
 import logging
 import pprint
+import json
 from collections import OrderedDict
 
-from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples
-from opiate import matrix_file
+from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples, qa_from_csv, add_ion_ratios
+from opiate import matrix_file, qafile
 import __init__ as config
 
 log = logging.getLogger(__name__)
@@ -52,3 +53,15 @@ class TestGroupSamples(unittest.TestCase):
         controls, sample_groups = group_samples('testfiles/opi_checkout.xml')
         self.assertEqual(len(controls), 10)
         self.assertEqual(sample_groups, OrderedDict())
+
+class TestAddIonRatios(unittest.TestCase):
+
+    def test01(self):
+        with open('testfiles/oct24.json') as f:
+            controls, sample_groups = json.load(f)
+        qadata = qa_from_csv(qafile)
+        
+        qd = add_ion_ratios(qadata, controls)
+        for d in qd.values():
+            self.assertTrue('ion_ratio_avg_calc' in d)
+        
