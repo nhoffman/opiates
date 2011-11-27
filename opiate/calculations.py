@@ -119,9 +119,9 @@ def check_ion_ratio(cmpnd):
     """
 
     # calculate reference range
-    delta = cmpnd.ion_ratio_average * cmpnd.ion_ratio_cv
-    ion_ratio_low = cmpnd.ion_ratio_average - delta
-    ion_ratio_high = cmpnd.ion_ratio_average + delta
+    delta = cmpnd.ion_ratio_avg * cmpnd.ion_ratio_cv
+    ion_ratio_low = cmpnd.ion_ratio_avg - delta
+    ion_ratio_high = cmpnd.ion_ratio_avg + delta
 
     if not cmpnd.CONFIRMATIONIONPEAK1_area:
         ion_ratio = None
@@ -188,7 +188,7 @@ def mean_ion_ratios(controls, sample_ids):
     for cmpnd, cmpnd_grp in groupby(stds, lambda c: c['COMPOUND_id']):
         out[cmpnd] = OrderedDict(
             (cnames[c['SAMPLE_id']], ion_ratio(c)) for c in cmpnd_grp)
-        out[cmpnd]['ion_ratio_average_calc'] = average(out[cmpnd].values())
+        out[cmpnd]['ion_ratio_avg_calc'] = average(out[cmpnd].values())
 
     return out
                 

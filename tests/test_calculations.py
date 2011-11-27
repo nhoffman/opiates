@@ -90,13 +90,13 @@ class TestCalculation(unittest.TestCase):
     def test_ion_ratio(self):
         trials = [
             (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 1.,
-                  ion_ratio_average = 1, ion_ratio_cv = 0.1), True),
+                  ion_ratio_avg = 1, ion_ratio_cv = 0.1), True),
             (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 2.,
-                  ion_ratio_average = 1, ion_ratio_cv = 0.1), False),
+                  ion_ratio_avg = 1, ion_ratio_cv = 0.1), False),
             (dict(PEAK_area = 0, CONFIRMATIONIONPEAK1_area = 2.,
-                  ion_ratio_average = 1, ion_ratio_cv = 0.1), False),
+                  ion_ratio_avg = 1, ion_ratio_cv = 0.1), False),
             (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 0,
-                  ion_ratio_average = 1, ion_ratio_cv = 0.1), None),
+                  ion_ratio_avg = 1, ion_ratio_cv = 0.1), None),
             ]
         self._testall(check_ion_ratio, trials)
         

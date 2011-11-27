@@ -39,7 +39,7 @@ def action(args):
         *[(i,n) for i,n in CONTROL_NAMES if n.startswith('std')])
 
     headers = ['qa_id', 'qa_compound'] + \
-        list(std_names) + ['ion_ratio_average_calc','ion_ratio_average']
+        list(std_names) + ['ion_ratio_avg_calc','ion_ratio_avg']
     writer = csv.DictWriter(args.outfile,
                             fieldnames = headers, extrasaction = 'ignore')
 
