@@ -12,7 +12,8 @@ from collections import OrderedDict
 
 log = logging.getLogger(__name__)
 
-from opiate.containers import Compound, Sample, flatten
+from opiate.containers import Compound, Sample
+from opiate.utils import flatten
 from opiate.parsers import qa_from_csv, read_matrix
 from opiate import qafile, matrix_file
 

@@ -16,7 +16,8 @@ from opiate import qafile, matrix_file
 from opiate.calculations import all_checks
 from opiate.parsers import qa_from_csv, read_matrix
 from opiate.display import display_specimens
-from opiate.containers import Compound, flatten
+from opiate.containers import Compound
+from opiate.utils import flatten
 
 import __init__ as config
 from __init__ import TestCaseSuppressOutput

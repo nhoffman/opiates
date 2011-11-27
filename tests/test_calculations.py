@@ -13,7 +13,7 @@ log = logging.getLogger(__name__)
 from opiate.calculations import *
 from opiate.containers import Compound
 from opiate.parsers import qa_from_csv, read_matrix
-from opiate import qafile, matrix_file
+from opiate import qafile, matrix_file, CONTROL_NAMES
 
 import __init__ as config
 
@@ -116,3 +116,8 @@ class TestCalculation(unittest.TestCase):
             ]
         self._testall(check_spike, trials)
         
+class TestMeanIonRatios(unittest.TestCase):
+
+    def test01(self):
+        ratios = mean_ion_ratios(controls, set([1,2,3,4,5]))
+        self.assertEqual(len(ratios), len(qadata))
