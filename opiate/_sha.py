@@ -1,1 +1,1 @@
-_sha=''
+_sha = None
