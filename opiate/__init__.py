@@ -8,7 +8,7 @@ def _safeint(s):
 
 from _sha import _sha
     
-__version__ = "0.1" + _sha
+__version__ = "0.1" + (_sha or '')
 __version_info__ = tuple([_safeint(num) for num in __version__.split('.')])
 
 qafile = path.join(path.dirname(__file__), 'data', 'qa.csv')
