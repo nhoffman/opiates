@@ -27,5 +27,11 @@ Now checking out ``opiate/_sha.py`` inserts the abbreviated hash
 identifying the current commit. This is reflected in the version
 number::
 
+    % ./smack --version 
+    0.1.8f9b976
 
+The rub is that you need to check out _sha.py to make its contents
+describe the current commit::
 
+    % rm opiate/_sha.py && git checkout opiate/_sha.py && cat opiate/_sha.py
+    _sha='.8f9b976'
