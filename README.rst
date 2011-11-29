@@ -11,7 +11,7 @@ http://progit.org/book/ch7-2.html
 
 Initial setup was performed like this::
 
-    % echo "opiate/_sha.py    filter=sha" > .gitattributes
+    % echo "opiate/data/sha    filter=sha" > .gitattributes
     % git add .gitattributes
 
 I couldn't figure out the quoting and escaping to update the local git
@@ -20,18 +20,36 @@ config``, so I added the following section manually::
 
     % grep sha .git/config
     [filter "sha"]
-        clean = python -c \"print '_sha = None'\"
-        smudge = echo "_sha=\"$(git --no-pager log --pretty=format:\"'.%h'\" -1)\""
+	    clean = cat > /dev/null
+	    smudge = echo "$(git --no-pager log --pretty=format:\"%h\" -1)"
 
-Now checking out ``opiate/_sha.py`` inserts the abbreviated hash
+Now checking out ``opiate/data/sha`` inserts the abbreviated hash
 identifying the current commit. This is reflected in the version
 number::
 
     % ./smack --version 
-    0.1.8f9b976
+    0.1.f7fe0eb
 
-The rub is that you need to check out _sha.py to make its contents
-describe the current commit::
 
-    % rm opiate/_sha.py && git checkout opiate/_sha.py && cat opiate/_sha.py
-    _sha='.8f9b976'
+The rub is that you need to check out ``opiate/data/sha`` to make its contents
+describe the current commit. This can be done using ``dev/refresh_sha.sh``::
+
+    % dev/refresh_sha.sh
+
+    shafile=opiate/data/sha
+    cat ${shafile:?}
+    f7fe0eb
+    rm -f ${shafile:?}
+    git checkout ${shafile:?}
+    cat ${shafile:?}
+    f7fe0eb
+    git --no-pager log -1
+    commit f7fe0ebb28fe986199bb9f33e76a57c0e733477d
+    Author: Noah Hoffman <noah.hoffman@gmail.com>
+    Date:   Mon Nov 28 16:47:30 2011 -0800
+
+	.gitattributes identified opiate/data/sha
+
+This step needs to be performed before, running ``setup.py`` to
+install the package, for example.
+
