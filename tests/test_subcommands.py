@@ -38,7 +38,7 @@ class TestQA(TestCaseSuppressOutput):
 
     def test05(self):
         config_action(Args(compound_id = 1))
-        config_action(Args(compound_id = 21))
+        self.assertRaises(SystemExit, config_action, Args(compound_id = 21))
         
 class TestInfo(TestCaseSuppressOutput):
 
