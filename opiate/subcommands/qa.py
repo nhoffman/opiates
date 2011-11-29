@@ -11,7 +11,7 @@ import logging
 import sys
 import xml.etree.ElementTree
 
-from opiate import matrix_file, qafile
+from opiate import __version__, matrix_file, qafile
 from opiate.parsers import qa_from_csv, read_matrix, group_samples, add_ion_ratios
 from opiate.display import display_specimens, display_controls
 from opiate.containers import Compound
@@ -21,8 +21,10 @@ log = logging.getLogger(__name__)
 
 def build_parser(parser):
     parser.add_argument('infile', help='Input xml or json file containing experimental data.')
-    parser.add_argument('-o','--outfile', metavar = 'FILE', default = sys.stdout,
-                        type = argparse.FileType('w'))
+    parser.add_argument('-o','--outfile', metavar = 'FILE', default = None,
+                        type = argparse.FileType('w'), help = """Output file in csv format. If this argument is not provided, the output file name will be generated from the input file name plus the version number. Use '-o -' or '--outfile=-' to print to the screen.""")
+    parser.add_argument('-d','--outdir', metavar = 'DIRECTORY', default = None,
+                        help = """Optional output directory. Writes to same directory as infile by default.""")
     parser.add_argument('-a','--show-all', help='Show all results for each compound (ie, not just QA failures)',
                         action = 'store_true', default = False)    
     parser.add_argument('-O','--outcomes-only',
@@ -41,13 +43,27 @@ def build_parser(parser):
 def action(args):
 
     style = 'screen' if args.outfile == sys.stdout else 'file'
-    
+
+    if args.outfile is None:
+        outdir = args.outdir or path.dirname(args.infile)
+        outfile = open(
+            path.join(
+                outdir,
+                '.'.join([path.splitext(path.basename(args.infile))[0], __version__, 'csv'])
+                ), 'w')
+
+    else:
+        outfile = args.outfile
+        
     if args.infile.lower().endswith('.xml'):
         controls, sample_groups = group_samples(args.infile)
-    else:
+    elif args.infile.lower().endswith('.json'):
         with open(args.infile) as f:
             controls, sample_groups = json.load(f)        
-
+    else:
+        log.error('input file name must end with either ".xml" or ".json"')
+        sys.exit(1)
+            
     qadata = qa_from_csv(qafile)
     matrix = read_matrix(matrix_file)
 
@@ -65,20 +81,24 @@ def action(args):
     # controls
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
                  for c in flatten(controls.values()) if cond(c)]     
-
     display_controls(compounds,
-                     outfile = args.outfile,
+                     outfile = outfile,
+                     show_all = args.show_all,
                      message = not args.outcomes_only,
                      style = style)
 
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
                  for c in flatten(sample_groups.values()) if cond(c)]     
     display_specimens(compounds,
-                      outfile = args.outfile,
+                      outfile = outfile,
+                     show_all = args.show_all,                      
                       message = not args.outcomes_only,
                       style = style)
     
-            
+    if args.outfile is None:
+        outfile.close()
+
+    
 if __name__ == '__main__':
     main()
     

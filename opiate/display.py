@@ -47,7 +47,7 @@ def display_specimens(compounds, outfile, show_all = False, message = True, styl
             writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
 
             # ...and maybe the rest
-            if not first.type == 'patient' or not first.qa_ok:
+            if not first.type == 'patient' or not first.qa_ok or show_all:
                 for cmpnd in label_group: 
                     d = cmpnd.display(message)
                     writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
@@ -69,16 +69,16 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
     compounds.sort(key = lambda c: c.sort_by_compound())
     for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
         grp = list(compound_group)
-        any_failed = any(c.qa_ok is False for c in grp)
+        show_group = any(c.qa_ok is False for c in grp) or show_all
         
-        if any_failed and style == 'screen':
+        if show_group and style == 'screen':
             writer.writerow(display_header)
             
         for cmpnd in grp:
-            if cmpnd.qa_ok is False:
+            if cmpnd.qa_ok is False or show_all:
                 d = cmpnd.display(message)
                 writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
 
-        if any_failed and style == 'screen':
+        if show_group and style == 'screen':
             writer.writerow(display_empty)
             
