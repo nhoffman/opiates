@@ -38,7 +38,11 @@ def build_parser(parser):
     providing this option causes QA to be performed using
     'ion_ratio_avg' from the qa configuration file.""",
                         action = 'store_false', dest = 'calculate_ion_ratios', default = True)    
-    
+    parser.add_argument('-s','--split-desc', default = 'word', choices = ['word','firstsix'],
+                        help = """Method used to process the specimen
+                        description: word, use the first
+                        whitespace-delimited word; firstsix, use first
+                        six characters.""")
     
 def action(args):
 
@@ -56,7 +60,10 @@ def action(args):
         outfile = args.outfile
         
     if args.infile.lower().endswith('.xml'):
-        controls, sample_groups = group_samples(args.infile)
+        split_desc = {'word': lambda x: x.split()[0],
+                      'firstsix': lambda x: x[:6]
+                      }[args.split_desc]
+        controls, sample_groups = group_samples(args.infile, split_desc = split_desc)
     elif args.infile.lower().endswith('.json'):
         with open(args.infile) as f:
             controls, sample_groups = json.load(f)        
