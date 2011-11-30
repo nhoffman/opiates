@@ -138,6 +138,35 @@ def check_ion_ratio(cmpnd):
         
     return retval, msg
         
+def check_ion_ratio_calc(cmpnd):
+    """
+    Ion Ratio
+
+    Compare Drug Ion Ratio (Quatifying Peak Area/ Qualifying Peak
+    Area) to a QA range. If the denominator is zero, return None.
+
+    Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
+    """
+
+    avg = cmpnd.get('ion_ratio_avg_calc')
+    delta = avg * cmpnd.ion_ratio_cv
+    ion_ratio_low = avg - delta
+    ion_ratio_high = avg + delta
+
+    if not cmpnd.CONFIRMATIONIONPEAK1_area:
+        ion_ratio = None
+        retval = None
+    else:
+        ion_ratio = cmpnd.PEAK_area/cmpnd.CONFIRMATIONIONPEAK1_area
+        retval = ion_ratio_low <= ion_ratio <= ion_ratio_high
+
+    msg = '%s [%s-%s]' % \
+        fmt(ion_ratio, ion_ratio_low, ion_ratio_high)
+        
+    return retval, msg
+        
+
+
 def check_is_peak_area(cmpnd):
     """
     I.S. Pk Area
