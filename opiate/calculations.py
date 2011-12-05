@@ -158,12 +158,12 @@ def check_is_peak_area(cmpnd):
     I.S. Pk Area
 
     Compare Drug Internal Standard Peak Area with QA Peak Area. This
-    test is only performed when the compound concentration is below
-    the AMR lower limit to rule out ion suppression before issuing a
-    negative result.
+    test is only performed when the compound concentration is None or
+    has a value below the AMR lower limit to rule out ion suppression
+    before issuing a negative result.
     """
-
-    if cmpnd.PEAK_analconc < cmpnd.amr_low:
+    
+    if (cmpnd.PEAK_analconc or 0) < cmpnd.amr_low:
         retval = (cmpnd.ISPEAK_area or 0) > cmpnd.int_std_peak_area
     else:
         retval = None

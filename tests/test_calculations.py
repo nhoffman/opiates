@@ -110,9 +110,11 @@ class TestCalculations(unittest.TestCase):
         trials = [
             (dict(ISPEAK_area = 0.3, int_std_peak_area = 0.1, PEAK_analconc = 1, amr_low = 2), True),
             (dict(ISPEAK_area = 0, int_std_peak_area = 0.1, PEAK_analconc = 1, amr_low = 2), False),
+            (dict(ISPEAK_area = 0.3, int_std_peak_area = 0.1, PEAK_analconc = None, amr_low = 2), True),
+            (dict(ISPEAK_area = 0, int_std_peak_area = 0.1, PEAK_analconc = None, amr_low = 2), False),
             (dict(ISPEAK_area = None, int_std_peak_area = 0.1, PEAK_analconc = 1, amr_low = 2), False),
             (dict(ISPEAK_area = 0.3, int_std_peak_area = 0.1, PEAK_analconc = 3, amr_low = 2), None),
-            (dict(ISPEAK_area = 0, int_std_peak_area = 0.1, PEAK_analconc = 3, amr_low = 2), None)            
+            (dict(ISPEAK_area = 0, int_std_peak_area = 0.1, PEAK_analconc = 3, amr_low = 2), None)
             ]
         self._testall(check_is_peak_area, trials)
 
