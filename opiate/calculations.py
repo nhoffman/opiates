@@ -8,15 +8,6 @@ from utils import flatten
 
 log = logging.getLogger(__name__)
 
-def _check_true(cmpnd):
-    return True
-
-def _check_false(cmpnd):
-    return False
-
-def _check_none(cmpnd):
-    return None
-
 def fmt(*args):
     return tuple('%.2f' % val if isinstance(val, float) else val for val in args)
     
@@ -166,10 +157,17 @@ def check_is_peak_area(cmpnd):
     """
     I.S. Pk Area
 
-    Compare Drug Internal Standard Peak Area with QA Peak Area
+    Compare Drug Internal Standard Peak Area with QA Peak Area. This
+    test is only performed when the compound concentration is below
+    the AMR lower limit to rule out ion suppression before issuing a
+    negative result.
     """
+
+    if cmpnd.PEAK_analconc < cmpnd.amr_low:
+        retval = (cmpnd.ISPEAK_area or 0) > cmpnd.int_std_peak_area
+    else:
+        retval = None
     
-    retval = (cmpnd.ISPEAK_area or 0) > cmpnd.int_std_peak_area
     msg = '%s > %s' % fmt(cmpnd.ISPEAK_area, cmpnd.int_std_peak_area)
     return retval, msg
     

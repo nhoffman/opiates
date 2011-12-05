@@ -33,7 +33,7 @@ class Cmpnd(object):
     def get(self, key, default = None):
         return self.__dict__.get(key, default)
     
-class TestCalculation(unittest.TestCase):
+class TestCalculations(unittest.TestCase):
     
     def _testall(self, checkfun, trials):
         for kwargs, predicted in trials:
@@ -105,12 +105,14 @@ class TestCalculation(unittest.TestCase):
             
             ]
         self._testall(check_ion_ratio, trials)
-        
+
     def test_is_peak_area(self):
         trials = [
-            (dict(ISPEAK_area = 0.3, int_std_peak_area = 0.1), True),
-            (dict(ISPEAK_area = 0, int_std_peak_area = 0.1), False),
-            (dict(ISPEAK_area = None, int_std_peak_area = 0.1), False),
+            (dict(ISPEAK_area = 0.3, int_std_peak_area = 0.1, PEAK_analconc = 1, amr_low = 2), True),
+            (dict(ISPEAK_area = 0, int_std_peak_area = 0.1, PEAK_analconc = 1, amr_low = 2), False),
+            (dict(ISPEAK_area = None, int_std_peak_area = 0.1, PEAK_analconc = 1, amr_low = 2), False),
+            (dict(ISPEAK_area = 0.3, int_std_peak_area = 0.1, PEAK_analconc = 3, amr_low = 2), None),
+            (dict(ISPEAK_area = 0, int_std_peak_area = 0.1, PEAK_analconc = 3, amr_low = 2), None)            
             ]
         self._testall(check_is_peak_area, trials)
 
