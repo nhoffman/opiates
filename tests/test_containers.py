@@ -72,18 +72,10 @@ class TestQACalculation(unittest.TestCase):
         self.assertTrue(cmpnd.qa_ok is None)
 
     def test02(self):
-        compound = sample1[0]
-        cmpnd = Compound(compound, matrix, **qadata[compound['COMPOUND_id']])
-        self.assertTrue(cmpnd.qa_ok)
-        self.assertEquals(
-            cmpnd.testnames,
-            set(['check_ion_ratio', 'check_rrt', 'check_signoise', 'check_is_peak_area']))
-
-    def test03(self):
         compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(controls.values())]
         self.assertTrue(all(x.type == 'control' for x in compounds))
 
-    def test04(self):
+    def test03(self):
         compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample1)]
         self.assertTrue(all(x.type == 'patient' for x in compounds))
         

@@ -108,12 +108,16 @@ def check_signoise(cmpnd):
 
     return retval, msg
         
-def check_ion_ratio(cmpnd):
+def _check_ion_ratio_general(cmpnd, use_calculated = False):
     """
     Ion Ratio
 
     Compare Drug Ion Ratio (Quatifying Peak Area/ Qualifying Peak
     Area) to a QA range. If the denominator is zero, return None.
+
+    `use_calculated` determines whether the calculated is performed
+    using the average ion ratio determined from the standards and
+    provided as the value of the attribute `cmpnd.ion_ratio_avg_calc`.
 
     Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
     """
@@ -121,7 +125,12 @@ def check_ion_ratio(cmpnd):
     # calculate reference range; first try to use the calculated
     # average ion ratio, then fall back to the stored value if not
     # defined
-    avg = cmpnd.get('ion_ratio_avg_calc') or cmpnd.ion_ratio_avg
+
+    if use_calculated:
+        avg = cmpnd.get('ion_ratio_avg_calc') or cmpnd.ion_ratio_avg
+    else:
+        avg = cmpnd.ion_ratio_avg
+        
     delta = avg * cmpnd.ion_ratio_cv
     ion_ratio_low = avg - delta
     ion_ratio_high = avg + delta
@@ -137,35 +146,21 @@ def check_ion_ratio(cmpnd):
         fmt(ion_ratio, ion_ratio_low, ion_ratio_high)
         
     return retval, msg
-        
-def check_ion_ratio_calc(cmpnd):
+
+def check_ion_ratio(cmpnd, use_calculated = False):
     """
     Ion Ratio
-
-    Compare Drug Ion Ratio (Quatifying Peak Area/ Qualifying Peak
-    Area) to a QA range. If the denominator is zero, return None.
-
-    Return None if cmpnd.CONFIRMATIONIONPEAK1_area is 0 or missing.
     """
 
-    avg = cmpnd.get('ion_ratio_avg_calc')
-    delta = avg * cmpnd.ion_ratio_cv
-    ion_ratio_low = avg - delta
-    ion_ratio_high = avg + delta
+    return _check_ion_ratio_general(cmpnd, use_calculated = True)    
+    
 
-    if not cmpnd.CONFIRMATIONIONPEAK1_area:
-        ion_ratio = None
-        retval = None
-    else:
-        ion_ratio = cmpnd.PEAK_area/cmpnd.CONFIRMATIONIONPEAK1_area
-        retval = ion_ratio_low <= ion_ratio <= ion_ratio_high
+def check_ion_ratio_std(cmpnd):
+    """
+    Ion Ratio of Stds
+    """
 
-    msg = '%s [%s-%s]' % \
-        fmt(ion_ratio, ion_ratio_low, ion_ratio_high)
-        
-    return retval, msg
-        
-
+    return _check_ion_ratio_general(cmpnd, use_calculated = False)
 
 def check_is_peak_area(cmpnd):
     """
