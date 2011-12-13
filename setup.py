@@ -3,6 +3,7 @@ Create unix package:    python setup.py sdist
 """
 
 from distutils.core import setup
+from os.path import join
 
 # try:
 #     from setuptools import setup, find_packages
@@ -22,7 +23,7 @@ params = {'author': 'Noah Hoffman',
           'scripts': ['smack'],
           'version': __version__,
           # 'install_requires': ['sqlalchemy', 'decorator'],
-          'package_data': {'opiate': ['data/qa.csv']}
+          'package_data': {'opiate': [join('data',f) for f in ['qa.csv','qa.csv','sha']]}
           }
 
 setup(**params)
