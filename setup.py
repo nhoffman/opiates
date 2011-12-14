@@ -26,7 +26,7 @@ with open(os.devnull, 'w') as stdout, open(os.devnull, 'w') as stderr:
         subprocess.call(['git', 'config', '--remove-section', 'filter.sha'], **outputs)    
         gitconf = '.git/config'
         shutil.copyfile(gitconf, 'git-config.bak')
-        with open(gitconf, 'wa') as fobj:
+        with open(gitconf, 'a') as fobj:
             fobj.write('\n[filter "sha"]\n')
             fobj.write('clean = cat > /dev/null\n')
             fobj.write(r'smudge = echo "$(git --no-pager log --pretty=format:\"%h\" -1)"')
