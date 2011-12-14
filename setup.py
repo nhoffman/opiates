@@ -23,7 +23,7 @@ params = {'author': 'Noah Hoffman',
           'scripts': ['smack'],
           'version': __version__,
           # 'install_requires': ['sqlalchemy', 'decorator'],
-          'package_data': {'opiate': [join('data',f) for f in ['qa.csv','qa.csv','sha']]}
+          'package_data': {'opiate': [join('data',f) for f in ['qa.csv','matrix.csv','sha']]}
           }
 
 setup(**params)

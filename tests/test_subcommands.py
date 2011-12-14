@@ -8,8 +8,11 @@ import logging
 import pprint
 import sys
 
+import opiate.subcommands.config as config_subcommand
 from opiate.subcommands.config import action as config_action
 from opiate.subcommands.info import action as info_action
+
+from opiate.scripts.smack import main as smack
 
 from __init__ import TestCaseSuppressOutput
 import __init__ as config
@@ -22,7 +25,27 @@ class Args(object):
     def __getattr__(self, key):        
         return self.data.get(key)
 
-class TestQA(TestCaseSuppressOutput):
+class TestConfig(TestCaseSuppressOutput):
+    subcommand = config_subcommand
+
+    def test_exits(self):
+        self.assertRaises(SystemExit, smack, ['config','-h'])
+        self.assertRaises(SystemExit, smack, ['config','-i'])
+        self.assertRaises(SystemExit, smack, ['config','-s'])        
+
+    def test_options(self):
+        options = [
+            ['config','-C'],
+            ['config','-c'],
+            ['config','-f'],
+            ['config','-i', '1'],
+            ['config','-r'],
+            ['config','-s', 'check_amr'],
+            ]
+        for opt in options:
+            smack(opt)
+                
+class TestConfigOld(TestCaseSuppressOutput):
 
     def test01(self):
         config_action(Args())

@@ -35,9 +35,10 @@ class TestCaseSuppressOutput(unittest.TestCase):
         self.funcname = '_'.join(self.id().split('.')[-2:])
         self.suppress_output = log.getEffectiveLevel() >= logging.INFO
         if self.suppress_output:
-            sys.stdout = open(os.devnull, 'w')
+            sys.stdout = sys.stderr = open(os.devnull, 'w')
             
     def tearDown(self):
         if self.suppress_output:
             sys.stdout = sys.__stdout__
+            sys.stderr = sys.__stderr__
 
