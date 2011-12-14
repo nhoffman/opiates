@@ -2,6 +2,23 @@
  opiates package: automated QA for an LC/MS opaites assay
 ==========================================================
 
+installation
+============
+
+Installation to the system is performed either in the standard way for
+a Python package::
+
+    sudo python setup.py install
+
+or using `pip`::
+
+    sudo pip install .
+
+Subsequent (re)installation with pip should be performed using the
+``-U`` option::
+
+    sudo pip install -U .
+
 versions
 ========
 
@@ -14,42 +31,17 @@ Initial setup was performed like this::
     % echo "opiate/data/sha    filter=sha" > .gitattributes
     % git add .gitattributes
 
-I couldn't figure out the quoting and escaping to update the local git
-config file (``.git/config``) from the command line using ``git
-config``, so I added the following section manually::
+A newly cloned repo contains `.gitattributes`, so this doesn't need to
+be repeated. However, some local configuration does need to be
+performed before the version will be defined properly in
+`setup.py`. This one-time configuration is taken care of when
+`setup.py` is first run.
 
-    % grep sha .git/config
-    [filter "sha"]
-	    clean = cat > /dev/null
-	    smudge = echo "$(git --no-pager log --pretty=format:\"%h\" -1)"
+In addition, before each installation, `opiate/data/sha`, the file
+containing the abbreviated git sha, needs to be updated to contain the
+hash representing the current commit. This is also taken care of when
+`setup.py` is run. Note, however, that all changes must be committed
+before installation, or the version hash will not accurately reflect
+the current state of the code.
 
-Now checking out ``opiate/data/sha`` inserts the abbreviated hash
-identifying the current commit. This is reflected in the version
-number::
-
-    % ./smack --version 
-    0.1.f7fe0eb
-
-
-The rub is that you need to check out ``opiate/data/sha`` to make its contents
-describe the current commit. This can be done using ``dev/refresh_sha.sh``::
-
-    % dev/refresh_sha.sh
-
-    shafile=opiate/data/sha
-    cat ${shafile:?}
-    f7fe0eb
-    rm -f ${shafile:?}
-    git checkout ${shafile:?}
-    cat ${shafile:?}
-    f7fe0eb
-    git --no-pager log -1
-    commit f7fe0ebb28fe986199bb9f33e76a57c0e733477d
-    Author: Noah Hoffman <noah.hoffman@gmail.com>
-    Date:   Mon Nov 28 16:47:30 2011 -0800
-
-	.gitattributes identified opiate/data/sha
-
-This step needs to be performed before, running ``setup.py`` to
-install the package, for example.
 

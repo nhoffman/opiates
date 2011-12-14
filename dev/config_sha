@@ -1,3 +1,0 @@
-[filter "sha"]
-	clean = cat > /dev/null
-	smudge = echo "$(git --no-pager log --pretty=format:\"%h\" -1)"
