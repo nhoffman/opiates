@@ -34,6 +34,7 @@ def display_specimens(compounds, outfile, show_all = False, message = True, styl
 
     # sort, then group by compound
     compounds.sort(key = lambda c: c.sort_by_compound())
+
     for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
         if style == 'screen':
             writer.writerow(display_header)

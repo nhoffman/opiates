@@ -46,9 +46,9 @@ CONTROL_NAMES = (
 # a=x10, b=spike_x10, c=straight, d=spiked
 SAMPLE_PREP_NAMES = ['straight10','spiked10','straight','spiked']
 
-# will be assigned to cmpnd.sample_prep
+# will be assigned to cmpnd.sample_prep_label
 SAMPLE_PREP_LABELS = ['a','b','c','d']
 
 # define the order in which samples are shown in each group of four -
-# will be assigned to cmpnd.sample_order
+# will be assigned to cmpnd.sample_prep_order
 SAMPLE_PREP_ORDER = [2, 3, 1, 4]

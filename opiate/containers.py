@@ -13,11 +13,14 @@ class Compound(object):
     Container class for a compound plus QA values.
     """
 
+    # display_headers provide the (column name, attribute) for the qa
+    # reports
     display_headers = (
         ('cmpnd','COMPOUND_name'),
         ('cmpnd_id','COMPOUND_id'),        
         ('sample','SAMPLE_desc'),
-        ('sample_id','SAMPLE_id'),        
+        ('sample_id','SAMPLE_id'),
+        ('sample_prep','sample_prep_name'),
         ('conc','PEAK_analconc')
         )
     
@@ -60,15 +63,15 @@ class Compound(object):
 
         if self.SAMPLE_id in control_ids:
             self.type = 'control'
-        elif self.get('sample_prep'):
+        elif self.get('sample_prep_label'):
             self.type = 'patient'
         else:
             self.type = 'misc'
 
-        # define testnames; 'sample_prep' is added by
+        # define testnames; 'sample_prep_label' is added by
         # `parsers.group_samples()` - if this value is defined, use it
         # in place of SAMPLE_id
-        sample_id = self.get('sample_prep') or self.SAMPLE_id
+        sample_id = self.get('sample_prep_label') or self.SAMPLE_id
         compound_id = self.COMPOUND_id
 
         if testnames:
@@ -89,7 +92,7 @@ class Compound(object):
             self.COMPOUND_id,
             self.COMPOUND_name[:10] + '...',
             self.SAMPLE_id,
-            self.get('sample_prep') or '',
+            self.get('sample_prep_label') or '',
             self.type
             )
     
@@ -125,7 +128,7 @@ class Compound(object):
         """
 
         if self.type == 'patient':
-            return (self.COMPOUND_id, self.sample_label, self.sample_order)
+            return (self.COMPOUND_id, self.sample_label, self.sample_prep_order)
         elif self.type == 'misc':
             return (self.COMPOUND_id, self.sample_label, self.SAMPLE_id)
         elif self.type == 'control':
@@ -138,7 +141,8 @@ class Compound(object):
         final report.
         """
 
-        d = OrderedDict((k, self.__dict__[a]) for k,a in self.display_headers)
+        # d = OrderedDict((k, self.__dict__[a]) for k,a in self.display_headers)
+        d = OrderedDict((k, self.__dict__.get(a, None)) for k,a in self.display_headers)
 
         for calc_name, results in self.qa_results.items():                   
             retval, msg = results
