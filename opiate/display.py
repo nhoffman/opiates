@@ -40,23 +40,17 @@ def display_specimens(compounds, outfile, show_all = False, message = True, styl
             writer.writerow(display_header)
         # within each compound, group by label
         for label, label_group in groupby(compound_group, lambda c: c.sample_label):
-            first = label_group.next()
-
-            # display the first in the group of specimens from this
-            # accession
-            d = first.display(message)
-            writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
-
-            # ...and maybe the rest
-            if not first.type == 'patient' or not first.qa_ok or show_all:
-                for cmpnd in label_group: 
+            # the 'show_for_qa' method should provide the logic for
+            # whether to display each compound
+            for cmpnd in label_group:
+                if show_all or cmpnd.show_for_qa():
                     d = cmpnd.display(message)
                     writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
-                    
+
             if style == 'screen':
                 writer.writerow(display_empty)
-                
-        
+
+
 def display_controls(compounds, outfile, show_all = False, message = True, style = 'screen'):
 
     nullchar = choose_nullchar[style]
@@ -71,10 +65,10 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
     for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
         grp = list(compound_group)
         show_group = any(c.qa_ok is False for c in grp) or show_all
-        
+
         if show_group and style == 'screen':
             writer.writerow(display_header)
-            
+
         for cmpnd in grp:
             if cmpnd.qa_ok is False or show_all:
                 d = cmpnd.display(message)
@@ -82,4 +76,4 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
 
         if show_group and style == 'screen':
             writer.writerow(display_empty)
-            
+

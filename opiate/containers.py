@@ -153,6 +153,30 @@ class Compound(object):
                 d[calc_name] = outcomes[retval]
         
         return d
+
+    def show_for_qa(self):
+        """
+        Return True if this compound should be displayed in QA report.
+        """
+
+        if self.type == 'patient' and self.sample_prep_label == 'c':
+            # we always show the "c" row in each group of patient
+            # specimens
+            show = True
+        elif not self.qa_ok:
+            show = True
+        # elif self.
+        else:
+            show = False
+
+        return show
+            
+    def show_for_results(self):
+        """
+        Return True if this compound should be displayed in results report.
+        """
+
+        pass
         
 class Sample(object):
     """

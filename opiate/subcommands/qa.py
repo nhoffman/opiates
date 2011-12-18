@@ -26,24 +26,24 @@ def build_parser(parser):
     parser.add_argument('-d','--outdir', metavar = 'DIRECTORY', default = None,
                         help = """Optional output directory. Writes to same directory as infile by default.""")
     parser.add_argument('-a','--show-all', help='Show all results for each compound (ie, not just QA failures)',
-                        action = 'store_true', default = False)    
+                        action = 'store_true', default = False)
     parser.add_argument('-O','--outcomes-only',
                         help="""Show outcome for each QA calculation
     instead of a more detailed message containing values.""",
-                        action = 'store_true', default = False)    
+                        action = 'store_true', default = False)
     parser.add_argument('-c','--compound-id', help='Show results for this compound id only.',
                         metavar = 'NUMBER', type = int, default = None)
     parser.add_argument('-n','-no-calculate-ion-ratio-avg', help="""By
     default, ion ratio averages are calculated from the standards;
     providing this option causes QA to be performed using
     'ion_ratio_avg' from the qa configuration file.""",
-                        action = 'store_false', dest = 'calculate_ion_ratios', default = True)    
+                        action = 'store_false', dest = 'calculate_ion_ratios', default = True)
     parser.add_argument('-s','--split-desc', default = 'word', choices = ['word','firstsix'],
                         help = """Method used to process the specimen
                         description: word, use the first
                         whitespace-delimited word; firstsix, use first
-                        six characters.""")
-    
+                        six characters [default "%(default)s"].""")
+
 def action(args):
 
     style = 'screen' if args.outfile == sys.stdout else 'file'
@@ -58,7 +58,7 @@ def action(args):
 
     else:
         outfile = args.outfile
-        
+
     if args.infile.lower().endswith('.xml'):
         split_desc = {'word': lambda x: x.split()[0],
                       'firstsix': lambda x: x[:6]
@@ -66,11 +66,11 @@ def action(args):
         controls, sample_groups = group_samples(args.infile, split_desc = split_desc)
     elif args.infile.lower().endswith('.json'):
         with open(args.infile) as f:
-            controls, sample_groups = json.load(f)        
+            controls, sample_groups = json.load(f)
     else:
         log.error('input file name must end with either ".xml" or ".json"')
         sys.exit(1)
-            
+
     qadata = qa_from_csv(qafile)
     matrix = read_matrix(matrix_file)
 
@@ -84,10 +84,10 @@ def action(args):
         cond = lambda c: c['COMPOUND_id'] == args.compound_id
     else:
         cond = lambda c: True
-    
+
     # controls
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
-                 for c in flatten(controls.values()) if cond(c)]     
+                 for c in flatten(controls.values()) if cond(c)]
     display_controls(compounds,
                      outfile = outfile,
                      show_all = args.show_all,
@@ -95,17 +95,17 @@ def action(args):
                      style = style)
 
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
-                 for c in flatten(sample_groups.values()) if cond(c)]     
+                 for c in flatten(sample_groups.values()) if cond(c)]
     display_specimens(compounds,
                       outfile = outfile,
-                     show_all = args.show_all,                      
+                      show_all = args.show_all,
                       message = not args.outcomes_only,
                       style = style)
-    
+
     if args.outfile is None:
         outfile.close()
 
-    
+
 if __name__ == '__main__':
     main()
-    
+
