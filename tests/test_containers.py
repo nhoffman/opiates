@@ -63,6 +63,30 @@ class TestCompound(unittest.TestCase):
         self.assertTrue(cpnd.qa_compound == 'Morphine')
         self.assertTrue(cpnd.testnames == set())
         self.assertTrue(cpnd.qa_results == OrderedDict())
+
+    def test03(self):
+        cpnd = Compound(dict(SAMPLE_id = 1,
+                             COMPOUND_id = 1,
+                             COMPOUND_name = 'whatever',
+                             PEAK_analconc = 10))
+        self.assertEqual(cpnd.type, 'control')
+        self.assertEqual(cpnd.peak_analconc_x10, None)
+                
+        cpnd = Compound(dict(SAMPLE_id = 11,
+                             COMPOUND_id = 1,
+                             COMPOUND_name = 'whatever',
+                             PEAK_analconc = 10))
+        self.assertEqual(cpnd.type, 'misc')
+        self.assertEqual(cpnd.peak_analconc_x10, None)
+        
+        cpnd = Compound(dict(SAMPLE_id = 11,
+                             COMPOUND_id = 1,
+                             COMPOUND_name = 'whatever',
+                             sample_prep_label = 'a',
+                             PEAK_analconc = 10))
+        self.assertEqual(cpnd.type, 'patient')
+        self.assertEqual(cpnd.peak_analconc_x10, 100)        
+        
         
 class TestQACalculation(unittest.TestCase):
 

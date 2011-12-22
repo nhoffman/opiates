@@ -21,7 +21,8 @@ class Compound(object):
         ('sample','SAMPLE_desc'),
         ('sample_id','SAMPLE_id'),
         ('sample_prep','sample_prep_name'),
-        ('conc','PEAK_analconc')
+        ('conc','PEAK_analconc'),
+        ('conc_x10','peak_analconc_x10')        
         )
     
     def __init__(self, experiment, matrix = None, testnames = None, **kwargs):                
@@ -86,6 +87,23 @@ class Compound(object):
         else:
             self.qa_results = OrderedDict()
             self.qa_ok = None
+
+        # set attributes using "_get_" methods
+        for attr in ['peak_analconc_x10']:
+            val = getattr(self, '_get_'+attr)()
+            setattr(self, attr, val)
+            
+    # We need to calculate some additional values from existing
+    # ones. The methods below starting with '_get_' determine whether
+    # the named attribute should be defined and perform the necessary
+    # calculation. TODO: consider hooking attributes to getters so
+    # that they can be calculated lazily.
+    def _get_peak_analconc_x10(self):
+        cond = self.type == 'patient' \
+            and self.sample_prep_label in ('a','b') \
+            and self.PEAK_analconc
+
+        return (self.PEAK_analconc * 10) if cond else None
             
     def __repr__(self):
         return '<Cpnd %s %s Smpl %s %s (%s)>' % (
@@ -148,6 +166,8 @@ class Compound(object):
             retval, msg = results
             if message:
                 # show messages, but only if retval is False
+                # (explicitly check for False here, since values may
+                # also be None)
                 d[calc_name] = msg if retval is False else None
             else:
                 d[calc_name] = outcomes[retval]
