@@ -106,7 +106,7 @@ class Compound(object):
         return (self.PEAK_analconc * 10) if cond else None
             
     def __repr__(self):
-        return '<Cpnd %s %s Smpl %s %s (%s)>' % (
+        return '<Cpnd %02i %s Smpl %s %s (%s)>' % (
             self.COMPOUND_id,
             self.COMPOUND_name[:10] + '...',
             self.SAMPLE_id,
@@ -141,8 +141,8 @@ class Compound(object):
 
     def sort_by_compound(self):
         """
-        Emit a tuple to sort a list of Compound objects depending on
-        type.
+        Emit a tuple to sort a list of Compound objects by compound id
+        depending on type.
         """
 
         if self.type == 'patient':
@@ -152,6 +152,15 @@ class Compound(object):
         elif self.type == 'control':
             return (self.COMPOUND_id, self.SAMPLE_id)
 
+    def sort_by_label(self):
+        """
+        Emit a tuple to sort a list of Compound objects by specimen
+        label depending on type.
+        """
+
+        return None
+        
+        
         
     def display(self, message = True):
         """
@@ -179,13 +188,13 @@ class Compound(object):
         Return True if this compound should be displayed in QA report.
         """
 
-        if self.type == 'patient' and self.sample_prep_label == 'c':
-            # we always show the "c" row in each group of patient
-            # specimens
+        labels_to_show = set(['a','c'])
+        if self.type == 'patient' and self.sample_prep_label in labels_to_show:
+            # we always show the "a", "c" rows in each group of
+            # patient specimens
             show = True
         elif not self.qa_ok:
             show = True
-        # elif self.
         else:
             show = False
 
@@ -196,7 +205,7 @@ class Compound(object):
         Return True if this compound should be displayed in results report.
         """
 
-        pass
+        return True
         
 class Sample(object):
     """

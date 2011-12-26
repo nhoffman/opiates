@@ -77,3 +77,35 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
         if show_group and style == 'screen':
             writer.writerow(display_empty)
 
+def display_results(compounds, outfile, show_all = False, message = True, style = 'screen'):
+
+    fields = [h for h,_ in Compound.display_headers]
+    headers = dict((k, all_checks.get(k,k)) for k in fields)
+    empty = dict((k,'') for k in fields)
+    
+    nullchar = choose_nullchar[style]
+    fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
+    writer = csv.DictWriter(outfile, fieldnames = fields, extrasaction = 'ignore')
+
+    if style == 'file':
+        writer.writerow(headers)
+                
+    # sort, then group by accession
+    compounds.sort(key = lambda c: c.sort_by_compound())
+
+    for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
+        if style == 'screen':
+            writer.writerow(display_header)
+        # within each compound, group by label
+        for label, label_group in groupby(compound_group, lambda c: c.sample_label):
+            # the 'show_for_qa' method should provide the logic for
+            # whether to display each compound
+            for cmpnd in label_group:
+                if show_all or cmpnd.show_for_qa():
+                    d = cmpnd.display(message)
+                    writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
+
+            if style == 'screen':
+                writer.writerow(display_empty)
+
+
