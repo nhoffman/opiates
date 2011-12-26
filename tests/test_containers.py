@@ -9,6 +9,7 @@ import logging
 import pprint
 import json
 from collections import OrderedDict
+from itertools import groupby
 
 log = logging.getLogger(__name__)
 
@@ -27,7 +28,9 @@ matrix = read_matrix(matrix_file)
 with open('testfiles/oct24.json') as f:
     controls, sample_groups = json.load(f)
 expt_stda = controls['stdA']
-sample1 = sample_groups['Accession02'][0]
+
+sample1 = sample_groups['Accession02']
+compound1 = sample1[0]
 
 class TestFlatten(unittest.TestCase):
     def test01(self):
@@ -91,7 +94,7 @@ class TestCompound(unittest.TestCase):
 class TestQACalculation(unittest.TestCase):
 
     def test01(self):
-        compound = sample1[0]
+        compound = compound1[0]
         cmpnd = Compound(compound, **qadata[compound['COMPOUND_id']])
         self.assertTrue(cmpnd.qa_ok is None)
 
@@ -100,6 +103,15 @@ class TestQACalculation(unittest.TestCase):
         self.assertTrue(all(x.type == 'control' for x in compounds))
 
     def test03(self):
-        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample1)]
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(compound1)]
         self.assertTrue(all(x.type == 'patient' for x in compounds))
         
+class TestSample(unittest.TestCase):
+
+    def test01(self):
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample1)]
+        compounds.sort(key = lambda c: c.sort_by_patient())
+        for cmpnd_id, cmpnds in groupby(compounds, lambda c: c.COMPOUND_id):
+            sample = Sample(cmpnds)
+            self.assertEqual(cmpnd_id, sample.COMPOUND_id)
+

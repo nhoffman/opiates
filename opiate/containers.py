@@ -1,3 +1,4 @@
+import pprint
 from itertools import chain
 from collections import OrderedDict
 
@@ -16,10 +17,10 @@ class Compound(object):
     # display_headers provide the (column name, attribute) for the qa
     # reports
     display_headers = (
-        ('cmpnd','COMPOUND_name'),
         ('cmpnd_id','COMPOUND_id'),        
-        ('sample','SAMPLE_desc'),
+        ('cmpnd','COMPOUND_name'),
         ('sample_id','SAMPLE_id'),
+        ('sample','SAMPLE_desc'),
         ('sample_prep','sample_prep_name'),
         ('conc','PEAK_analconc'),
         ('conc_x10','peak_analconc_x10')        
@@ -152,15 +153,13 @@ class Compound(object):
         elif self.type == 'control':
             return (self.COMPOUND_id, self.SAMPLE_id)
 
-    def sort_by_label(self):
+    def sort_by_patient(self):
         """
         Emit a tuple to sort a list of Compound objects by specimen
         label depending on type.
         """
 
-        return None
-        
-        
+        return (self.sample_index, self.COMPOUND_id, self.sample_prep_order)
         
     def display(self, message = True):
         """
@@ -205,22 +204,43 @@ class Compound(object):
         Return True if this compound should be displayed in results report.
         """
 
-        return True
+        labels_to_show = set(['a','c'])        
+        if self.type == 'patient': 
+            show = self.sample_prep_label in labels_to_show
+        elif self.type == 'misc':
+            show = True
+        else:
+            show = False
+
+        return show
         
 class Sample(object):
     """
-    Container class for a collection of Compound objects. Calculations
-    are implemented as methods of subclasses of this base Class.
-
-    `sample_types` is a list of strings naming each element of
-    `samples`; each element in `samples` will be defined as an
-    attribute of `self`, as will any additional samples provided in
-    `**kargs`. Each element of `samples` (and each value in
-    `**kwargs`) is a dict that will be used to initialize an object of
-    class `Compound`.
+    Container class for a group of Compound objects. Logic for
+    display of results is implemented here.
     """
 
-    def __init__(self, sample_names, samples, **kwargs):
-        
-        pass
+    # display_headers provide the (column name, attribute) for the qa
+    # reports
+    display_headers = (
+        ('cmpnd_id', 'COMPOUND_id'),        
+        ('cmpnd', 'COMPOUND_name'),
+        ('sample', 'sample_label'),
+        ('type', 'type'),
+        ('conc', 'straight_analconc'),
+        ('conc_x10', 'x10_analconc')        
+        )
+    
+    def __init__(self, compounds):        
+        cc = self.compounds = list(compounds)
 
+        for attr in ['COMPOUND_id', 'COMPOUND_name', 'sample_label', 'type']:
+            self.__dict__[attr] = getattr(cc[0], attr)            
+            assert len(set(getattr(c, attr) for c in cc)) == 1        
+            
+    def __repr__(self):
+        return '<Sample %s %s (%s)>' % (
+            self.sample_label,
+            (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name,
+            self.type
+            )

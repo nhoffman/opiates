@@ -91,9 +91,9 @@ def display_results(compounds, outfile, show_all = False, message = True, style 
         writer.writerow(headers)
                 
     # sort, then group by accession
-    compounds.sort(key = lambda c: c.sort_by_compound())
+    compounds.sort(key = lambda c: c.sort_by_patient())
 
-    for compound_id, compound_group in groupby(compounds, lambda c: c.COMPOUND_id):
+    for sample_label, compound_group in groupby(compounds, lambda c: c.sample_label):
         if style == 'screen':
             writer.writerow(display_header)
         # within each compound, group by label
@@ -101,7 +101,7 @@ def display_results(compounds, outfile, show_all = False, message = True, style 
             # the 'show_for_qa' method should provide the logic for
             # whether to display each compound
             for cmpnd in label_group:
-                if show_all or cmpnd.show_for_qa():
+                if show_all or cmpnd.show_for_results():
                     d = cmpnd.display(message)
                     writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
 
