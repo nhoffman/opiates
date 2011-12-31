@@ -52,3 +52,19 @@ SAMPLE_PREP_LABELS = ['a','b','c','d']
 # define the order in which samples are shown in each group of four -
 # will be assigned to cmpnd.sample_prep_order
 SAMPLE_PREP_ORDER = [2, 3, 1, 4]
+
+# (COMPOUND_id, lab_mnemonic)
+COMPOUND_CODES = (
+    (1, '1'),
+    (2, '2'),
+    (3, '3'),
+    (4, '4'),
+    (5, '5'),
+    (6, '6'),
+    (7, '7'),
+    (8, '8'),
+    (9, '9'),
+    (10, '10'),
+    (11, '11'),
+    (12, '12')
+    )

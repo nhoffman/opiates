@@ -2,7 +2,7 @@ import pprint
 from itertools import chain
 from collections import OrderedDict
 
-from __init__ import CONTROL_NAMES
+from __init__ import CONTROL_NAMES, SAMPLE_PREP_NAMES
 control_ids = set(i for i,n in CONTROL_NAMES)
 outcomes = {True: 'ok', False: 'FAIL', None: '-'}
 
@@ -109,7 +109,7 @@ class Compound(object):
     def __repr__(self):
         return '<Cpnd %02i %s Smpl %s %s (%s)>' % (
             self.COMPOUND_id,
-            self.COMPOUND_name[:10] + '...',
+            (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name,
             self.SAMPLE_id,
             self.get('sample_prep_label') or '',
             self.type
@@ -219,28 +219,27 @@ class Sample(object):
     Container class for a group of Compound objects. Logic for
     display of results is implemented here.
     """
-
-    # display_headers provide the (column name, attribute) for the qa
-    # reports
-    display_headers = (
-        ('cmpnd_id', 'COMPOUND_id'),        
-        ('cmpnd', 'COMPOUND_name'),
-        ('sample', 'sample_label'),
-        ('type', 'type'),
-        ('conc', 'straight_analconc'),
-        ('conc_x10', 'x10_analconc')        
-        )
     
     def __init__(self, compounds):        
-        cc = self.compounds = list(compounds)
-
+        self.compounds = OrderedDict((c.sample_prep_name, c) for c in compounds)
+        cc = self.compounds.values()
+        
         for attr in ['COMPOUND_id', 'COMPOUND_name', 'sample_label', 'type']:
             self.__dict__[attr] = getattr(cc[0], attr)            
             assert len(set(getattr(c, attr) for c in cc)) == 1        
             
+        self.qa_ok = all(c.qa_ok for c in cc)
+        self.abbrev_name = (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name
+        
     def __repr__(self):
-        return '<Sample %s %s (%s)>' % (
-            self.sample_label,
-            (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name,
-            self.type
-            )
+        return '<Sample %(sample_label)s %(abbrev_name)s (%(type)s)>' % \
+            self
+
+    def __getitem__(self, key):
+        return self.__dict__[key]
+    
+    def get(self, key, default = None):
+        return self.__dict__.get(key, default)
+
+    def conc(self):
+        return self.compounds['straight'].PEAK_analconc

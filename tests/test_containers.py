@@ -29,8 +29,12 @@ with open('testfiles/oct24.json') as f:
     controls, sample_groups = json.load(f)
 expt_stda = controls['stdA']
 
-sample1 = sample_groups['Accession02']
-compound1 = sample1[0]
+# type 'misc'
+misc_sample = sample_groups['Accession01']
+
+# type 'patient'
+patient_sample = sample_groups['Accession02']
+compound1 = patient_sample[0]
 
 class TestFlatten(unittest.TestCase):
     def test01(self):
@@ -107,11 +111,19 @@ class TestQACalculation(unittest.TestCase):
         self.assertTrue(all(x.type == 'patient' for x in compounds))
         
 class TestSample(unittest.TestCase):
-
+    
     def test01(self):
-        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(sample1)]
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(patient_sample)]
         compounds.sort(key = lambda c: c.sort_by_patient())
         for cmpnd_id, cmpnds in groupby(compounds, lambda c: c.COMPOUND_id):
             sample = Sample(cmpnds)
             self.assertEqual(cmpnd_id, sample.COMPOUND_id)
 
+    def test02(self):
+        compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(misc_sample)]
+        compounds.sort(key = lambda c: c.sort_by_patient())
+        for cmpnd_id, cmpnds in groupby(compounds, lambda c: c.COMPOUND_id):
+            sample = Sample(cmpnds)
+            self.assertEqual(cmpnd_id, sample.COMPOUND_id)
+            print sample
+            raise Exception('figure out what to do with misc specimens')

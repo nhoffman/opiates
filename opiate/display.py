@@ -4,9 +4,9 @@ import pprint
 import sys
 import csv
 
-from opiate import CONTROL_NAMES
+from opiate import CONTROL_NAMES, COMPOUND_CODES
 from opiate.calculations import all_checks, fmt
-from opiate.containers import Compound
+from opiate.containers import Compound, Sample
 
 choose_nullchar = {'screen':'.', 'file':''}
 display_fields = [h for h,_ in Compound.display_headers] + all_checks.keys()
@@ -78,34 +78,24 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
             writer.writerow(display_empty)
 
 def display_results(compounds, outfile, show_all = False, message = True, style = 'screen'):
-
-    fields = [h for h,_ in Compound.display_headers]
-    headers = dict((k, all_checks.get(k,k)) for k in fields)
-    empty = dict((k,'') for k in fields)
+    
+    compound_ids, headers = zip(*COMPOUND_CODES)
+    headers = dict((k, all_checks.get(k,k)) for k in compound_ids)
+    empty = dict((k,'') for k in compound_ids)
     
     nullchar = choose_nullchar[style]
     fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
-    writer = csv.DictWriter(outfile, fieldnames = fields, extrasaction = 'ignore')
+    writer = csv.DictWriter(outfile, fieldnames = compound_ids, extrasaction = 'ignore')
 
     if style == 'file':
         writer.writerow(headers)
                 
     # sort, then group by accession
     compounds.sort(key = lambda c: c.sort_by_patient())
-
-    for sample_label, compound_group in groupby(compounds, lambda c: c.sample_label):
-        if style == 'screen':
-            writer.writerow(display_header)
-        # within each compound, group by label
-        for label, label_group in groupby(compound_group, lambda c: c.sample_label):
-            # the 'show_for_qa' method should provide the logic for
-            # whether to display each compound
-            for cmpnd in label_group:
-                if show_all or cmpnd.show_for_results():
-                    d = cmpnd.display(message)
-                    writer.writerow(dict((k, fmt(d.get(k))) for k in display_fields))
-
-            if style == 'screen':
-                writer.writerow(display_empty)
-
-
+    for sample_label, sample_group in groupby(compounds, lambda c: c.sample_label):
+        # ... then group by compound
+        for compound_id, compound_group in groupby(sample_group, lambda c: c.COMPOUND_id):
+            sample = Sample(compound_group)
+            print sample_label, compound_id, sample, sample.compounds
+        break
+            
