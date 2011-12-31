@@ -118,12 +118,13 @@ class TestSample(unittest.TestCase):
         for cmpnd_id, cmpnds in groupby(compounds, lambda c: c.COMPOUND_id):
             sample = Sample(cmpnds)
             self.assertEqual(cmpnd_id, sample.COMPOUND_id)
-
+            self.assertEqual(sample.type, 'patient')
+            
     def test02(self):
         compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']]) for c in flatten(misc_sample)]
         compounds.sort(key = lambda c: c.sort_by_patient())
         for cmpnd_id, cmpnds in groupby(compounds, lambda c: c.COMPOUND_id):
             sample = Sample(cmpnds)
             self.assertEqual(cmpnd_id, sample.COMPOUND_id)
-            print sample
-            raise Exception('figure out what to do with misc specimens')
+            self.assertEqual(sample.type, 'misc')            
+

@@ -17,16 +17,16 @@ class Compound(object):
     # display_headers provide the (column name, attribute) for the qa
     # reports
     display_headers = (
-        ('cmpnd_id','COMPOUND_id'),        
+        ('cmpnd_id','COMPOUND_id'),
         ('cmpnd','COMPOUND_name'),
         ('sample_id','SAMPLE_id'),
         ('sample','SAMPLE_desc'),
         ('sample_prep','sample_prep_name'),
         ('conc','PEAK_analconc'),
-        ('conc_x10','peak_analconc_x10')        
+        ('conc_x10','peak_analconc_x10')
         )
-    
-    def __init__(self, experiment, matrix = None, testnames = None, **kwargs):                
+
+    def __init__(self, experiment, matrix = None, testnames = None, **kwargs):
         """
         Initialize the object with values in dict `experiment` and
         additional values in **kwargs. QA calculations are performed
@@ -37,9 +37,9 @@ class Compound(object):
          * matrix - a dict with keys (sample_id, compound_id) returning a list of
            testnames
          * testnames - provides a list of calculation names in the
-           absence of matrix. 
+           absence of matrix.
          * **kwargs - should provide other values used in various calculations.
-         
+
         The attribute `self.type` is set as one of
         'control','patient', or 'misc'.
 
@@ -58,7 +58,7 @@ class Compound(object):
          u'PEAK_signoise': 300.1793138859,
          u'SAMPLE_desc': u'StdA',
          u'SAMPLE_id': 1}
-        >>> cmpnd = Compound(compound, matrix, **qadata[compound['COMPOUND_id']]        
+        >>> cmpnd = Compound(compound, matrix, **qadata[compound['COMPOUND_id']]
         """
 
         self.__dict__ = dict(chain(*[experiment.items(), kwargs.items()]))
@@ -79,7 +79,7 @@ class Compound(object):
         if testnames:
             self.testnames = set(testnames)
         elif matrix:
-            self.testnames = matrix.get((sample_id, compound_id), []) if matrix else all_checks.keys()        
+            self.testnames = matrix.get((sample_id, compound_id), []) if matrix else all_checks.keys()
         else:
             self.testnames = set()
 
@@ -93,7 +93,7 @@ class Compound(object):
         for attr in ['peak_analconc_x10']:
             val = getattr(self, '_get_'+attr)()
             setattr(self, attr, val)
-            
+
     # We need to calculate some additional values from existing
     # ones. The methods below starting with '_get_' determine whether
     # the named attribute should be defined and perform the necessary
@@ -105,7 +105,7 @@ class Compound(object):
             and self.PEAK_analconc
 
         return (self.PEAK_analconc * 10) if cond else None
-            
+
     def __repr__(self):
         return '<Cpnd %02i %s Smpl %s %s (%s)>' % (
             self.COMPOUND_id,
@@ -114,7 +114,7 @@ class Compound(object):
             self.get('sample_prep_label') or '',
             self.type
             )
-    
+
     def items(self):
         return self.__dict__.items()
 
@@ -160,7 +160,7 @@ class Compound(object):
         """
 
         return (self.sample_index, self.COMPOUND_id, self.sample_prep_order)
-        
+
     def display(self, message = True):
         """
         Return an OrderedDict containing values to display in the
@@ -170,7 +170,7 @@ class Compound(object):
         # d = OrderedDict((k, self.__dict__[a]) for k,a in self.display_headers)
         d = OrderedDict((k, self.__dict__.get(a, None)) for k,a in self.display_headers)
 
-        for calc_name, results in self.qa_results.items():                   
+        for calc_name, results in self.qa_results.items():
             retval, msg = results
             if message:
                 # show messages, but only if retval is False
@@ -179,7 +179,7 @@ class Compound(object):
                 d[calc_name] = msg if retval is False else None
             else:
                 d[calc_name] = outcomes[retval]
-        
+
         return d
 
     def show_for_qa(self):
@@ -198,14 +198,14 @@ class Compound(object):
             show = False
 
         return show
-            
+
     def show_for_results(self):
         """
         Return True if this compound should be displayed in results report.
         """
 
-        labels_to_show = set(['a','c'])        
-        if self.type == 'patient': 
+        labels_to_show = set(['a','c'])
+        if self.type == 'patient':
             show = self.sample_prep_label in labels_to_show
         elif self.type == 'misc':
             show = True
@@ -213,31 +213,38 @@ class Compound(object):
             show = False
 
         return show
-        
+
 class Sample(object):
     """
     Container class for a group of Compound objects. Logic for
     display of results is implemented here.
     """
-    
-    def __init__(self, compounds):        
-        self.compounds = OrderedDict((c.sample_prep_name, c) for c in compounds)
-        cc = self.compounds.values()
-        
+
+    def __init__(self, compounds):
+
+        compounds = list(compounds)
+
+        # ensure that this set of compounds are homogenous for certain
+        # attributes
         for attr in ['COMPOUND_id', 'COMPOUND_name', 'sample_label', 'type']:
-            self.__dict__[attr] = getattr(cc[0], attr)            
-            assert len(set(getattr(c, attr) for c in cc)) == 1        
-            
-        self.qa_ok = all(c.qa_ok for c in cc)
-        self.abbrev_name = (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name
+            self.__dict__[attr] = getattr(compounds[0], attr)
+            assert len(set(getattr(c, attr) for c in compounds)) == 1
         
+        if compounds[0].type == 'patient':
+            self.compounds = OrderedDict((c.sample_prep_name, c) for c in compounds)
+        elif compounds[0].type == 'misc':
+            self.compounds = OrderedDict((c.SAMPLE_id, c) for c in compounds)
+            
+        self.qa_ok = all(c.qa_ok for c in compounds)
+        self.abbrev_name = (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name
+
     def __repr__(self):
         return '<Sample %(sample_label)s %(abbrev_name)s (%(type)s)>' % \
             self
 
     def __getitem__(self, key):
         return self.__dict__[key]
-    
+
     def get(self, key, default = None):
         return self.__dict__.get(key, default)
 
