@@ -1,4 +1,4 @@
-from itertools import chain, groupby
+from itertools import chain, groupby, ifilter
 
 import pprint
 import sys
@@ -76,26 +76,30 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
 
         if show_group and style == 'screen':
             writer.writerow(display_empty)
-
+                
 def display_results(compounds, outfile, show_all = False, message = True, style = 'screen'):
-    
-    compound_ids, headers = zip(*COMPOUND_CODES)
-    headers = dict((k, all_checks.get(k,k)) for k in compound_ids)
-    empty = dict((k,'') for k in compound_ids)
-    
+
+    fieldnames, labels = zip(*COMPOUND_CODES)
+          
     nullchar = choose_nullchar[style]
     fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
-    writer = csv.DictWriter(outfile, fieldnames = compound_ids, extrasaction = 'ignore')
 
-    if style == 'file':
-        writer.writerow(headers)
+    keys = ['label'] + list(fieldnames)
+    writer = csv.DictWriter(outfile,
+                            fieldnames = keys,
+                            extrasaction = 'ignore')
+
+    d = dict(label = 'label')
+    d.update(dict(COMPOUND_CODES))
+    writer.writerow(d)
                 
     # sort, then group by accession
     compounds.sort(key = lambda c: c.sort_by_patient())
-    for sample_label, sample_group in groupby(compounds, lambda c: c.sample_label):
-        # ... then group by compound
-        for compound_id, compound_group in groupby(sample_group, lambda c: c.COMPOUND_id):
-            sample = Sample(compound_group)
-            print sample_label, compound_id, sample, sample.compounds
-        break
+    patient_compounds = ifilter(lambda c: c.type == 'patient', compounds)
+    for sample_label, sample_group in groupby(patient_compounds, lambda c: c.sample_label):
+        # ... then group by compound and initialize a Sample for each group
+        samples = [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
+        # d contains concentrations keyed by compound_id
+        d = dict(zip(keys, [sample_label] + [fmt(s.conc()) for s in samples]))
+        writer.writerow(d)
             
