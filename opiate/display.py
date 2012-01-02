@@ -17,6 +17,7 @@ def list_grouped_samples(controls, sample_groups):
     print '# Standards and Controls:'
     for k, v in controls.items():
         print '%s\t%s' % (v[0]['SAMPLE_id'], k)
+
     print '# Other specimens:'
     for label, grp in sample_groups.items():
         print '# %s (%s specimens)' % (label, len(grp))
@@ -77,7 +78,7 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
         if show_group and style == 'screen':
             writer.writerow(display_empty)
                 
-def display_results(compounds, outfile, show_all = False, message = True, style = 'screen'):
+def display_results(compounds, outfile, style = 'screen'):
 
     fieldnames, labels = zip(*COMPOUND_CODES)
           

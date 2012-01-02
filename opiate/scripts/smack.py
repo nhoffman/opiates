@@ -32,8 +32,9 @@ def main(argv):
 
 def parse_arguments(argv):
     """
+    Create the argument parser
     """
-    # Create the argument parser
+
     parser = argparse.ArgumentParser(description=__doc__)
 
     parser.add_argument('-V', '--version', action='version',
@@ -47,7 +48,6 @@ def parse_arguments(argv):
     parser.add_argument('-q', '--quiet',
         action='store_const', dest='verbosity', const=0,
         help='Suppress output')
-
 
     ##########################
     # Setup all sub-commands #

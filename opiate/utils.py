@@ -11,4 +11,16 @@ def flatten(seq):
             for sub in flatten(el):
                 yield sub
         else:
-            yield el    
+            yield el
+
+def get_outfile(args, label, ext = 'csv'):
+    if args.outfile is None:
+        dirname, basename = path.split(args.infile)
+        outfile = open(
+            path.join(
+                args.outdir or dirname,
+                '.'.join([path.splitext(basename)[0], __version__, label, 'csv'])
+                ), 'w')
+    else:
+        outfile = args.outfile
+                

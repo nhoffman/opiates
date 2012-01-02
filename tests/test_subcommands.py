@@ -18,59 +18,67 @@ from __init__ import TestCaseSuppressOutput
 import __init__ as config
 log = logging.getLogger(__name__)
 
-class Args(object):
-    def __init__(self, **kwargs):
-        self.data = kwargs
-
-    def __getattr__(self, key):        
-        return self.data.get(key)
-
 class TestConfig(TestCaseSuppressOutput):
-    subcommand = config_subcommand
-
+    
     def test_exits(self):
-        self.assertRaises(SystemExit, smack, ['config','-h'])
-        self.assertRaises(SystemExit, smack, ['config','-i'])
-        self.assertRaises(SystemExit, smack, ['config','-s'])        
+        options = [['-h'],
+                   ['-i'],
+                   ['-s']]
+
+        for opt in options:               
+            self.assertRaises(SystemExit, smack, ['config'] + opt)
 
     def test_options(self):
         options = [
-            ['config','-C'],
-            ['config','-c'],
-            ['config','-f'],
-            ['config','-i', '1'],
-            ['config','-r'],
-            ['config','-s', 'check_amr'],
+            ['-C'],
+            ['-c'],
+            ['-f'],
+            ['-i', '1'],
+            ['-r'],
+            ['-s', 'check_amr'],
             ]
         for opt in options:
-            smack(opt)
+            smack(['config'] + opt)
                 
-class TestConfigOld(TestCaseSuppressOutput):
-
-    def test01(self):
-        config_action(Args())
-
-    def test02(self):
-        config_action(Args(names = True))
-
-    def test03(self):
-        config_action(Args(qa_file = True))
-
-    def test04(self):
-        config_action(Args(variables = True))
-
-    def test05(self):
-        config_action(Args(compound_id = 1))
-        self.assertRaises(SystemExit, config_action, Args(compound_id = 21))
-        
 class TestInfo(TestCaseSuppressOutput):
 
+    def test_options(self):
+
+        infile = 'testfiles/oct24.json'
+        options = [
+            [infile]
+            ]
+        for opt in options:
+            smack(['info'] + opt)
+        
+
+class TestQA(TestCaseSuppressOutput):
+    
+    def testExit01(self):
+        self.assertRaises(SystemExit, smack, ['qa'])
+            
     def test01(self):
-        info_action(Args(infile = 'testfiles/opi_checkout.xml'))
+        smack(['qa', 'testfiles/oct24.json', '-o', '-'])
 
     def test02(self):
-        info_action(Args(infile = 'testfiles/opi_checkout.xml', samples = True))
+        smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1'])
 
     def test03(self):
-        info_action(Args(infile = 'testfiles/opi_checkout.xml', compounds = True))
+        smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1', '--outcomes-only'])
+        
+
+class TestResults(TestCaseSuppressOutput):
+    
+    def testExit01(self):
+        self.assertRaises(SystemExit, smack, ['results'])
+            
+    def test01(self):
+        smack(['results', 'testfiles/oct24.json', '-o', '-'])
+
+    # def test02(self):
+    #     smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1'])
+
+    # def test03(self):
+    #     smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1', '--outcomes-only'])
+        
         

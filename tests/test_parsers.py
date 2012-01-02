@@ -9,7 +9,7 @@ import pprint
 import json
 from collections import OrderedDict
 
-from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples, qa_from_csv, add_ion_ratios
+from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples, qa_from_csv, add_ion_ratios, get_input
 from opiate import matrix_file, qafile
 import __init__ as config
 
@@ -65,3 +65,22 @@ class TestAddIonRatios(unittest.TestCase):
         for d in qd.values():
             self.assertTrue('ion_ratio_avg_calc' in d)
         
+class TestGetInput(unittest.TestCase):
+
+    def test01(self):
+        controls, sample_groups = get_input(
+            'testfiles/oct24.json')
+
+    def test02(self):
+        controls, sample_groups = get_input(
+            'testfiles/opi_checkout.xml')
+        
+    def test03(self):
+        self.assertRaises(SystemExit, get_input,
+            'testfiles/oct24.json',
+            format = 'xml')
+
+    def test04(self):
+        self.assertRaises(SystemExit, get_input,
+            'testfiles/opi_checkout.xml',
+            format = 'json')

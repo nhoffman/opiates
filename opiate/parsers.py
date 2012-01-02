@@ -5,6 +5,7 @@ import xml.etree.ElementTree
 import sys
 import csv
 import copy
+import json
 from collections import defaultdict, OrderedDict
 from itertools import chain, groupby, count
 from calculations import all_checks, mean_ion_ratios
@@ -12,6 +13,9 @@ from calculations import all_checks, mean_ion_ratios
 from __init__ import qafile, SAMPLE_ATTRS, CONTROL_NAMES, SAMPLE_PREP_LABELS, SAMPLE_PREP_ORDER, SAMPLE_PREP_NAMES
 
 dump = xml.etree.ElementTree.dump
+
+class ParseError(Exception):
+    pass
 
 def get_attrs(elem):
     """
@@ -87,18 +91,7 @@ def parse_sample(sample, compound_ids = None):
             compound_data.update(sample_data)
             yield compound_data
 
-def get_rows(infile):
-
-    qadata = qa_from_csv(qafile)
-    compound_ids = [d['qa_id'] for d in qadata.values()]
-
-    tree = xml.etree.ElementTree.ElementTree(file=infile)
-    sample_elems = tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')
-    rows = chain.from_iterable(parse_sample(elem, compound_ids) for elem in sample_elems)
-
-    return rows
-
-def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = lambda desc: desc.split()[0]):
+def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = None):
     """
     Parse the contents of XML-file `infile`, and return two
     OrderedDict objects: (`controls`,`sample_groups`) where `controls`
@@ -108,7 +101,9 @@ def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = lambda desc: d
 
      * infile - XML file
      * ctl_names - list of (sample_id, control_name) tuples
-     * split_desc - function applied to SAMPLE_desc used to group clinical samples.
+     * split_desc - function applied to SAMPLE_desc used to group
+       clinical samples. Default is to use the entire description
+       field stripped of whitespace.
      
     Dicts containing compound data in sample_groups are given the
     following additional keys:
@@ -122,6 +117,7 @@ def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = lambda desc: d
 
     """
 
+    split_desc = split_desc or (lambda x: x.strip())
     qadata = qa_from_csv(qafile)
     compound_ids = [d['qa_id'] for d in qadata.values()]
 
@@ -168,6 +164,44 @@ def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = lambda desc: d
 
     return (controls, sample_groups)
 
+def get_input(fname, split_description = 'word', format = None):
+    """
+    Read LC/MS experimental data.
+
+     * fname - name of an input file
+     * split_description - string specifying grouping function for
+       description field. May be 'word' (grouping function returns
+       first whitespace-delimited word) or 'firstsix' (grouping
+       function returns first six characters).
+     * format - force interpretation of input file format as XML
+       ('xml') or JSON ('json').
+    """
+
+    formats = ('xml','json')
+
+    if not format:
+        format = fname.lower().split('.')[-1]
+        if format not in formats:
+            msg = 'Input file must end with one of %s if format is not specified.' \
+                % ','.join(formats)
+            sys.exit(msg)
+
+    try:            
+        if format == 'xml':
+            split_desc = {
+                'word': lambda x: x.split()[0],
+                'firstsix': lambda x: x[:6]
+                }[split_description]
+            controls, sample_groups = group_samples(
+                fname, split_desc = split_desc)
+        elif format == 'json':
+            with open(fname) as f:
+                controls, sample_groups = json.load(f)
+    except (ValueError, xml.etree.ElementTree.ParseError), msg:
+        sys.exit('Error reading %s format file "%s"' % (format, fname))
+                
+    return controls, sample_groups
+    
 def qa_from_csv(fname):
 
     qadata = OrderedDict()
