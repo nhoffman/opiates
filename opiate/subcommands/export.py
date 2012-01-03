@@ -1,20 +1,18 @@
 """Extract contents of an XML file into another format."""
 
-from os import path
-import csv
 import json
 import logging
-import xml.etree.ElementTree
 
-from opiate import SAMPLE_ATTRS
 from opiate.parsers import get_input, remove_patient_info
 from opiate import subcommands
+from opiate.utils import get_outfile
 
 log = logging.getLogger(__name__)
 
 def build_parser(parser):
     subcommands.add_infile(parser)
-    subcommands.add_outfile(parser)    
+    subcommands.add_outfile(parser)
+    subcommands.add_outdir(parser)    
     parser.add_argument(
         '-s','--sanitize', action = 'store_true',
         default = False,
@@ -22,16 +20,13 @@ def build_parser(parser):
     
 def action(args):
 
-    infile = args.infile
-    format = args.format
-    outfile = args.outfile or path.basename(infile).replace('.xml','.'+format)
+    fmt = 'json'
 
-    with open(outfile,'w') as f:
-        samples = get_input(args.infile)
-        if args.sanitize:
-            samples = remove_patient_info(samples)            
-        json.dump(samples, f, indent=4)
+    samples = get_input(args.infile)
+    if args.sanitize:
+        samples = remove_patient_info(samples)            
+
+    outfile = get_outfile(args, ext = fmt)    
+    json.dump(samples, outfile, indent=4)
             
-if __name__ == '__main__':
-    main()
     

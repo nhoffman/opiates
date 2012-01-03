@@ -15,13 +15,12 @@ from opiate import __version__, matrix_file, qafile
 from opiate.parsers import qa_from_csv, read_matrix, get_input, add_ion_ratios
 from opiate.display import display_specimens, display_controls
 from opiate.containers import Compound
-from opiate.utils import flatten
+from opiate.utils import flatten, get_outfile
 from opiate import subcommands
 
 log = logging.getLogger(__name__)
 
 def build_parser(parser):
-
     subcommands.add_infile(parser)
     subcommands.add_outfile(parser)
     subcommands.add_outdir(parser)
@@ -42,24 +41,14 @@ def build_parser(parser):
         help = 'Show results for this compound id only.')
 
 def action(args):
-
-    style = 'screen' if args.outfile == sys.stdout else 'file'
-
-    if args.outfile is None:
-        dirname, basename = path.split(args.infile)
-        outfile = open(
-            path.join(
-                args.outdir or dirname,
-                '.'.join([path.splitext(basename)[0], __version__, 'qa', 'csv'])
-                ), 'w')
-    else:
-        outfile = args.outfile
-
+    
     controls, sample_groups = get_input(args.infile, split_description = args.split_desc)
-
     qadata = qa_from_csv(qafile)
     matrix = read_matrix(matrix_file)
 
+    style = 'screen' if args.outfile == sys.stdout else 'file'
+    outfile = get_outfile(args, label = 'qa', ext = 'csv')
+    
     if args.calculate_ion_ratios:
         qadata = add_ion_ratios(qadata, controls)
         log.info('calculating ion ratio averages from experimental data.')

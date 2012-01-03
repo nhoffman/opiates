@@ -42,7 +42,7 @@ class TestGetOutfile(TestBase):
 
     def tearDown(self):
         pass
-                
+
     def test01(self):
         args = Args(infile = self.infile,
                     outfile = None,
@@ -57,7 +57,7 @@ class TestGetOutfile(TestBase):
                     outdir = None)
         
         self.assertRaises(OSError, get_outfile, args, label = 'qa')
-
+        
     def test03(self):
         args = Args(infile = self.infile,
                     outfile = open(path.join(self.outdir, 'outfile.csv'), 'w'),
@@ -74,4 +74,28 @@ class TestGetOutfile(TestBase):
 
         outfile = get_outfile(args, label = 'qa')
         log.debug(outfile)
+        
+    def test05(self):
+        args = Args(infile = self.infile,
+                    outfile = None,
+                    outdir = None)
+
+        outfile = get_outfile(args)
+        log.debug(outfile)
+
+    def test06(self):
+        args = Args(infile = self.infile,
+                    outfile = None,
+                    outdir = None)
+
+        outfile = get_outfile(args, include_version = False)
+        log.debug(outfile)
+        
+    def test07(self):
+        args = Args(infile = self.infile,
+                    outfile = None,
+                    outdir = None)
+        
+        self.assertRaises(OSError, get_outfile, args, ext = 'txt', include_version = False)
+
         

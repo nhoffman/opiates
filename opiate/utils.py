@@ -2,8 +2,11 @@ from collections import Iterable
 import os
 from os import path
 import shutil
+import logging
 
 from __init__ import __version__
+
+log = logging.getLogger(__name__)
 
 def flatten(seq):
     """
@@ -18,7 +21,7 @@ def flatten(seq):
         else:
             yield el
 
-def get_outfile(args, label, ext = 'csv'):
+def get_outfile(args, label = None, ext = None, include_version = True):
     """
     Return a file-like object open for writing. `args` is expected to
     have attributes 'infile' (None or a string specifying a file
@@ -29,18 +32,23 @@ def get_outfile(args, label, ext = 'csv'):
     directory or in `args.outdir` if provided.
     """
 
+    version = __version__ if include_version else None
+    
     if args.outfile is None:
         dirname, basename = path.split(args.infile)
-        outfile = open(
-            path.join(
-                args.outdir or dirname,
-                '.'.join([path.splitext(basename)[0], __version__, label, 'csv'])
-                ), 'w')
+        parts = filter(lambda x: x,
+                       [path.splitext(basename)[0], version, label, ext])
+        outname = path.join(args.outdir or dirname,
+                            '.'.join(parts))
+        if path.abspath(outname) == path.abspath(args.infile):
+            raise OSError('Input and output file names are identical')        
+        outfile = open(outname, 'w')
     else:
         outfile = args.outfile
         if not (hasattr(outfile, 'write') and not outfile.closed and 'w' in outfile.mode):
             raise OSError('`args.outfile` must be a file-like object open for writing')
 
+    log.debug(outfile)
     return outfile
 
 def mkdir(dirpath, clobber = False):

@@ -14,7 +14,7 @@ from opiate.subcommands.info import action as info_action
 
 from opiate.scripts.smack import main as smack
 
-from __init__ import TestCaseSuppressOutput
+from __init__ import TestCaseSuppressOutput, TestBase
 import __init__ as config
 log = logging.getLogger(__name__)
 
@@ -42,17 +42,10 @@ class TestConfig(TestCaseSuppressOutput):
                 
 class TestInfo(TestCaseSuppressOutput):
 
-    def test_options(self):
-
-        infile = 'testfiles/oct24.json'
-        options = [
-            [infile]
-            ]
-        for opt in options:
-            smack(['info'] + opt)
-        
-
-class TestQA(TestCaseSuppressOutput):
+    def test01(self):
+        smack(['info', 'testfiles/oct24.json'])
+                
+class TestQA(TestCaseSuppressOutput, TestBase):
     
     def testExit01(self):
         self.assertRaises(SystemExit, smack, ['qa'])
@@ -65,9 +58,13 @@ class TestQA(TestCaseSuppressOutput):
 
     def test03(self):
         smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1', '--outcomes-only'])
+
+    def test04(self):
+        outdir = self.mkoutdir()
+        smack(['qa', 'testfiles/oct24.json', '--outdir', outdir])        
         
 
-class TestResults(TestCaseSuppressOutput):
+class TestResults(TestCaseSuppressOutput, TestBase):
     
     def testExit01(self):
         self.assertRaises(SystemExit, smack, ['results'])
@@ -75,10 +72,29 @@ class TestResults(TestCaseSuppressOutput):
     def test01(self):
         smack(['results', 'testfiles/oct24.json', '-o', '-'])
 
-    # def test02(self):
-    #     smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1'])
-
-    # def test03(self):
-    #     smack(['qa', 'testfiles/oct24.json', '-o', '-', '--compound-id', '1', '--outcomes-only'])
+    def test02(self):
+        outdir = self.mkoutdir()
+        smack(['results', 'testfiles/oct24.json', '--outdir', outdir])        
         
+        
+class TestExport(TestCaseSuppressOutput, TestBase):
+    
+    def testExit01(self):
+        self.assertRaises(SystemExit, smack, ['export'])
+            
+    def test01(self):
+        outdir = self.mkoutdir()
+        smack(['export', 'testfiles/opi_checkout.xml', '--outdir', outdir])
+
+class TestIonRatios(TestCaseSuppressOutput, TestBase):
+    
+    def testExit01(self):
+        self.assertRaises(SystemExit, smack, ['ion_ratios'])
+            
+    def test01(self):
+        smack(['ion_ratios', 'testfiles/oct24.json', '-o', '-'])
+
+    def test02(self):
+        outdir = self.mkoutdir()
+        smack(['ion_ratios', 'testfiles/oct24.json', '--outdir', outdir])        
         
