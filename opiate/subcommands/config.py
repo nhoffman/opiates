@@ -55,6 +55,3 @@ def action(args):
         for row in CONTROL_NAMES:
             print '%s\t%s' % row
         
-if __name__ == '__main__':
-    main()
-    

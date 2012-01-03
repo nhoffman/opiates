@@ -18,6 +18,4 @@ def action(args):
     controls, sample_groups = get_input(args.infile)
     list_grouped_samples(controls, sample_groups)
 
-if __name__ == '__main__':
-    main()
     

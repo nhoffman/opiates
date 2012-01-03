@@ -80,7 +80,3 @@ def action(args):
     if args.outfile is None:
         outfile.close()
 
-
-if __name__ == '__main__':
-    main()
-
