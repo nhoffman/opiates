@@ -35,16 +35,6 @@ misc_sample = sample_groups['Accession01']
 # type 'patient'
 patient_sample = sample_groups['Accession02']
 compound1 = patient_sample[0]
-
-class TestFlatten(unittest.TestCase):
-    def test01(self):
-        flat = flatten(sample_groups.values())
-        self.assertTrue(all(isinstance(x, dict) for x in flat))
-
-    def test02(self):
-        flat = flatten(controls.values())
-        self.assertTrue(all(isinstance(x, dict) for x in flat))
-
         
 class TestCompound(unittest.TestCase):
 
