@@ -55,16 +55,25 @@ SAMPLE_PREP_ORDER = [2, 3, 1, 4]
 
 # (COMPOUND_id, lab_mnemonic)
 COMPOUND_CODES = (
-    (1, '1'),
-    (2, '2'),
-    (3, '3'),
-    (4, '4'),
-    (5, '5'),
-    (6, '6'),
-    (7, '7'),
-    (8, '8'),
-    (9, '9'),
-    (10, '10'),
-    (11, '11'),
-    (12, '12')
+    (1, 'UMORPH'),
+    (2, 'UOXYM'),
+    (3, 'UHMOR'),
+    (4, 'UCOD'),
+    (5, 'UOXCD'),
+    (6, 'UHCOD'),
+    (7, 'UMOR6'),
+    (8, 'UFENTM'),
+    (9, 'UMPERM'),
+    (10, 'UMPER'),
+    (11, 'UFENT'),
+    (12, 'UBUPR'),
+    (13, 'UPPOX'),
+    (14, 'UMETH'),
+    (15, 'UMOR3G'),
+    (16, 'UMOR6G'),
+    (17, 'UHMORG'),
+    (18, 'UOXYMG'),
+    (19, 'UCOD6G'),
+    (20, 'UNBUPG')
     )
+
