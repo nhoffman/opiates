@@ -249,4 +249,10 @@ class Sample(object):
         return self.__dict__.get(key, default)
 
     def conc(self):
-        return self.compounds['straight'].PEAK_analconc
+        val = self.compounds['straight'].PEAK_analconc
+
+        try:
+            return int(val)
+        except TypeError:
+            return val
+        

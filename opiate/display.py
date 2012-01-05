@@ -80,20 +80,28 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
                 
 def display_results(compounds, outfile, style = 'screen'):
 
+    """
+For the resulting, we would like the compounds to be divided in three worksheets: worksheet 1: compound_ids 1-7, worksheet 2: compound_ids 8-14, worksheet 3: compound ids 15-20.
+
+If c > amr_high, calculate the result from a by multiplying by 10
+When a > amr_high, report >10,000
+When c < amr_low, report <10
+
+-Use whole numbers, except for fentanyl (compound_id 11) use 2 decimal places.
+    """
+
     fieldnames, labels = zip(*COMPOUND_CODES)
           
     nullchar = choose_nullchar[style]
     fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
 
     keys = ['label'] + list(fieldnames)
-    writer = csv.DictWriter(outfile,
-                            fieldnames = keys,
-                            extrasaction = 'ignore')
 
+    rows = []
     d = dict(label = 'label')
     d.update(dict(COMPOUND_CODES))
-    writer.writerow(d)
-                
+    rows.append(d)
+    
     # sort, then group by accession
     compounds.sort(key = lambda c: c.sort_by_patient())
     patient_compounds = ifilter(lambda c: c.type == 'patient', compounds)
@@ -102,5 +110,12 @@ def display_results(compounds, outfile, style = 'screen'):
         samples = [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
         # d contains concentrations keyed by compound_id
         d = dict(zip(keys, [sample_label] + [fmt(s.conc()) for s in samples]))
-        writer.writerow(d)
+        rows.append(d)
             
+
+    writer = csv.DictWriter(outfile,
+                            fieldnames = keys,
+                            extrasaction = 'ignore')
+
+    for d in rows:
+        writer.writerow(d)
