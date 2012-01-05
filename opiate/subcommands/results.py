@@ -27,6 +27,9 @@ def build_parser(parser):
     subcommands.add_outdir(parser)
     subcommands.add_no_calculate_ion_ratio_avg(parser)    
     subcommands.add_split_desc(parser)
+    parser.add_argument(
+        '-p', '--pretty', action = 'store_true', default = False,
+        help = 'Highlight positive results by suppressing "< x" and "> y" messages.')
     
 def action(args):
 
@@ -44,7 +47,7 @@ def action(args):
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
                  for c in flatten(sample_groups.values())]
 
-    display_results(compounds, outfile = outfile, style = style)
+    display_results(compounds, outfile = outfile, style = style, pretty = args.pretty)
 
     if args.outfile is None:
         outfile.close()

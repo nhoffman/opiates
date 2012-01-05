@@ -1,4 +1,4 @@
-from itertools import chain, groupby, ifilter
+from itertools import chain, groupby, ifilter, islice
 
 import pprint
 import sys
@@ -78,28 +78,22 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
         if show_group and style == 'screen':
             writer.writerow(display_empty)
                 
-def display_results(compounds, outfile, style = 'screen'):
-
+def display_results(compounds, outfile, style = 'screen', pretty = False):
     """
-For the resulting, we would like the compounds to be divided in three worksheets: worksheet 1: compound_ids 1-7, worksheet 2: compound_ids 8-14, worksheet 3: compound ids 15-20.
-
-If c > amr_high, calculate the result from a by multiplying by 10
-When a > amr_high, report >10,000
-When c < amr_low, report <10
-
--Use whole numbers, except for fentanyl (compound_id 11) use 2 decimal places.
+    For the resulting, we would like the compounds to be divided
+    in three worksheets: worksheet 1: compound_ids 1-7, worksheet
+    2: compound_ids 8-14, worksheet 3: compound ids 15-20.        
     """
 
-    fieldnames, labels = zip(*COMPOUND_CODES)
+    
+    fieldnames, labels = map(list, zip(*COMPOUND_CODES))
           
     nullchar = choose_nullchar[style]
     fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
 
-    keys = ['label'] + list(fieldnames)
-
     rows = []
     d = dict(label = 'label')
-    d.update(dict(COMPOUND_CODES))
+    d.update(dict((i, '%s-%s' % (i, label)) for i, label in COMPOUND_CODES))
     rows.append(d)
     
     # sort, then group by accession
@@ -109,13 +103,16 @@ When c < amr_low, report <10
         # ... then group by compound and initialize a Sample for each group
         samples = [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
         # d contains concentrations keyed by compound_id
-        d = dict(zip(keys, [sample_label] + [fmt(s.conc()) for s in samples]))
+        d = dict(zip(['label'] + fieldnames, [sample_label] + [fmt(s.result(pretty)) for s in samples]))
         rows.append(d)
-            
 
-    writer = csv.DictWriter(outfile,
-                            fieldnames = keys,
-                            extrasaction = 'ignore')
+    # print the results grouped by worksheet
+    for first, last in [(0, 7), (7, 14), (14, None)]:
+        fields = list(islice(fieldnames, first, last))
+        
+        writer = csv.DictWriter(
+            outfile, fieldnames = ['label'] + fields, extrasaction = 'ignore')
 
-    for d in rows:
-        writer.writerow(d)
+        for d in rows:
+            writer.writerow(d)
+        outfile.write('\n')

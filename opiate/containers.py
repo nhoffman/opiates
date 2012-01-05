@@ -248,11 +248,31 @@ class Sample(object):
     def get(self, key, default = None):
         return self.__dict__.get(key, default)
 
-    def conc(self):
-        val = self.compounds['straight'].PEAK_analconc
+    def result(self, pretty = False, nullchar = ''):
+        """
+        If c > amr_high, calculate the result from a by multiplying by 10
+        When a > amr_high, report "> amr_high"
+        When c < amr_low, report "< amr_low"
 
-        try:
-            return int(val)
-        except TypeError:
-            return val
+        Use whole numbers, except for fentanyl (compound_id 11) use 2
+        decimal places.
+        """
+
+        conc = lambda x: (x.PEAK_analconc or 0)
+        
+        c = self.compounds['straight']
+        a = self.compounds['straight10']
+        low, high = c.amr_low, c.amr_high
+        fmt = {11: '%.2f'}.get(self.COMPOUND_id, '%.0f')
+        
+        if conc(c) < low:
+            val = nullchar if pretty else ('<%s' % low)
+        elif low <= conc(c) <= high:
+            val = fmt % conc(c)
+        elif low <= conc(a) <= high:
+            val = fmt % (conc(a)*10)
+        else:
+            val = (fmt % (conc(a)*10))+'*' if pretty else ('>%s' % high)
+        
+        return val
         
