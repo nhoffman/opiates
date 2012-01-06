@@ -229,12 +229,12 @@ class Sample(object):
         for attr in ['COMPOUND_id', 'COMPOUND_name', 'sample_label', 'type']:
             self.__dict__[attr] = getattr(compounds[0], attr)
             assert len(set(getattr(c, attr) for c in compounds)) == 1
-        
+
         if compounds[0].type == 'patient':
             self.compounds = OrderedDict((c.sample_prep_name, c) for c in compounds)
         elif compounds[0].type == 'misc':
             self.compounds = OrderedDict((c.SAMPLE_id, c) for c in compounds)
-            
+
         self.qa_ok = all(c.qa_ok for c in compounds)
         self.abbrev_name = (self.COMPOUND_name[:10] + '...') if len(self.COMPOUND_name) > 10 else self.COMPOUND_name
 
@@ -259,20 +259,30 @@ class Sample(object):
         """
 
         conc = lambda x: (x.PEAK_analconc or 0)
-        
+
         c = self.compounds['straight']
         a = self.compounds['straight10']
         low, high = c.amr_low, c.amr_high
         fmt = {11: '%.2f'}.get(self.COMPOUND_id, '%.0f')
-        
-        if conc(c) < low:
-            val = nullchar if pretty else ('<%s' % low)
-        elif low <= conc(c) <= high:
-            val = fmt % conc(c)
-        elif low <= conc(a) <= high:
-            val = fmt % (conc(a)*10)
+
+        if high is None:
+            # glucuronides are reported qualitatively
+            if conc(c) < low:
+                val = nullchar if pretty else 'NRN'
+            else:
+                val = 'POS'
         else:
-            val = (fmt % (conc(a)*10))+'*' if pretty else ('>%s' % high)
-        
+            if conc(c) < low:
+                val = nullchar if pretty else ('<%s' % low)
+            elif low <= conc(c) <= high:
+                val = fmt % conc(c)
+            elif low <= conc(a) <= high:
+                val = fmt % (conc(a)*10)
+            else:
+                val = (fmt % (conc(a)*10))+' [H]' if pretty else ('>%s' % high)
+
+        if not self.qa_ok:
+            val = 'QA FAIL'
+
         return val
-        
+
