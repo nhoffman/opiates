@@ -1,19 +1,18 @@
-from os import path
+from os.path import join, dirname
 
-def _safeint(s):
-    try:
-        return int(s)
-    except ValueError:
-        return s
+_data = join(dirname(__file__), 'data')
+    
+try:
+    with open(join(_data, 'sha')) as s, open(join(_data, 'ver')) as v:
+        sha = s.read().strip()
+        ver = int(v.read())
+except Exception, e:
+    __version__ = ''
+else:    
+    __version__ = '%04i.%s' % (ver, sha)
 
-with open(path.join(path.dirname(__file__), 'data', 'sha')) as f:
-    sha = f.read().strip()
-        
-__version__ = "0.1" + ('.' + sha if sha else '')
-__version_info__ = tuple([_safeint(num) for num in __version__.split('.')])
-
-qafile = path.join(path.dirname(__file__), 'data', 'qa.csv')
-matrix_file = path.join(path.dirname(__file__), 'data', 'matrix.csv')
+qafile = join(_data, 'qa.csv')
+matrix_file = join(_data, 'matrix.csv')
 
 SAMPLE_ATTRS = (
     ('SAMPLE_id', int),
