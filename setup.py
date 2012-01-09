@@ -21,7 +21,7 @@ params = {'author': 'Noah Hoffman',
           'package_dir': {'opiate': 'opiate'},
           'scripts': ['smack'],
           'version': __version__,
-          'package_data': {'opiate': [join('data',f) for f in ['qa.csv','matrix.csv','sha']]}
+          'package_data': {'opiate': [join('data',f) for f in ['qa.csv','matrix.csv','sha','ver']]}
           }
     
 setup(**params)
