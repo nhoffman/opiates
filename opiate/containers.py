@@ -293,20 +293,16 @@ class Sample(object):
         Use whole numbers, except for fentanyl (compound_id 11) use 2
         decimal places.
 
-        I.S. Peak Area: If IS Pk Area fails in c, but doesn't fail for
-        a (x10), then it passes. If a also fails, check recovery of d
-        (need to talk to Andy about exact requirements).
+        If is_peak_area fails in c but doesn't fail for a (x10), then
+        QA passes for this compound.
+
+        TODO: If a also fails, check recovery of d (need to talk to
+        Andy about exact requirements).
 
         For ion_ratio and rrt, do not perform if peak_analconc <
         amr_low, and report a negative result.  If either fails when
         peak_analconc > amr_low, check a.  If both pass in a, report
         result from a.  If either fails, report QA fail.
-
-        TODO: The QA report is ordering the specimens in alphabetical
-        order instead of the order in which they were run - can we
-        change this?  It would be easier to follow if it matched the
-        worklist.
-        fix by ordering by specimen id.
         """
 
         conc = lambda x: (x.PEAK_analconc or 0)
