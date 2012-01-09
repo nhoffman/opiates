@@ -15,14 +15,18 @@ display_empty = dict((k,'') for k in display_fields)
 
 def list_grouped_samples(controls, sample_groups):
     print '# Standards and Controls:'
-    for k, v in controls.items():
+    sort_key = lambda item: item[1][0]['SAMPLE_id']
+    for k, v in sorted(controls.items(), key = sort_key):
         print '%s\t%s' % (v[0]['SAMPLE_id'], k)
 
     print '# Other specimens:'
-    for label, grp in sample_groups.items():
+    sort_key = lambda item: item[1][0][0]['sample_index'] 
+    for label, grp in sorted(sample_groups.items(), key = sort_key):
+
         print '# %s (%s specimens)' % (label, len(grp))
         for sample in grp:
-            print '%s\t%s' % (sample[0]['SAMPLE_id'], sample[0]['SAMPLE_desc'])
+            s0 = sample[0]
+            print '%s\t%s' % (s0['SAMPLE_id'], s0['SAMPLE_desc'])
 
 def display_specimens(compounds, outfile, show_all = False, message = True, style = 'screen'):
 
@@ -51,7 +55,6 @@ def display_specimens(compounds, outfile, show_all = False, message = True, styl
             if style == 'screen':
                 writer.writerow(display_empty)
 
-
 def display_controls(compounds, outfile, show_all = False, message = True, style = 'screen'):
 
     nullchar = choose_nullchar[style]
@@ -78,14 +81,13 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
         if show_group and style == 'screen':
             writer.writerow(display_empty)
                 
-def display_results(compounds, outfile, style = 'screen', pretty = False):
+def display_results(compounds, outfile, style = 'screen'):
     """
     For the resulting, we would like the compounds to be divided
     in three worksheets: worksheet 1: compound_ids 1-7, worksheet
     2: compound_ids 8-14, worksheet 3: compound ids 15-20.        
     """
 
-    
     fieldnames, labels = map(list, zip(*COMPOUND_CODES))
           
     nullchar = choose_nullchar[style]
@@ -101,9 +103,10 @@ def display_results(compounds, outfile, style = 'screen', pretty = False):
     patient_compounds = ifilter(lambda c: c.type == 'patient', compounds)
     for sample_label, sample_group in groupby(patient_compounds, lambda c: c.sample_label):
         # ... then group by compound and initialize a Sample for each group
-        samples = [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
+        samples = [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]        
         # d contains concentrations keyed by compound_id
-        d = dict(zip(['label'] + fieldnames, [sample_label] + [fmt(s.result(pretty)) for s in samples]))
+        row_label = samples[0].row_label()
+        d = dict(zip(['label'] + fieldnames, [row_label] + [fmt(s.result(nullchar)) for s in samples]))
         rows.append(d)
 
     # print the results grouped by worksheet
