@@ -52,23 +52,23 @@ class TestCalculations(unittest.TestCase):
             ]
         self._testall(check_stda_signoise, trials)
 
-    def test_amr(self):
-        trials = [
-            (dict(PEAK_analconc = 0.3, amr_low = 0.1, amr_high = 0.5), True),
-            (dict(PEAK_analconc = 1, amr_low = 0.1, amr_high = 0.5), False),
-            (dict(PEAK_analconc = None, amr_low = 0.1, amr_high = 0.5), None),
-            (dict(PEAK_analconc = 0, amr_low = 0.1, amr_high = 0.5), None)
-            ]
-        self._testall(check_amr, trials)
+    # def test_amr(self):
+    #     trials = [
+    #         (dict(PEAK_analconc = 0.3, amr_low = 0.1, amr_high = 0.5), True),
+    #         (dict(PEAK_analconc = 1, amr_low = 0.1, amr_high = 0.5), False),
+    #         (dict(PEAK_analconc = None, amr_low = 0.1, amr_high = 0.5), None),
+    #         (dict(PEAK_analconc = 0, amr_low = 0.1, amr_high = 0.5), None)
+    #         ]
+    #     self._testall(check_amr, trials)
         
-    def test_amr_low(self):
-        trials = [
-            (dict(PEAK_analconc = 0.3, amr_low = 0.1), True),
-            (dict(PEAK_analconc = 0.1, amr_low = 1), False),
-            (dict(PEAK_analconc = None, amr_low = 0.1), None),
-            (dict(PEAK_analconc = 0, amr_low = 0.1), None)
-            ]
-        self._testall(check_amr_low, trials)
+    # def test_amr_low(self):
+    #     trials = [
+    #         (dict(PEAK_analconc = 0.3, amr_low = 0.1), True),
+    #         (dict(PEAK_analconc = 0.1, amr_low = 1), False),
+    #         (dict(PEAK_analconc = None, amr_low = 0.1), None),
+    #         (dict(PEAK_analconc = 0, amr_low = 0.1), None)
+    #         ]
+    #     self._testall(check_amr_low, trials)
 
     def test_rrt(self):
         trials = [

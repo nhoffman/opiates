@@ -35,7 +35,7 @@ class TestConfig(TestCaseSuppressOutput):
             ['-f'],
             ['-i', '1'],
             ['-r'],
-            ['-s', 'check_amr'],
+            ['-s', 'check_spike'],
             ]
         for opt in options:
             smack(['config'] + opt)

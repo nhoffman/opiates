@@ -25,41 +25,41 @@ def check_stda_signoise(cmpnd):
 
     return retval, msg
     
-def check_amr(cmpnd):
-    """
-    AMR
+# def check_amr(cmpnd):
+#     """
+#     AMR
 
-    Compare Drug Concentration with Drug QA Concentration Range
+#     Compare Drug Concentration with Drug QA Concentration Range
 
-    Return None if cmpnd.PEAK_analconc is None or 0
-    """    
+#     Return None if cmpnd.PEAK_analconc is None or 0
+#     """    
 
-    if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
-        retval = None
-    else:
-        retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
+#     if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
+#         retval = None
+#     else:
+#         retval = cmpnd.amr_low <= cmpnd.PEAK_analconc <= cmpnd.amr_high
 
-    msg = '%s [%s-%s]' % fmt(cmpnd.PEAK_analconc, cmpnd.amr_low, cmpnd.amr_high)
+#     msg = '%s [%s-%s]' % fmt(cmpnd.PEAK_analconc, cmpnd.amr_low, cmpnd.amr_high)
 
-    return retval, msg
+#     return retval, msg
 
-def check_amr_low(cmpnd):
-    """
-    AMR Low
+# def check_amr_low(cmpnd):
+#     """
+#     AMR Low
 
-    Compare Drug Concentration with lower limit of Drug QA Concentration Range
+#     Compare Drug Concentration with lower limit of Drug QA Concentration Range
 
-    Return None if cmpnd.PEAK_analconc is None or 0
-    """    
+#     Return None if cmpnd.PEAK_analconc is None or 0
+#     """    
 
-    if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
-        retval = None
-    else:
-        retval = cmpnd.amr_low <= cmpnd.PEAK_analconc
+#     if cmpnd.PEAK_analconc == 0 or cmpnd.PEAK_analconc is None:
+#         retval = None
+#     else:
+#         retval = cmpnd.amr_low <= cmpnd.PEAK_analconc
 
-    msg = '%s <= %s' % fmt(cmpnd.amr_low, cmpnd.PEAK_analconc)
+#     msg = '%s <= %s' % fmt(cmpnd.amr_low, cmpnd.PEAK_analconc)
 
-    return retval, msg
+#     return retval, msg
     
 def check_rrt(cmpnd):
     """
