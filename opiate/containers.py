@@ -307,8 +307,11 @@ class Sample(object):
 
         conc = lambda x: (x.PEAK_analconc or 0)
 
-        c = self.compounds['straight']
         a = self.compounds['straight10']
+        b = self.compounds['spiked10']
+        c = self.compounds['straight']
+        d = self.compounds['spiked']
+
         low, high = c.amr_low, c.amr_high
         # define significant digits for result
         fmt = {11: '%.2f'}.get(self.COMPOUND_id, '%.0f')
@@ -331,12 +334,12 @@ class Sample(object):
         # Now we can use the undiluted specimen if certain QA tests
         # pass, and if the concentration of the undiluted specimen >
         # amr_high.
-        elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio']):
+        elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio', 'signoise']) and d.check_qa(['spike']):
             # The result from c is in range and QA passes. Report the
             # quantitative result.
             val = conc(c)
         # Check QA for the diluted specimen.
-        elif a.check_qa(['rrt', 'ion_ratio']):
+        elif a.check_qa(['rrt', 'ion_ratio', 'signoise']) and b.check_qa(['spike']):
             if conc(a) <= high:
                 val = conc(a)*10
             else:

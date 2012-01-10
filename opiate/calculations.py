@@ -86,8 +86,6 @@ def check_signoise(cmpnd):
     Compare Drug signal to noise (S/N) ratio with QA Range    
 
     Return None if cmpnd.PEAK_signoise is None.
-
-    TODO: Should this test fail if cmpnd.PEAK_signoise == 0?
     """
     
     if cmpnd.PEAK_signoise is None or not cmpnd.PEAK_analconc:
