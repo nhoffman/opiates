@@ -326,20 +326,21 @@ class Sample(object):
         if conc(c) < low:
             # This compound appears to be negative. Before we can
             # report it, check IS Peak area in a to rule out ion
-            # suppression.
-            if a.check_qa(['is_peak_area']):
+            # suppression and at least one or b or d must pass the
+            # spike test.
+            if a.check_qa(['is_peak_area']) and (b.check_qa(['spike']) or d.check_qa(['spike'])):
                 val = nullchar
             else:
                 val = 'FAIL'
         # Now we can use the undiluted specimen if certain QA tests
         # pass, and if the concentration of the undiluted specimen >
         # amr_high.
-        elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio', 'signoise']) and d.check_qa(['spike']):
+        elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio', 'signoise']):
             # The result from c is in range and QA passes. Report the
             # quantitative result.
             val = conc(c)
         # Check QA for the diluted specimen.
-        elif a.check_qa(['rrt', 'ion_ratio', 'signoise']) and b.check_qa(['spike']):
+        elif a.check_qa(['rrt', 'ion_ratio', 'signoise']):
             if conc(a) <= high:
                 val = conc(a)*10
             else:
