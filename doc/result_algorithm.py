@@ -2,70 +2,41 @@
 
 import pygraphviz as pgv
 
-g = """digraph {
-
-  node [    fill=cornflowerblue,
-            fontcolor=white,
-            shape=diamond,
-            style=filled];
-
-  Step1 [   color=darkgoldenrod2,
-            fontcolor=navy,
-            label=start,
-            shape=box];
-
-  Step2;
-
-  Step3a [  style=filled,
-            fillcolor=grey80,
-            color=grey80,
-            shape=circle,
-            fontcolor=navy];
-
-  Step1  -> Step2;
-  Step1  -> Step2a;
-  Step2a -> Step3a;
-  Step3;
-  Step3a -> Step3;
-  Step3a -> Step2b;
-  Step2  -> Step2b;
-  Step2b -> Step3;
-  End [ shape=rectangle,
-        color=darkgoldenrod2,
-        fontcolor=navy];
-  Step3  -> End [label=193];
-}"""
-
-
 g = r"""digraph {
-  graph [];
-  node [shape = "box"];
-  edge [ordering = "in"];
 
-  Start;
+  node [shape = "box", order = "in"];
 
-  Start -> Level1a [label = "conc(c) < low", outputorder = 1];
-  Level1a [label = "a.check_qa(['is_peak_area']) \nand \n(b.check_qa(['spike']) or d.check_qa(['spike']))"];
+  Start [label = "conc(c) < low"];
 
-  Level1a -> Level2a [label="true"];
-  Level2a [label = "negative", shape = "circle", fontcolor = "green"];
-  Level1a -> Level2b [label="false"];
-  Level2b [label = "QA FAIL", shape = "octagon", fontcolor = "red"];
+  Start -> Level1b [label = "yes"];
+  Level1b [label = "a.check_qa(['is_peak_area']) \nand\n (b.check_qa(['spike']) or d.check_qa(['spike']))"];
 
-  Start -> Level1b [label = "conc(c) <= high \nand \nc.check_qa(['rrt', 'ion_ratio', 'signoise'])"];
-  Level1b [label = "conc(c)", shape = "circle", fontcolor = "green"];
+  Start -> Level1a [label = "no"];
+  Level1a [label = "conc(c) <= high \nand\n c.check_qa(['rrt', 'ion_ratio', 'signoise'])"];
 
-  Start -> Level1c [label = "a.check_qa(['rrt', 'ion_ratio', 'signoise'])"];
-  Level1c [label = "conc(a) <= high"];
+  Level1b -> Level2b [label = "yes"];
+  Level2b [label = "< amr_low", shape = "circle", fontcolor = "green"];
 
-  Level1c -> Level2c [label = "true"];
-  Level2c [label = "conc(a)*10", shape = "circle", fontcolor = "green"];
+  Level1b -> Level2c [label = "no"];
+  Level2c [label = "QA FAIL", shape = "octagon", fontcolor = "red"];
 
-  Level1c -> Level2d [label="false"];
-  Level2d [label = "> amr_high", shape = "circle", fontcolor = "green"];
+  Level1a -> Level2d [label = "yes"];
+  Level2d [label = "conc(c)", shape = "circle", fontcolor = "green"];
 
-  Start -> Level1d [label = "otherwise..."];
-  Level1d [label = "QA FAIL", shape = "octagon", fontcolor = "red"];
+  Level1a -> Level2a [label= "no" ];
+  Level2a [label = "a.check_qa(['rrt', 'ion_ratio', 'signoise'])"];
+
+  Level2a -> Level3b [label = "yes"];
+  Level3b [label = "conc(a) <= high"];
+
+  Level2a -> Level3a [label = "no"];
+  Level3a [label = "QA FAIL", shape = "octagon", fontcolor = "red"];
+
+  Level3b -> Level4a [label = "yes"];
+  Level4a [label = "conc(a)*10", shape = "circle", fontcolor = "green"];
+
+  Level3b -> Level4b [label = "no"];
+  Level4b [label = "> amr_high", shape = "circle", fontcolor = "green"];
 }"""
 
 
