@@ -109,9 +109,11 @@ script and individual actions using the ``-h`` or ``--help`` options::
 Help text for an individual action is available by including the name
 of the action::
 
-    % smack results -h
+    % smack results -h                
     usage: smack results [-h] [-o FILE] [-d DIRECTORY] [-n] [-s {word,firstsix}]
 			 infile
+
+    Show concentration of each compound.
 
     positional arguments:
       infile                Input xml or json file containing experimental data.
@@ -136,8 +138,9 @@ of the action::
 			    use the first whitespace-delimited word; firstsix, use
 			    first six characters [default "word"].
 
-So to put this together with the ``column`` command for formatting
-tabular data for the screen::
+Here is an example of a command combined with ``column`` (installed by
+default on many unix-like systems) for formatting tabular data for the
+screen::
 
     % ./smack results testfiles/oct24.json -o- | column -ts,
     label          1-UMORPH   2-UOXYM    3-UHMOR    4-UCOD     5-UOXCD    6-UHCOD    7-UMOR6
@@ -178,9 +181,9 @@ unit tests
 ==========
 
 Unit tests are implemented using the ``unittest`` module in the Python
-standard library. The ``tests`` subdirectory is in fact a Python
+standard library. The ``tests`` subdirectory is itself a Python
 package that imports the local version (ie, the version in the project
-directory, not the version installed to the system) ``opiate``
+directory, not the version installed to the system) of the ``opiate``
 package. All unit tests can be run like this::
 
     opiates % ./testall   
@@ -200,3 +203,25 @@ class, or method within the ``tests`` package using dot notation::
 
     OK
 
+configuration
+=============
+
+Configuration files are located in ``opiate/data``, and as package
+data, are installed to the system along with the rest of the
+package. The program reads data from the .csv files, but the
+corresponding .xlsx files are expected to contain the same data. The
+latter files provide a mechanism for updating the former. To make a
+change to the configuration files, edit the Excel version, then save
+to csv. Copies of both versions should then be committed to version
+control, and the change should be described in the commit comment. In
+this way, changes in configuration state result in a version
+change.
+
+* ``qa.csv`` - defines compound-specific parameters (for
+  example, the analytic measurement range [AMR]) for performing QA
+  calculations.
+* ``matrix.csv`` - specifies the calculations that will be performed
+  on each control or sample prep for each compound. Each cell should
+  contain a listing of control specimens (integers corresponding to
+  ``opiate.CONTROL_NAMES``) or sample preparations (letters a-d
+  corresponding to ``opiate.SAMPLE_PREP_LABELS``). 
