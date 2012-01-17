@@ -5,6 +5,7 @@ Command line tool for opaites analysis.
 """
 
 import argparse
+from argparse import RawDescriptionHelpFormatter
 import sys
 import os
 import logging
@@ -36,7 +37,7 @@ def parse_arguments(argv):
     """
 
     parser = argparse.ArgumentParser(description=__doc__)
-
+    
     parser.add_argument('-V', '--version', action='version',
         version = version,
         help = 'Print the version number and exit')
@@ -54,7 +55,7 @@ def parse_arguments(argv):
     ##########################
 
     subparsers = parser.add_subparsers(dest='subparser_name')
-
+    
     # Begin help sub-command
     parser_help = subparsers.add_parser(
         'help', help='Detailed help for actions using `help <action>`')
@@ -64,7 +65,15 @@ def parse_arguments(argv):
     actions = {}
 
     for name, mod in subcommands.itermodules(os.path.split(subcommands.__file__)[0]):
-        subparser = subparsers.add_parser(name, help=mod.__doc__)
+        # set up subcommand help text. The first line of the dosctring
+        # in the module is displayed as the help text in the
+        # script-level help message (`script -h`). The entire
+        # docstring is displayed in the help message for the
+        # individual subcommand ((`script action -h`)).
+        subparser = subparsers.add_parser(name,
+                                          help = mod.__doc__.lstrip().split('\n', 1)[0],                                          
+                                          description = mod.__doc__,
+                                          formatter_class = RawDescriptionHelpFormatter)
         mod.build_parser(subparser)
         actions[name] = mod.action
 
