@@ -175,11 +175,23 @@ def check_spike(cmpnd):
     """
     Spike
 
-    Compare and report metabolites that have no deuterated internal standard.
+    Ensure that the concentration of a spiked compound exceeds a lower
+    limit.
     """
 
     retval = (cmpnd.PEAK_analconc or 0) >= cmpnd.spike_low
     msg = '%s >= %s' % fmt(cmpnd.PEAK_analconc, cmpnd.spike_low)
+    return retval, msg
+
+def check_is_spike_recovery(cmpnd):
+    """
+    I.S. Spike Recov.
+    
+    Compare PEAK_analconc with is_spike_recovery
+    """
+
+    retval = (cmpnd.PEAK_analconc or 0) > cmpnd.is_spike_recovery
+    msg = '%s > %s' % fmt(cmpnd.PEAK_analconc, cmpnd.is_spike_recovery)
     return retval, msg
     
 def description(fun):

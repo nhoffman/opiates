@@ -42,5 +42,5 @@ g = r"""digraph {
 
 G = pgv.AGraph(g)
 G.layout(prog = 'dot') # default to neato
-G.draw('file.png')
+G.draw('result_algorithm.png')
 

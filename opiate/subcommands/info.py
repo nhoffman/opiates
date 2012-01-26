@@ -1,4 +1,6 @@
-"""Describe an XML file."""
+"""
+Describe an XML file.
+"""
 
 import logging
 from os import path
