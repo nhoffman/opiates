@@ -1,7 +1,9 @@
+import sys
 import pprint
 from itertools import chain, ifilter, groupby
 import logging
 from collections import OrderedDict, defaultdict
+import copy
 from __init__ import CONTROL_NAMES
 
 from utils import flatten
@@ -224,4 +226,142 @@ def ion_ratio(cmpnd):
 def average(seq):
     noneless = filter(lambda x: x is not None, seq)
     return sum(noneless)/len(noneless) if noneless else None
+
+def result_a_first(sample):
+    """
+    Implements "a first" logic for results, considering QA
+    checks and AMR.
+    """
+
+    conc = lambda x: (x.PEAK_analconc or 0)
+
+    a = sample.compounds['straight10']
+    b = sample.compounds['spiked10']
+    c = sample.compounds['straight']
+    d = sample.compounds['spiked']
+
+    low, high = c.amr_low, c.amr_high
+    # define significant digits for result
+    fmt = {11: '%.2f'}.get(sample.COMPOUND_id, '%.0f')
+    fail = 'FAIL'
+    
+    # amr_high may not be defined (ie, if the compund is a
+    # glucuronide). To simplify the logic below, let's temporarily
+    # redefine 'high' as a large number if it is indeed
+    # undefined. We'll deal with the special case of an undefined
+    # amr_high later.
+    high = high or sys.maxint
+
+    if conc(a) < low:
+        # This compound appears to be negative. Before we can report
+        # it, either a or c must pass IS Peak area test to rule out
+        # ion suppression and at least one or b or d must pass the
+        # spike test.
+        if (
+            a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])
+            ) and (
+            b.check_qa(['spike']) or d.check_qa(['spike'])):
+            val = None
+        else:
+            val = fail
+    # Now we consider the diluted specimen if certain QA tests pass,
+    # and if the concentration of the diluted specimen > amr_high.
+    elif conc(a) <= high and a.check_qa(['rrt', 'ion_ratio', 'signoise']):
+        # The result from a is in range and QA passes. Report the
+        # quantitative result from this specimen, correcting for the
+        # dilution.
+        val = conc(a) * 10
+    # Check QA for the undiluted specimen.
+    elif c.check_qa(['rrt', 'ion_ratio', 'signoise']):
+        if conc(c) <= high:
+            # The result from c is in range and QA passes. Report the
+            # quantitative result from this specimen.
+            val = conc(c)
+        else:
+            val = '>%s' % high
+    else:
+        val = fail
+
+    # Finally, we determine if amr_high is undefined, and make the
+    # result qualitative if necessary.
+    if c.amr_high is None and val not in (fail, None):
+        val = 'POS'
+
+    return val
+
+# def result_c_first(sample):
+#     """
+#     Implements "c first" logic for results, considering QA
+#     checks and AMR.
+#     """
+
+#     conc = lambda x: (x.PEAK_analconc or 0)
+
+#     a = sample.compounds['straight10']
+#     b = sample.compounds['spiked10']
+#     c = sample.compounds['straight']
+#     d = sample.compounds['spiked']
+
+#     low, high = c.amr_low, c.amr_high
+#     # define significant digits for result
+#     fmt = {11: '%.2f'}.get(sample.COMPOUND_id, '%.0f')
+#     fail = 'FAIL'
+    
+#     # amr_high may not be defined (ie, if the compund is a
+#     # glucuronide). To simplify the logic below, let's temporarily
+#     # redefine 'high' as a large number if it is indeed
+#     # undefined. We'll deal with the special case of an undefined
+#     # amr_high later.
+#     high = high or sys.maxint
+
+#     if conc(c) < low:
+#         # This compound appears to be negative. Before we can
+#         # report it, check IS Peak area in a to rule out ion
+#         # suppression and at least one or b or d must pass the
+#         # spike test.
+#         if a.check_qa(['is_peak_area']) and (b.check_qa(['spike']) or d.check_qa(['spike'])):
+#             val = None
+#         else:
+#             val = fail
+#     # Now we can use the undiluted specimen if certain QA tests
+#     # pass, and if the concentration of the undiluted specimen >
+#     # amr_high.
+#     elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio', 'signoise']):
+#         # The result from c is in range and QA passes. Report the
+#         # quantitative result.
+#         val = conc(c)
+#     # Check QA for the diluted specimen.
+#     elif a.check_qa(['rrt', 'ion_ratio', 'signoise']):
+#         if conc(a) <= high:
+#             val = conc(a)*10
+#         else:
+#             val = '>%s' % high
+#     else:
+#         val = fail
+
+#     # Finally, we determine if amr_high is undefined, and make the
+#     # result qualitative if necessary.
+#     if c.amr_high is None and val not in (fail, None):
+#         val = 'POS'
+
+#     return val
+
+def add_ion_ratios(qadata, controls):
+    """
+    Update qadata with ion ratos calculated from experimental data
+    """
+
+    log.info('calculating ion ratio averages from experimental data.')
+    
+    std_ids, std_names = zip(
+        *[(i,n) for i,n in CONTROL_NAMES if n.startswith('std')])
+    ion_ratios = mean_ion_ratios(controls, set(std_ids))    
+
+    qdcopy = copy.deepcopy(qadata)
+
+    for cmpnd_id, data in qdcopy.items():
+        data['ion_ratio_avg_calc'] = ion_ratios[cmpnd_id]['ion_ratio_avg_calc']
+
+    return qdcopy
+    
     

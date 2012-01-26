@@ -3,10 +3,13 @@ from itertools import chain, groupby, ifilter, islice
 import pprint
 import sys
 import csv
+import logging
 
 from opiate import CONTROL_NAMES, COMPOUND_CODES
 from opiate.calculations import all_checks, fmt
 from opiate.containers import Compound, Sample
+
+log = logging.getLogger(__name__)
 
 choose_nullchar = {'screen':'.', 'file':''}
 display_fields = [h for h,_ in Compound.display_headers] + all_checks.keys()
@@ -81,41 +84,36 @@ def display_controls(compounds, outfile, show_all = False, message = True, style
         if show_group and style == 'screen':
             writer.writerow(display_empty)
                 
-def display_results(compounds, outfile, style = 'screen'):
+def display_results(patient_samples, outfile, style = 'screen', grouped = True):
     """
     For the resulting, we would like the compounds to be divided
     in three worksheets: worksheet 1: compound_ids 1-7, worksheet
     2: compound_ids 8-14, worksheet 3: compound ids 15-20.        
     """
+    
+    compound_ids, compound_codes = map(list, zip(*COMPOUND_CODES))
 
-    fieldnames, labels = map(list, zip(*COMPOUND_CODES))
-          
     nullchar = choose_nullchar[style]
     fmt = lambda s: '%.2f' % s if isinstance(s, float) else (s or nullchar)
 
-    rows = []
-    d = dict(label = 'label')
-    d.update(dict((i, '%s-%s' % (i, label)) for i, label in COMPOUND_CODES))
-    rows.append(d)
-    
-    # sort, then group by accession
-    compounds.sort(key = lambda c: c.sort_by_patient())
-    patient_compounds = ifilter(lambda c: c.type == 'patient', compounds)
-    for sample_label, sample_group in groupby(patient_compounds, lambda c: c.sample_label):
-        # ... then group by compound and initialize a Sample for each group
-        samples = [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]        
-        # d contains concentrations keyed by compound_id
-        row_label = samples[0].row_label()
-        d = dict(zip(['label'] + fieldnames, [row_label] + [fmt(s.result(nullchar)) for s in samples]))
-        rows.append(d)
+    # create headers for the first row
+    rows =[ dict(label = 'label')]
+    rows[0].update(dict((i, '%s-%s' % (i, code)) for i, code in COMPOUND_CODES))
 
-    # print the results grouped by worksheet
-    for first, last in [(0, 7), (7, 14), (14, None)]:
-        fields = list(islice(fieldnames, first, last))
+    for samples in patient_samples:
+        d = dict(label = samples[0].row_label()) 
+        d.update(dict((s.COMPOUND_id, fmt(s.result)) for s in samples))
+        rows.append(d)
+    
+    # print the results grouped by worksheet if grouped is True
+    colgroups = [(0, 7), (7, 14), (14, None)] if grouped else [(0, None)]
+    for first, last in colgroups:
+        compounds = list(islice(compound_ids, first, last))
         
         writer = csv.DictWriter(
-            outfile, fieldnames = ['label'] + fields, extrasaction = 'ignore')
+            outfile, fieldnames = ['label'] + compounds, extrasaction = 'ignore')
 
         for d in rows:
             writer.writerow(d)
-        outfile.write('\n')
+        if style == 'screen' and (first, last) != colgroups[-1]:
+            writer.writerow({})

@@ -12,11 +12,12 @@ import sys
 import xml.etree.ElementTree
 
 from opiate import __version__, matrix_file, qafile
-from opiate.parsers import qa_from_csv, read_matrix, get_input, add_ion_ratios
+from opiate.parsers import qa_from_csv, read_matrix, get_input
 from opiate.display import display_specimens, display_controls
 from opiate.containers import Compound
 from opiate.utils import flatten, get_outfile
 from opiate import subcommands
+from opiate.calculations import add_ion_ratios
 
 log = logging.getLogger(__name__)
 
@@ -51,7 +52,6 @@ def action(args):
     
     if args.calculate_ion_ratios:
         qadata = add_ion_ratios(qadata, controls)
-        log.info('calculating ion ratio averages from experimental data.')
 
     # if a single compound is specified, define lambda cond to use as
     # a filter

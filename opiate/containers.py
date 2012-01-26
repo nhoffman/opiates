@@ -8,7 +8,7 @@ control_ids = set(i for i,n in CONTROL_NAMES)
 outcomes = {True: 'ok', False: 'FAIL', None: '-'}
 
 import calculations
-from calculations import all_checks
+from calculations import all_checks, result_a_first
 
 class QaFailure(Exception):
     pass
@@ -245,7 +245,7 @@ class Sample(object):
     display of results is implemented here.
     """
 
-    def __init__(self, compounds):
+    def __init__(self, compounds, calculate_results = True):
 
         compounds = list(compounds)
 
@@ -264,7 +264,11 @@ class Sample(object):
         # these abbreviations are used in several calculations
         self.a = self.compounds['straight10']
         self.c = self.compounds['straight']
-        
+
+        # calculate results
+        self.result = result_a_first(self) if calculate_results else []
+
+            
     def __repr__(self):
         return '<Sample %(sample_label)s %(abbrev_name)s (%(type)s)>' % \
             self
@@ -281,77 +285,4 @@ class Sample(object):
         
     def get(self, key, default = None):
         return self.__dict__.get(key, default)
-        
-    def result(self, nullchar = ''):
-        """
-        Encapsulates logic for results, considering QA checks and AMR.
-
-        If c > amr_high, calculate the result from a by multiplying by 10
-        When c < amr_low, report <blank>
-        When a > amr_high, report "> amr_high"
-
-        Use whole numbers, except for fentanyl (compound_id 11) use 2
-        decimal places.
-
-        If is_peak_area fails in c but doesn't fail for a (x10), then
-        QA passes for this compound.
-
-        TODO: If a also fails, check recovery of d (need to talk to
-        Andy about exact requirements).
-
-        For ion_ratio and rrt, do not perform if peak_analconc <
-        amr_low, and report a negative result.  If either fails when
-        peak_analconc > amr_low, check a.  If both pass in a, report
-        result from a.  If either fails, report QA fail.
-        """
-
-        conc = lambda x: (x.PEAK_analconc or 0)
-
-        a = self.compounds['straight10']
-        b = self.compounds['spiked10']
-        c = self.compounds['straight']
-        d = self.compounds['spiked']
-
-        low, high = c.amr_low, c.amr_high
-        # define significant digits for result
-        fmt = {11: '%.2f'}.get(self.COMPOUND_id, '%.0f')
-
-        # amr_high may not be defined (ie, if the compund is a
-        # glucuronide). To simplify the logic below, let's temporarily
-        # redefine 'high' as a large number if it is indeed
-        # undefined. We'll deal with the special case of an undefined
-        # amr_high later.
-        high = high or sys.maxint
-
-        if conc(c) < low:
-            # This compound appears to be negative. Before we can
-            # report it, check IS Peak area in a to rule out ion
-            # suppression and at least one or b or d must pass the
-            # spike test.
-            if a.check_qa(['is_peak_area']) and (b.check_qa(['spike']) or d.check_qa(['spike'])):
-                val = nullchar
-            else:
-                val = 'FAIL'
-        # Now we can use the undiluted specimen if certain QA tests
-        # pass, and if the concentration of the undiluted specimen >
-        # amr_high.
-        elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio', 'signoise']):
-            # The result from c is in range and QA passes. Report the
-            # quantitative result.
-            val = conc(c)
-        # Check QA for the diluted specimen.
-        elif a.check_qa(['rrt', 'ion_ratio', 'signoise']):
-            if conc(a) <= high:
-                val = conc(a)*10
-            else:
-                val = '>%s' % high
-        else:
-            val = 'FAIL'
-
-        # Finally, we determine if amr_high is undefined, and make the
-        # result qualitative if necessary.
-        if c.amr_high is None and val not in ('FAIL', nullchar):
-            val = 'POS'
-            
-        return val
 

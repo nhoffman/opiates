@@ -9,11 +9,17 @@ import pprint
 import json
 from collections import OrderedDict
 
-from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples, qa_from_csv, add_ion_ratios, get_input
+from opiate.parsers import cast, cast_numeric, cast_vals, read_matrix, group_samples, qa_from_csv, get_input, get_samples
 from opiate import matrix_file, qafile
+from opiate.calculations import add_ion_ratios
 import __init__ as config
 
 log = logging.getLogger(__name__)
+
+qadata = qa_from_csv(qafile)
+matrix = read_matrix(matrix_file)
+with open('testfiles/oct24.json') as f:
+    controls, sample_groups = json.load(f)
 
 class TestCast(unittest.TestCase):
 
@@ -84,3 +90,13 @@ class TestGetInput(unittest.TestCase):
         self.assertRaises(SystemExit, get_input,
             'testfiles/opi_checkout.xml',
             format = 'json')
+
+class TestGetSamples(unittest.TestCase):
+    
+    def test01(self):
+        _qadata = add_ion_ratios(qadata, controls)
+        rows = get_samples(controls, sample_groups, _qadata, matrix)
+        rows.next()
+        
+
+        

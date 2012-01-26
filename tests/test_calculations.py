@@ -131,3 +131,4 @@ class TestMeanIonRatios(unittest.TestCase):
     def test01(self):
         ratios = mean_ion_ratios(controls, set([1,2,3,4,5]))
         self.assertEqual(len(ratios), len(qadata))
+

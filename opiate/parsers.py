@@ -4,13 +4,17 @@ import pprint
 import xml.etree.ElementTree
 import sys
 import csv
-import copy
 import json
 from collections import defaultdict, OrderedDict
-from itertools import chain, groupby, count
-from calculations import all_checks, mean_ion_ratios
+from itertools import chain, groupby, count, ifilter
+import logging
 
-from __init__ import qafile, SAMPLE_ATTRS, CONTROL_NAMES, SAMPLE_PREP_LABELS, SAMPLE_PREP_ORDER, SAMPLE_PREP_NAMES
+from __init__ import qafile, SAMPLE_ATTRS, CONTROL_NAMES, SAMPLE_PREP_LABELS, SAMPLE_PREP_ORDER, SAMPLE_PREP_NAMES, COMPOUND_CODES
+from containers import Compound, Sample
+from calculations import all_checks, mean_ion_ratios, add_ion_ratios, result_a_first
+import utils
+
+log = logging.getLogger(__name__)
 
 dump = xml.etree.ElementTree.dump
 
@@ -216,23 +220,6 @@ def qa_from_csv(fname):
 
     return qadata
 
-def add_ion_ratios(qadata, controls):
-    """
-    Update qadata with ion ratos calculated from experimental data
-    """
-
-    std_ids, std_names = zip(
-        *[(i,n) for i,n in CONTROL_NAMES if n.startswith('std')])
-    ion_ratios = mean_ion_ratios(controls, set(std_ids))    
-
-    qdcopy = copy.deepcopy(qadata)
-
-    for cmpnd_id, data in qdcopy.items():
-        data['ion_ratio_avg_calc'] = ion_ratios[cmpnd_id]['ion_ratio_avg_calc']
-
-    return qdcopy
-    
-    
 def read_matrix(fname):
     """
     Read a configuration file describing compound-calculation
@@ -283,3 +270,19 @@ def remove_patient_info(samples):
         sanitized[new_label] = group
 
     return (controls, sanitized)
+
+def get_samples(controls, sample_groups, qadata, matrix):
+    
+    # beware name collision with `flatten` defined in this module
+    compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
+                 for c in utils.flatten(sample_groups.values())]
+
+    # sort, then group by accession
+    compounds.sort(key = lambda c: c.sort_by_patient())
+    patient_compounds = ifilter(lambda c: c.type == 'patient', compounds)
+    for sample_label, sample_group in groupby(patient_compounds, lambda c: c.sample_label):
+        # ... then group by compound and initialize a Sample for each group
+        yield [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
+
+    
+        
