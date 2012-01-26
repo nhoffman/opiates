@@ -27,8 +27,6 @@ def build_parser(parser):
     subcommands.add_outdir(parser)
     subcommands.add_no_calculate_ion_ratio_avg(parser)    
     subcommands.add_split_desc(parser)
-    parser.add_argument('--c-first', action = 'store_true', default = False,
-                        help = 'use "c first" algorithm for results (default is "a first")')
     parser.add_argument('--no-groups', action = 'store_false', default = True,
                         dest = 'grouped',
                         help = 'Do not group columns by worksheet.')

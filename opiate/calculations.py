@@ -252,7 +252,7 @@ def result_a_first(sample):
     # amr_high later.
     high = high or sys.maxint
 
-    if conc(a) < low:
+    if conc(a) < low and conc(c) < low:
         # This compound appears to be negative. Before we can report
         # it, either a or c must pass IS Peak area test to rule out
         # ion suppression and at least one or b or d must pass the
