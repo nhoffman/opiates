@@ -13,6 +13,7 @@ import inspect
 from opiate import qafile, CONTROL_NAMES
 from opiate.parsers import qa_from_csv
 from opiate import calculations
+from opiate import calculations
 from opiate.calculations import all_checks
 
 log = logging.getLogger(__name__)
@@ -25,6 +26,8 @@ def build_parser(parser):
     parser.add_argument('-n','--names', help='list id and name of each compound', action = 'store_true', default = False)
     parser.add_argument('-r','--variables', help='print variable names (headers in QA file)', action = 'store_true', default = False)
     parser.add_argument('-s','--show-calculation', help='show a functions implementing a calculation specified by NAME', metavar = 'NAME', default = False)
+    parser.add_argument('-a','--algorithm', help='Show the function for calculating results from a patient sample.', action = 'store_true', default = False)
+
     
 def action(args):
     qadata = qa_from_csv(qafile)
@@ -54,4 +57,5 @@ def action(args):
     elif args.controls:
         for row in CONTROL_NAMES:
             print '%s\t%s' % row
-        
+    elif args.algorithm:
+        print ''.join(inspect.getsourcelines(calculations.result_a_first)[0])
