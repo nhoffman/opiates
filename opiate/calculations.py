@@ -277,7 +277,8 @@ def result_a_first(sample):
         else:
             val = fail
     # Now we consider the diluted specimen if certain QA tests pass,
-    # and if the concentration of the diluted specimen > amr_high.
+    # and if the concentration of the diluted specimen is within the
+    # amr.
     elif low <= conc(a) <= high and a.check_qa(['rrt', 'ion_ratio', 'signoise']):
         # The result from a is in range and QA passes. Report the
         # quantitative result from this specimen, correcting for the
@@ -286,6 +287,7 @@ def result_a_first(sample):
     # Check QA for the undiluted specimen.
     elif c.check_qa(['rrt', 'ion_ratio', 'signoise']):
         if conc(c) < low:
+            # it would be very strange for this to happen.
             val = fail
         elif low <= conc(c) <= high:
             # The result from c is in range and QA passes. Report the
