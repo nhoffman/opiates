@@ -269,7 +269,7 @@ def result_a_first(sample):
         # it, either a or c must pass IS Peak area test to rule out
         # ion suppression and at least one or b or d must pass the
         # spike test.
-        if (
+        if conc(a) == 0 and (
             a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])
             ) and (
             b.check_qa(['spike']) or d.check_qa(['spike'])):
