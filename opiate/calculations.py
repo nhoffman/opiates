@@ -264,16 +264,10 @@ def results(sample):
     high = high or sys.maxint
 
     if conc(a) > 0 and a.check_qa(['rrt', 'ion_ratio', 'signoise']):
-        if conc(a) <= high:
-            val = conc(a)*10
-        else:
-            val = '>%s' % high
+        val = conc(a)*10 if conc(a) <= high else ('>%s' % high)
     elif conc(c) > low:
         if c.check_qa(['rrt', 'ion_ratio', 'signoise']):
-            if conc(c) <= high:
-                val = conc(c)
-            else:
-                val = '>%s' % high
+            val = conc(c) if conc(c) <= high else ('>%s' % high)
         else:
             val = fail
     elif (a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])) \
