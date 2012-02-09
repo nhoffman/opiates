@@ -239,10 +239,9 @@ def average(seq):
     noneless = filter(lambda x: x is not None, seq)
     return sum(noneless)/len(noneless) if noneless else None
 
-def result_a_first(sample):
+def results(sample):
     """
-    Implements "a first" logic for results, considering QA
-    checks and AMR.
+    Implements logic for results.
     """
 
     conc = lambda x: (x.PEAK_analconc or 0)
@@ -264,40 +263,25 @@ def result_a_first(sample):
     # amr_high later.
     high = high or sys.maxint
 
-    if conc(a) < low and conc(c) < low:
-        # This compound appears to be negative. Before we can report
-        # it, either a or c must pass IS Peak area test to rule out
-        # ion suppression and at least one or b or d must pass the
-        # spike test.
-        if conc(a) == 0 and (
-            a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])
-            ) and (
-            b.check_qa(['spike']) or d.check_qa(['spike'])):
-            val = None
-        else:
-            val = fail
-    # Now we consider the diluted specimen if certain QA tests pass,
-    # and if the concentration of the diluted specimen is within the
-    # amr.
-    elif low <= conc(a) <= high and a.check_qa(['rrt', 'ion_ratio', 'signoise']):
-        # The result from a is in range and QA passes. Report the
-        # quantitative result from this specimen, correcting for the
-        # dilution.
-        val = conc(a) * 10
-    # Check QA for the undiluted specimen.
-    elif c.check_qa(['rrt', 'ion_ratio', 'signoise']):
-        if conc(c) < low:
-            # it would be very strange for this to happen.
-            val = fail
-        elif low <= conc(c) <= high:
-            # The result from c is in range and QA passes. Report the
-            # quantitative result from this specimen.
-            val = conc(c)
+    if conc(a) > 0 and a.check_qa(['rrt', 'ion_ratio', 'signoise']):
+        if conc(a) <= high:
+            val = conc(a)*10
         else:
             val = '>%s' % high
+    elif conc(c) > low:
+        if c.check_qa(['rrt', 'ion_ratio', 'signoise']):
+            if conc(c) <= high:
+                val = conc(c)
+            else:
+                val = '>%s' % high
+        else:
+            val = fail
+    elif (a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])) \
+            and (b.check_qa(['spike']) or d.check_qa(['spike'])):
+        val = None
     else:
         val = fail
-
+                    
     # Finally, we determine if amr_high is undefined, and make the
     # result qualitative if necessary.
     if c.amr_high is None and val not in (fail, None):

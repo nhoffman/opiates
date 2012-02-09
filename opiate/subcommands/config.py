@@ -58,4 +58,4 @@ def action(args):
         for row in CONTROL_NAMES:
             print '%s\t%s' % row
     elif args.algorithm:
-        print ''.join(inspect.getsourcelines(calculations.result_a_first)[0])
+        print ''.join(inspect.getsourcelines(calculations.results)[0])

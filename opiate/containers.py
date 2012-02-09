@@ -8,7 +8,7 @@ control_ids = set(i for i,n in CONTROL_NAMES)
 outcomes = {True: 'ok', False: 'FAIL', None: '-'}
 
 import calculations
-from calculations import all_checks, result_a_first
+from calculations import all_checks, results
 
 class QaFailure(Exception):
     pass
@@ -266,7 +266,7 @@ class Sample(object):
         self.c = self.compounds['straight']
 
         # calculate results
-        self.result = result_a_first(self) if calculate_results else []
+        self.result = results(self) if calculate_results else []
 
             
     def __repr__(self):

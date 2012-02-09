@@ -11,7 +11,7 @@ import logging
 
 from __init__ import qafile, SAMPLE_ATTRS, CONTROL_NAMES, SAMPLE_PREP_LABELS, SAMPLE_PREP_ORDER, SAMPLE_PREP_NAMES, COMPOUND_CODES
 from containers import Compound, Sample
-from calculations import all_checks, mean_ion_ratios, add_ion_ratios, result_a_first
+from calculations import all_checks, mean_ion_ratios, add_ion_ratios, results
 import utils
 
 log = logging.getLogger(__name__)
