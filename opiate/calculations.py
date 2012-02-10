@@ -277,9 +277,10 @@ def results(sample):
         val = fail
                     
     # Finally, we determine if amr_high is undefined, and make the
-    # result qualitative if necessary.
+    # result qualitative if necessary. We'll only report a positive
+    # result if val is > amr_low
     if c.amr_high is None and val not in (fail, None):
-        val = 'POS'
+        val = 'POS' if val > low else None
 
     return val
 
