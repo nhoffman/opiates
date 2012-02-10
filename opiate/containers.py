@@ -247,6 +247,11 @@ class Sample(object):
 
     def __init__(self, compounds, calculate_results = True):
 
+
+        """
+         * qualitative - if True, return POS for positive glucuronides and < amr_low when below amr
+        """
+        
         compounds = list(compounds)
 
         # ensure that this set of compounds are homogenous for certain
@@ -267,8 +272,7 @@ class Sample(object):
 
         # calculate results
         self.result = results(self) if calculate_results else []
-
-            
+                        
     def __repr__(self):
         return '<Sample %(sample_label)s %(abbrev_name)s (%(type)s)>' % \
             self

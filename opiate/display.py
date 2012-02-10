@@ -117,3 +117,4 @@ def display_results(patient_samples, outfile, style = 'screen', grouped = True):
             writer.writerow(d)
         if style == 'screen' and (first, last) != colgroups[-1]:
             writer.writerow({})
+
