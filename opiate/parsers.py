@@ -271,7 +271,7 @@ def remove_patient_info(samples):
 
     return (controls, sanitized)
 
-def get_samples(controls, sample_groups, qadata, matrix):
+def get_samples(controls, sample_groups, qadata, matrix, quantitative = False):
     
     # beware name collision with `flatten` defined in this module
     compounds = [Compound(c, matrix, **qadata[c['COMPOUND_id']])
@@ -282,7 +282,7 @@ def get_samples(controls, sample_groups, qadata, matrix):
     patient_compounds = ifilter(lambda c: c.type == 'patient', compounds)
     for sample_label, sample_group in groupby(patient_compounds, lambda c: c.sample_label):
         # ... then group by compound and initialize a Sample for each group
-        yield [Sample(grp) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
+        yield [Sample(grp, quantitative = quantitative) for _, grp in groupby(sample_group, lambda c: c.COMPOUND_id)]
 
     
         

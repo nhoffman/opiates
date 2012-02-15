@@ -64,7 +64,7 @@ def action(args):
         if args.calculate_ion_ratios:
             qadata = add_ion_ratios(qadata.copy(), controls)
 
-        patient_samples = get_samples(controls, sample_groups, qadata, matrix)
+        patient_samples = get_samples(controls, sample_groups, qadata, matrix, quantitative = True)
         for samples in patient_samples:
             d['label'] = samples[0].row_label() if args.keep_phi else counter.next()
             d.update(dict((s.COMPOUND_id, s.result) for s in samples))

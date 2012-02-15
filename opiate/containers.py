@@ -245,11 +245,11 @@ class Sample(object):
     display of results is implemented here.
     """
 
-    def __init__(self, compounds, calculate_results = True):
+    def __init__(self, compounds, calculate_results = True, quantitative = False):
 
 
         """
-         * qualitative - if True, return POS for positive glucuronides and < amr_low when below amr
+         * quantitative - if False, return POS for positive glucuronides and < amr_low when below amr
         """
         
         compounds = list(compounds)
@@ -271,7 +271,7 @@ class Sample(object):
         self.c = self.compounds['straight']
 
         # calculate results
-        self.result = results(self) if calculate_results else []
+        self.result = results(self, quantitative) if calculate_results else []
                         
     def __repr__(self):
         return '<Sample %(sample_label)s %(abbrev_name)s (%(type)s)>' % \

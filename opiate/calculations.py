@@ -239,7 +239,7 @@ def average(seq):
     noneless = filter(lambda x: x is not None, seq)
     return sum(noneless)/len(noneless) if noneless else None
 
-def results(sample):
+def results(sample, quantitative = False):
     """
     Implements logic for results.
     """
@@ -275,7 +275,10 @@ def results(sample):
         val = None
     else:
         val = fail
-                    
+
+    if quantitative:
+        return val
+        
     # Finally, we determine if amr_high is undefined, and make the
     # result qualitative if necessary. We'll only report a positive
     # result if val is > amr_low
