@@ -10,7 +10,7 @@ import sys
 import xml.etree.ElementTree
 import inspect
 
-from opiate import qafile, CONTROL_NAMES
+from opiate import qafile, CONTROL_NAMES, COMPOUND_CODES
 from opiate.parsers import qa_from_csv
 from opiate import calculations
 from opiate import calculations
@@ -38,9 +38,13 @@ def action(args):
         _, d = qadata.popitem()
         print('\n'.join(d.keys()))
     elif args.names:
-        print('id\tname')
+        cmpnd_codes = dict(COMPOUND_CODES)
+        writer = csv.writer(sys.stdout, quoting=csv.QUOTE_NONNUMERIC)
+        writer.writerow(['id', 'code', 'name'])
         for compound_id, d in qadata.items():
-            print('\t'.join(['%i' % compound_id, d['qa_compound']]))
+            writer.writerow([compound_id,
+                             cmpnd_codes[compound_id],
+                             d['qa_compound']])
     elif args.compound_id:
         try:
             for k,v in qadata[args.compound_id].items():
