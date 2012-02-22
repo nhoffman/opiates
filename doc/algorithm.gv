@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-
-import pygraphviz as pgv
-
-g = r"""digraph {
+digraph {
 
   node [shape = "box", order = "in"];
 
@@ -37,10 +33,4 @@ g = r"""digraph {
 
   Level3b -> Level4b [label = "no"];
   Level4b [label = "> amr_high", shape = "circle", fontcolor = "green"];
-}"""
-
-
-G = pgv.AGraph(g)
-G.layout(prog = 'dot') # default to neato
-G.draw('result_algorithm.png')
-
+}
