@@ -11,13 +11,13 @@ digraph {
   Level1a [label = "conc(c) <= high \nand\n c.check_qa(['rrt', 'ion_ratio', 'signoise'])"];
 
   Level1b -> Level2b [label = "yes"];
-  Level2b [label = "< amr_low", shape = "circle", fontcolor = "green"];
+  Level2b [label = "< amr_low", shape = "ellipse", fontcolor = "green"];
 
   Level1b -> Level2c [label = "no"];
   Level2c [label = "QA FAIL", shape = "octagon", fontcolor = "red"];
 
   Level1a -> Level2d [label = "yes"];
-  Level2d [label = "conc(c)", shape = "circle", fontcolor = "green"];
+  Level2d [label = "conc(c)", shape = "ellipse", fontcolor = "green"];
 
   Level1a -> Level2a [label= "no" ];
   Level2a [label = "a.check_qa(['rrt', 'ion_ratio', 'signoise'])"];
@@ -29,8 +29,8 @@ digraph {
   Level3a [label = "QA FAIL", shape = "octagon", fontcolor = "red"];
 
   Level3b -> Level4a [label = "yes"];
-  Level4a [label = "conc(a)*10", shape = "circle", fontcolor = "green"];
+  Level4a [label = "conc(a)*10", shape = "ellipse", fontcolor = "green"];
 
   Level3b -> Level4b [label = "no"];
-  Level4b [label = "> amr_high", shape = "circle", fontcolor = "green"];
+  Level4b [label = "> amr_high", shape = "ellipse", fontcolor = "green"];
 }
