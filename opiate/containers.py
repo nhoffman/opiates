@@ -97,7 +97,7 @@ class Compound(object):
         for attr in ['peak_analconc_x10']:
             val = getattr(self, '_get_'+attr)()
             setattr(self, attr, val)
-
+            
     # We need to calculate some additional values from existing
     # ones. The methods below starting with '_get_' determine whether
     # the named attribute should be defined and perform the necessary
@@ -133,13 +133,23 @@ class Compound(object):
         OrderedDict keyed by testname and returning `(retval,
         msg)`. Also defines `self.qa_ok` with a value of True (all
         checks pass) or False (at least one test fails).
+
+        `self.malformed` will be given a value of True in if there are
+        any missing data elements in the input.
         """
-
+        
         # testname: (retval, msg)
-        self.qa_results = OrderedDict(
-            (test, getattr(calculations, test)(self)) for test in self.testnames)
-        self.qa_ok = all(retval is not False for retval, msg in self.qa_results.values())
-
+        try:
+            self.qa_results = OrderedDict(
+                (test, getattr(calculations, test)(self)) for test in self.testnames)
+            self.qa_ok = all(retval is not False for retval, msg in self.qa_results.values())            
+            self.malformed = False
+        except AttributeError:
+            all_tests = [test for test in dir(calculations) if test.startswith('check_')]
+            self.qa_results = OrderedDict((test, (False, 'CHECK INTEGRATION')) for test in all_tests)
+            self.qa_ok = False
+            self.malformed = True
+            
     def print_qa(self):
         for k,v in self.qa_results.items():
             print k, v

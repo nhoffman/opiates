@@ -94,7 +94,7 @@ def parse_sample(sample, compound_ids = None):
         if keep(compound_data):
             compound_data.update(sample_data)
             yield compound_data
-
+            
 def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = None):
     """
     Parse the contents of XML-file `infile`, and return two
@@ -127,7 +127,7 @@ def group_samples(infile, ctl_names = CONTROL_NAMES, split_desc = None):
 
     tree = xml.etree.ElementTree.ElementTree(file=infile)
 
-    samples = [list(parse_sample(elem, compound_ids)) \
+    samples = [list(parse_sample(elem, set(compound_ids))) \
                    for elem in tree.getiterator('SAMPLELISTDATA')[0].findall('SAMPLE')]
 
     # controls is a dict with keys defined in ctl_names returning a

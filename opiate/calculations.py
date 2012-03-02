@@ -243,7 +243,7 @@ def results(sample, quantitative = False):
     """
     Implements logic for results.
     """
-
+    
     conc = lambda x: (x.PEAK_analconc or 0)
 
     a = sample.compounds['straight10']
@@ -255,6 +255,10 @@ def results(sample, quantitative = False):
     # define significant digits for result
     fmt = {11: '%.2f'}.get(sample.COMPOUND_id, '%.0f')
     fail = 'FAIL'
+
+    # fail this sample if any of the samples are malformed
+    if any(cmpnd.malformed for cmpnd in sample.compounds.values()):
+        return fail
     
     # amr_high may not be defined (ie, if the compund is a
     # glucuronide). To simplify the logic below, let's temporarily
