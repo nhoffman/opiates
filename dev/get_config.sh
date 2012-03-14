@@ -1,9 +1,16 @@
 #!/bin/bash
 
-set -o verbose
+# set -o verbose
 
-confdir=/home/LABMED/nhoffman/mnt/lilith/uwmc_chemistry/NewOpiatesAug2010/software_development/config
+confdir=/mnt/mass-spec/AA222_LCMS_Data/OpiateResearch/software_development/config
+
+if [ ! -d $confdir ]; then
+    echo "cannot see $confdir"
+    exit 1
+fi
 
 # get config files from lilith share mounted to sci
-scp sci:$confdir/matrix.xlsx opiate/data
-scp sci:$confdir/qa.xlsx opiate/data
+cp $confdir/matrix.xlsx opiate/data
+cp $confdir/qa.xlsx opiate/data
+
+chown -R ${SUDO_USER-$USER} opiate/data
