@@ -99,7 +99,7 @@ class TestCalculations(unittest.TestCase):
             (dict(PEAK_area = 0, CONFIRMATIONIONPEAK1_area = 2.,
                   ion_ratio_avg = 1, ion_ratio_cv = 0.1), False),
             (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 0,
-                  ion_ratio_avg = 1, ion_ratio_cv = 0.1), None),
+                  ion_ratio_avg = 1, ion_ratio_cv = 0.1), False),
             (dict(PEAK_area = 1., CONFIRMATIONIONPEAK1_area = 2,
                   ion_ratio_avg_calc = 1.1, ion_ratio_cv = 0.1), False),
             

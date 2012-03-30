@@ -126,9 +126,10 @@ def _check_ion_ratio_general(cmpnd, use_calculated = False):
     ion_ratio_low = avg - delta
     ion_ratio_high = avg + delta
 
-    if not cmpnd.CONFIRMATIONIONPEAK1_area:
+    if cmpnd.CONFIRMATIONIONPEAK1_area is None or cmpnd.CONFIRMATIONIONPEAK1_area == 0:
+        # fail if undefined *OR* zero
         ion_ratio = None
-        retval = None
+        retval = False
     else:
         ion_ratio = cmpnd.PEAK_area/cmpnd.CONFIRMATIONIONPEAK1_area
         retval = ion_ratio_low <= ion_ratio <= ion_ratio_high
