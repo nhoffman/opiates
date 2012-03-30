@@ -2,6 +2,9 @@ import sys
 import pprint
 from itertools import chain
 from collections import OrderedDict
+import logging
+
+log = logging.getLogger(__name__)
 
 from __init__ import CONTROL_NAMES, SAMPLE_PREP_NAMES
 control_ids = set(i for i,n in CONTROL_NAMES)
@@ -144,7 +147,9 @@ class Compound(object):
                 (test, getattr(calculations, test)(self)) for test in self.testnames)
             self.qa_ok = all(retval is not False for retval, msg in self.qa_results.values())            
             self.malformed = False
-        except AttributeError:
+        except AttributeError, msg:
+            log.warning(msg)
+            log.warning(self)
             all_tests = [test for test in dir(calculations) if test.startswith('check_')]
             self.qa_results = OrderedDict((test, (False, 'CHECK INTEGRATION')) for test in all_tests)
             self.qa_ok = False
