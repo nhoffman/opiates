@@ -267,17 +267,17 @@ def results(sample, quantitative = False):
     # undefined. We'll deal with the special case of an undefined
     # amr_high later.
     high = high or sys.maxint
-
+        
     if conc(a) > 0 and a.check_qa(['rrt', 'ion_ratio', 'signoise']):
         val = conc(a)*10 if conc(a) <= high else ('>%s' % high)
-    elif conc(c) > low and c.check_qa(['rrt', 'ion_ratio', 'signoise']):
+    elif conc(c) >= low and c.check_qa(['rrt', 'ion_ratio', 'signoise']):
         val = conc(c)
-    elif (a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])) \
+    elif conc(c) < low and (a.check_qa(['is_peak_area']) or c.check_qa(['is_peak_area'])) \
             and (b.check_qa(['spike']) or d.check_qa(['spike'])):
         val = conc(c)
     else:
         val = fail
-
+        
     if quantitative:
         return val
         
@@ -289,62 +289,6 @@ def results(sample, quantitative = False):
 
     return val
 
-# def result_c_first(sample):
-#     """
-#     Implements "c first" logic for results, considering QA
-#     checks and AMR.
-#     """
-
-#     conc = lambda x: (x.PEAK_analconc or 0)
-
-#     a = sample.compounds['straight10']
-#     b = sample.compounds['spiked10']
-#     c = sample.compounds['straight']
-#     d = sample.compounds['spiked']
-
-#     low, high = c.amr_low, c.amr_high
-#     # define significant digits for result
-#     fmt = {11: '%.2f'}.get(sample.COMPOUND_id, '%.0f')
-#     fail = 'FAIL'
-    
-#     # amr_high may not be defined (ie, if the compund is a
-#     # glucuronide). To simplify the logic below, let's temporarily
-#     # redefine 'high' as a large number if it is indeed
-#     # undefined. We'll deal with the special case of an undefined
-#     # amr_high later.
-#     high = high or sys.maxint
-
-#     if conc(c) < low:
-#         # This compound appears to be negative. Before we can
-#         # report it, check IS Peak area in a to rule out ion
-#         # suppression and at least one or b or d must pass the
-#         # spike test.
-#         if a.check_qa(['is_peak_area']) and (b.check_qa(['spike']) or d.check_qa(['spike'])):
-#             val = None
-#         else:
-#             val = fail
-#     # Now we can use the undiluted specimen if certain QA tests
-#     # pass, and if the concentration of the undiluted specimen >
-#     # amr_high.
-#     elif conc(c) <= high and c.check_qa(['rrt', 'ion_ratio', 'signoise']):
-#         # The result from c is in range and QA passes. Report the
-#         # quantitative result.
-#         val = conc(c)
-#     # Check QA for the diluted specimen.
-#     elif a.check_qa(['rrt', 'ion_ratio', 'signoise']):
-#         if conc(a) <= high:
-#             val = conc(a)*10
-#         else:
-#             val = '>%s' % high
-#     else:
-#         val = fail
-
-#     # Finally, we determine if amr_high is undefined, and make the
-#     # result qualitative if necessary.
-#     if c.amr_high is None and val not in (fail, None):
-#         val = 'POS'
-
-#     return val
 
 def add_ion_ratios(qadata, controls):
     """
