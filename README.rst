@@ -21,7 +21,7 @@ installation
 Clone the project from the git repository::
 
     cd ~/src
-    git clone git@uwmc-labmed.beanstalkapp.com:/opiates.git
+    git clone git@url-to-repo/opiates.git
     cd opiates
 
 Now installation can be performed using the familiar mechanism
@@ -64,6 +64,19 @@ with contents as follows:
    functionality. This subdirectory is installed to the system.
 * ``testfiles`` - files and data used for testing.
 * ``tests`` - subpackage implementing unit tests.
+
+versions
+========
+
+We use abbrevited git sha hashes to identify the software version::
+
+    % ./smack -V        
+    0128.9790c13
+
+The version information is saved in ``opiate/data`` when ``setup.py``
+is run (on installation, or even by executing ``python setup.py
+-h``). By default the version number appears in the name of the output
+file.
 
 execution
 =========
@@ -138,44 +151,39 @@ of the action::
 			    use the first whitespace-delimited word; firstsix, use
 			    first six characters [default "word"].
 
-Here is an example of a command combined with ``column`` (installed by
-default on many unix-like systems) for formatting tabular data for the
-screen::
+Here is an example of using the ``results`` subcommand combined with
+``csvlook`` (available as part of the csvkit package:
+https://github.com/onyxfish/csvkit)::
 
-    % ./smack results testfiles/oct24.json -o- | column -ts,
-    label          1-UMORPH   2-UOXYM    3-UHMOR    4-UCOD     5-UOXCD    6-UHCOD    7-UMOR6
-    Accession02 c  190.57     .          .          .          .          .          .
-    Accession03 c  .          .          72.78      .          .          1684.36    .
-    Accession04 c  425.36     11.35      .          FAIL       893.01     .          .
-    Accession05 c  .          .          10.34      .          .          477.79     .
-    Accession06 c  .          .          13.76      .          .          142.48     .
-    Accession07 c  FAIL       .          16.98      .          .          1008.58    .
-    label          8-UFENTM   9-UMPERM   10-UMPER   11-UFENT   12-UBUPR   13-UPPOX   14-UMETH
-    Accession02 c  .          .          .          .          .          .          .
-    Accession03 c  .          .          .          .          .          .          .
-    Accession04 c  .          .          .          .          .          .          .
-    Accession05 c  .          .          .          .          .          .          8786.45
-    Accession06 c  .          .          .          .          .          .          .
-    Accession07 c  .          .          .          .          .          .          .
-    label          15-UMOR3G  16-UMOR6G  17-UHMORG  18-UOXYMG  19-UCOD6G  20-UNBUPG
-    Accession02 c  POS        POS        POS        .          .          .
-    Accession03 c  POS        POS        .          POS        FAIL       .
-    Accession04 c  POS        POS        POS        POS        .          .
-    Accession05 c  .          .          POS        .          FAIL       .
-    Accession06 c  .          .          POS        .          FAIL       .
-    Accession07 c  .          .          POS        .          FAIL       .
+    % ./smack results testfiles/oct24.json -o- | csvlook
+    % ls
+    oct24.0128.9790c13.results.csv
+    % csvlook oct24.0128.9790c13.results.csv
+    ------------------------------------------------------------------------------------------------------
+    |  label         | 1-UMORPH  | 2-UOXYM   | 3-UHMOR   | 4-UCOD    | 5-UOXCD   | 6-UHCOD   | 7-UMOR6   |
+    ------------------------------------------------------------------------------------------------------
+    |  Accession02 c | 161.26    |           | 3.76      |           |           | 0.64      |           |
+    |  Accession03 c | 586.25    |           | 65.63     | 2.47      |           | 1684.36   |           |
+    |  Accession04 c | 402.22    | 11.35     | 5.10      | 15.45     | 896.07    |           |           |
+    |  Accession05 c |           |           | 10.34     |           |           | 445.90    |           |
+    |  Accession06 c |           |           | 13.76     | 0.60      |           | 110.65    |           |
+    |  Accession07 c |           |           | 16.98     | 1.88      |           | 1008.58   |           |
+    |  label         | 8-UFENTM  | 9-UMPERM  | 10-UMPER  | 11-UFENT  | 12-UBUPR  | 13-UPPOX  | 14-UMETH  |
+    |  Accession02 c |           |           |           |           |           | 0.08      | 0.89      |
+    |  Accession03 c |           |           |           |           |           | 0.05      | 1.08      |
+    |  Accession04 c |           |           |           |           |           | 0.05      | 0.35      |
+    |  Accession05 c |           |           |           |           |           | 1.60      | 8786.45   |
+    |  Accession06 c |           |           |           |           |           |           | 17.88     |
+    |  Accession07 c |           |           |           |           |           |           | 6.73      |
+    |  label         | 15-UMOR3G | 16-UMOR6G | 17-UHMORG | 18-UOXYMG | 19-UCOD6G | 20-UNBUPG  |
+    |  Accession02 c | POS       | POS       | POS       |           |           |            |
+    |  Accession03 c | POS       | POS       | POS       | POS       | FAIL      |            |
+    |  Accession04 c | POS       | POS       | POS       | POS       |           |            |
+    |  Accession05 c |           |           | POS       |           | FAIL      |            |
+    |  Accession06 c |           |           | POS       |           | FAIL      |            |
+    |  Accession07 c |           |           | POS       |           | FAIL      |            |
+    ------------------------------------------------------------------------------------------------------
 
-
-versions
-========
-
-We use abbrevited git sha hashes to identify the software version::
-
-    % ./smack -V        
-    0128.9790c13
-
-The version information is saved in ``opiate/data`` when ``setup.py``
-is run (on installation, or even by executing ``python setup.py -h``).
 
 unit tests
 ==========
@@ -225,3 +233,20 @@ change.
   contain a listing of control specimens (integers corresponding to
   ``opiate.CONTROL_NAMES``) or sample preparations (letters a-d
   corresponding to ``opiate.SAMPLE_PREP_LABELS``). 
+
+license
+=======
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+The GLPv3 license is reproduced in LICENSE.txt
+
+Copyright (C) 2012 Noah. G Hoffman
