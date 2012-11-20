@@ -1,6 +1,6 @@
 """Collect results from multiple runs into a single file."""
 
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 from itertools import chain, ifilter, count
 from os import path
 
@@ -58,19 +58,27 @@ def action(args):
     writer.writerow(d)
 
     counter = count(1)
+    seen = defaultdict(list) # keep only the first instance of each accession
     for infile in args.infiles:    
         d = dict(infile = infile)
         controls, sample_groups = get_input(infile, split_description = args.split_desc)
         if args.calculate_ion_ratios:
             qadata = add_ion_ratios(qadata.copy(), controls)
-
-        patient_samples = get_samples(controls, sample_groups, qadata, matrix, quantitative = True)
-        for samples in patient_samples:
-            d['label'] = samples[0].row_label() if args.keep_phi else counter.next()
-            d.update(dict((s.COMPOUND_id, s.result) for s in samples))
-            writer.writerow(sanitize(d))
-
+            patient_samples = get_samples(controls, sample_groups, qadata, matrix, quantitative = True)
             
+        for samples in patient_samples:
+            samples = list(samples)
+            # exclude any malformed samples
+            if any(any(c.malformed for c in sample.compounds.values()) for sample in samples):
+                log.warning('malformed samples in %s' % infile)
+                continue
+            # keep only the first instance of each sample
+            if samples[0].row_label() not in seen:
+                d['label'] = samples[0].row_label() if args.keep_phi else counter.next()
+                d.update(dict((s.COMPOUND_id, s.result) for s in samples))
+                writer.writerow(sanitize(d))
+            seen[samples[0].row_label()].append(infile)
 
-        
-
+    # for label, files in seen.items():
+    #     print label, len(files)
+            
