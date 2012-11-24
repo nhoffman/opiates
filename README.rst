@@ -7,6 +7,23 @@ processing XML-formatted output from a Waters LC/MS
 instrument. Configuration of the Waters instrument is documented
 elsewhere.
 
+Our manuscript published in *Clinica Chemica Acta* describes the
+motivation for and implementation of this software in the clinical
+laboratory:
+
+Dickerson JA, Schmeling M, Hoofnagle AN, and Hoffman NG. **Design and
+implementation of software for automated quality control and data
+analysis for a complex LC/MS/MS assay for urine opiates and
+metabolites.** *Clin Chim Acta.* 2012 Nov 15. PubMed: 23159299_ (doi_).
+
+.. _23159299: http://www.ncbi.nlm.nih.gov/pubmed/23159299
+.. _doi: http://dx.doi.org/10.1016/j.cca.2012.10.055
+
+Access to the article requires a personal or institutional
+subscription to the journal. Sorry about that. If you don't have
+access and would like a copy of the paper, please contact me and I'll
+be glad to send you one.
+
 .. contents:: Table of Contents
 
 dependencies
@@ -44,7 +61,7 @@ architecture
 
 This project contains the following subdirectories::
 
-    opiates % tree -d          
+    opiates % tree -d
     .
     |-- dev
     |-- doc
@@ -70,7 +87,7 @@ versions
 
 We use abbrevited git sha hashes to identify the software version::
 
-    % ./smack -V        
+    % ./smack --version
     0128.9790c13
 
 The version information is saved in ``opiate/data`` when ``setup.py``
@@ -122,7 +139,7 @@ script and individual actions using the ``-h`` or ``--help`` options::
 Help text for an individual action is available by including the name
 of the action::
 
-    % smack results -h                
+    % smack results -h
     usage: smack results [-h] [-o FILE] [-d DIRECTORY] [-n] [-s {word,firstsix}]
 			 infile
 
@@ -194,7 +211,7 @@ package that imports the local version (ie, the version in the project
 directory, not the version installed to the system) of the ``opiate``
 package. All unit tests can be run like this::
 
-    opiates % ./testall   
+    opiates % ./testall
     ...................................................
     ----------------------------------------------------------------------
     Ran 51 tests in 4.224s
@@ -204,7 +221,7 @@ package. All unit tests can be run like this::
 A single unit test can be run by referring to a specific module,
 class, or method within the ``tests`` package using dot notation::
 
-    opiates % ./testone tests.test_calculations.TestMeanIonRatios 
+    opiates % ./testone tests.test_calculations.TestMeanIonRatios
     .
     ----------------------------------------------------------------------
     Ran 1 test in 0.004s
@@ -232,7 +249,7 @@ change.
   on each control or sample prep for each compound. Each cell should
   contain a listing of control specimens (integers corresponding to
   ``opiate.CONTROL_NAMES``) or sample preparations (letters a-d
-  corresponding to ``opiate.SAMPLE_PREP_LABELS``). 
+  corresponding to ``opiate.SAMPLE_PREP_LABELS``).
 
 license
 =======
